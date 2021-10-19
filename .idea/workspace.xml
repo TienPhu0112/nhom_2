@@ -2,9 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test">
+      <change afterPath="$PROJECT_DIR$/nhom_2/app/Models/Customer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/app/Models/DishType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/app/Models/Event.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/app/Models/Food.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/app/Models/FoodOrder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/app/Models/News.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/app/Models/Order.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/app/Models/Table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/app/Models/TableOrder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/app/Models/TogoOrder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_10_19_131529_create_dish_types_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_10_19_132045_create_food_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_10_19_132656_create_food_orders_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_10_19_132844_create_table_orders_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_10_19_133051_create_togo_orders_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_10_19_133342_create_orders_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_10_19_133608_create_customers_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_10_19_133747_create_tables_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_10_19_134230_create_news_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_10_19_134620_create_events_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/abc.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/views.blade.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +162,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../T2011E/Laravel/shoping" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -157,6 +176,7 @@
       <updated>1634557254514</updated>
       <workItem from="1634557256796" duration="1108000" />
       <workItem from="1634565868995" duration="75000" />
+      <workItem from="1634648786087" duration="6357000" />
     </task>
     <task id="LOCAL-00001" summary="push test view">
       <created>1634559544613</created>
