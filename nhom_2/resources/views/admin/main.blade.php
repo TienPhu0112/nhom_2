@@ -88,6 +88,7 @@
 <main id="main" class="main">
 
     <section class="section">
+        @include('admin.alert')
         <div class="row">
             <div class="col-md-12">
 
