@@ -14,11 +14,11 @@ class Order extends Model
     }
 
     public function customers(){
-        return $this -> belongsTo('App\Models\Customer');
+        return $this -> belongsTo('App\Models\Customer','customer_id','id');
     }
 
     public function tables(){
-        return $this -> belongsTo('App\Models\Table');
+        return $this -> belongsTo('App\Models\Table','table_id','id');
     }
 
     public function foods(){

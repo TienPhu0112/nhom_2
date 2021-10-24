@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test">
+      <change afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/Admin/OrderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/CustomerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Models/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +24,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -142,7 +159,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/nhom_2/public/template/admin/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../T2011E/Laravel/shoping" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -169,7 +186,10 @@
       <workItem from="1634557256796" duration="1108000" />
       <workItem from="1634565868995" duration="75000" />
       <workItem from="1634648786087" duration="7562000" />
-      <workItem from="1634804775971" duration="7080000" />
+      <workItem from="1634804775971" duration="7788000" />
+      <workItem from="1634895116761" duration="337000" />
+      <workItem from="1634901323738" duration="4362000" />
+      <workItem from="1635044455549" duration="8054000" />
     </task>
     <task id="LOCAL-00001" summary="push test view">
       <created>1634559544613</created>
