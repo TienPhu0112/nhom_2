@@ -22,10 +22,6 @@
 
 
         <li class="nav-item">
-<<<<<<< Updated upstream
-            <a class="nav-link collapsed" data-bs-target="#components-nav2" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Khách hàng</span><i class="bi bi-chevron-down ms-auto"></i>
-=======
             <a class="nav-link collapsed" data-bs-target="#components-nav5" data-bs-toggle="collapse" href="#">
 
                 <i class="bi bi-menu-button-wide"></i><span> Bàn</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -41,7 +37,6 @@
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav2" data-bs-toggle="collapse" href="#">
                 <i class="bi bi-menu-button-wide"></i><span>Khách Hàng</span><i class="bi bi-chevron-down ms-auto"></i>
->>>>>>> Stashed changes
             </a>
             <ul id="components-nav2" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
@@ -54,13 +49,8 @@
                     </a>
                 </li>
             </ul>
-<<<<<<< Updated upstream
         </li><!-- End Components Nav -->
 
-
-=======
-        </li>
->>>>>>> Stashed changes
     </ul>
 
 </aside><!-- End Sidebar-->
