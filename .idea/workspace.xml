@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test">
-      <change afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/Admin/OrderController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/CustomerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Models/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +180,8 @@
       <workItem from="1634804775971" duration="7788000" />
       <workItem from="1634895116761" duration="337000" />
       <workItem from="1634901323738" duration="4362000" />
-      <workItem from="1635044455549" duration="8054000" />
+      <workItem from="1635044455549" duration="8130000" />
+      <workItem from="1635162099043" duration="1192000" />
     </task>
     <task id="LOCAL-00001" summary="push test view">
       <created>1634559544613</created>

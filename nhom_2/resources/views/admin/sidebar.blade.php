@@ -9,10 +9,10 @@
             </a>
             <ul id="components-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="{{asset('admin/order')}}"></a>
-                    <a href="{{asset('admin')}}">
+                    <a href="{{asset('admin/order')}}">
                         <i class="bi bi-circle"></i><span>Danh Sách Đơn Đặt Bàn</span>
                     </a>
+
                     <a href="{{asset('admin/order/create')}}">
                         <i class="bi bi-circle"></i><span>Thêm Đơn Đặt Bàn</span>
                     </a>
