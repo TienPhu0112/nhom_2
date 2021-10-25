@@ -1,7 +1,6 @@
 @extends('admin.main')
 @section('content')
     <div class="container">
-        <p>Table Management</p>
 
         @if(session('msg'))
             <div @class('alert alert-success')>

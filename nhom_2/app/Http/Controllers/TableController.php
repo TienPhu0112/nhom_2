@@ -16,11 +16,11 @@ class TableController extends Controller
     {
         $seach_type=$request->seach_type;
         if(isset($seach_type)){
-            $lsTable=Table::where('name','like','%'.$seach_type.'%')->paginate(4);
+            $lsTable=Table::where('type','like','%'.$seach_type.'%')->paginate(4);
         }else {
             $lsTable = Table::paginate(4);
         }
-        return view("table.index")->with(['lsTable' => $lsTable, 'title' => 'Trang quản trị Admin']);
+        return view("table.index")->with(['lsTable' => $lsTable, 'title' => 'Trang quản trị Bàn']);
     }
 
 
@@ -32,7 +32,7 @@ class TableController extends Controller
     public function create()
     {
         $lsTable = Table::all();
-        return view("table.add")->with(['lsTable'=>$lsTable,'title' => 'Trang quản trị Admin']);
+        return view("table.add")->with(['lsTable'=>$lsTable,'title' => 'Trang quản trị Bàn']);
     }
 
     /**
@@ -47,6 +47,7 @@ class TableController extends Controller
             $request->validate([
                 'type' => 'required|min:1|',
                 'status' => 'required'
+
             ]);
 
             $table=new Table();

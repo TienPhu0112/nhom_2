@@ -19,11 +19,19 @@
                        id="type" name="type">
             </div>
 
-            <div class="form-group">
-                <label for="title">status</label>
-                <input type="text" class="form-control"
-                       id="status" name="status">
-            </div>
+            <fieldset class="row mb-3">
+                <legend class="col-form-label col-sm-2 pt-0">Trạng Thái</legend>
+                <div class="col-sm-10">
+                    <div class="form-check">
+                        <input class="form-check-input" value="0" type="radio" name="status" id="gridRadios1" checked="">
+                        <label class="form-check-label" for="gridRadios1">
+                            Đang chờ
+                        </label>
+                    </div>
+
+                    
+                </div>
+            </fieldset>
             <input type="submit" value="Save">
         </form>
     </div>
