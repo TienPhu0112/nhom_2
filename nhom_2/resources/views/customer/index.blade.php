@@ -17,8 +17,6 @@
             <input type="submit" value="Search">
         </form>
 
-        <hr/>
-        <a href="{{asset('customer/create')}}" class="btn btn-primary">Add new</a>
         <hr>
         <table class="table">
             <tr>

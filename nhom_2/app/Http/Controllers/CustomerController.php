@@ -17,14 +17,14 @@ class CustomerController extends Controller
             $lsCustomer = Customer::paginate(4);
         }
         return  view("customer.index")->with([
-                "lsCustomer" => $lsCustomer, 'title' => 'Trang quản trị Customer']
+                "lsCustomer" => $lsCustomer, 'title' => 'Danh sách khách hàng']
         );
     }
 
 
     public function create()
     {
-        return view("customer.add")->with(['title' => 'Trang quản trị Customer']
+        return view("customer.add")->with(['title' => 'Thêm khách hàng']
         );;
     }
 
@@ -67,7 +67,7 @@ class CustomerController extends Controller
     public function edit($id)
     {
         $customer = Customer::find($id);
-        return view("customer.edit")->with(['customer' => $customer, 'title' => 'Trang quản trị Customer']);
+        return view("customer.edit")->with(['customer' => $customer, 'title' => 'Sửa thông tin khách hàng']);
     }
 
     /**
