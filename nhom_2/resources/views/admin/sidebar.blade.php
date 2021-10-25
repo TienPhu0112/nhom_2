@@ -31,6 +31,10 @@
                     <a href="{{asset('table')}}">
                         <i class="bi bi-circle"></i><span>Danh Sách Bàn</span>
                     </a>
+
+                    <a href="{{asset('table/create')}}">
+                        <i class="bi bi-circle"></i><span>Thêm Bàn</span>
+                    </a>
             </ul>
         </li>
 

@@ -13,10 +13,11 @@
         <form  action="{{route('table.store')}}"method="post"
                enctype="multipart/form-data">
             @csrf
-            <div class="form-group">
-                <label for="title">type</label>
-                <input type="text" class="form-control"
-                       id="type" name="type">
+            <div class="row mb-3">
+                <label for="inputType" class="col-sm-2 col-form-label">Type</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="type" name="type">
+                </div>
             </div>
 
             <fieldset class="row mb-3">

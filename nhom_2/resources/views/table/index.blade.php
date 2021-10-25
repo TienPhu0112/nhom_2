@@ -23,8 +23,6 @@
             <input type="submit" value="Seach">
         </form>
         <hr/>
-        <a href="{{asset('table/create')}}" class="btn btn-primary">Add new</a>
-        <hr>
         <table class="table">
             <tr>
                 <th>ID</th>
@@ -35,21 +33,12 @@
             @foreach($lsTable as $table)
                 <tr>
                     <td>{{$table->id}}</td>
-                    <td>{{$table->type}}</td>
+                    <td>Bàn {{$table->type}}</td>
                     <td>
                         @if($table->status == 0)
-                            OPEN
+                        Đang chờ
                         @endif
-                        @if($table->status == 1)
-                            <span style =" color: red; font-width: bold;"> CONFIRM</span>
-                        @endif
-                        @if($table->status == 2)
-                            <span style =" color: blue; font-width: bold;">DONE</span>
-                        @endif
-                        @if($table->status == 3)
-                            <span style =" color: red; font-width: bold;">CANCEL</span>
-                        @endif
-                    </td>
+
                     <td>
                             <form onsubmit="return" method="POST" action="{{route('table.destroy', $table->id)}}">
                                 @csrf
