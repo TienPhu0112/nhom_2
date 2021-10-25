@@ -1,7 +1,6 @@
 @extends('admin.main')
 @section('content')
     <div @class('container')>
-        <p>Edit Customer</p>
 
         @if(count($errors) > 0)
             <div @class('alert alert-danger')>

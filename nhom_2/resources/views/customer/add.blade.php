@@ -1,7 +1,6 @@
 @extends('admin.main')
 @section('content')
     <div @class('container')>
-        <p>Add new</p>
 
         <form method="post" @class('form') action="{{route('customer.store')}}" enctype="multipart/form-data">
             @csrf
