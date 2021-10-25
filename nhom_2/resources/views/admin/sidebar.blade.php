@@ -69,7 +69,9 @@
                     </a>
                 </li>
             </ul>
-        </li><!-- End Components Nav -->
+        </li>
+
+        <!-- End Components Nav -->
 
     </ul>
 
