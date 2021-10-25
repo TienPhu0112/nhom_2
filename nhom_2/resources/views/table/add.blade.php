@@ -21,15 +21,8 @@
 
             <div class="form-group">
                 <label for="title">status</label>
-                <select name="status" class="form-group">
-                    @foreach($lsTable as $table)
-                        <option value="{{$table->status==0}}">OPEN</option>
-                        <option value="{{$table->status==1}}">CONFIRM</option>
-                        <option value="{{$table->status==2}}">DONE</option>
-                        <option value="{{$table->status==3}}">CANCEL</option>
-
-                    @endforeach
-                </select>
+                <input type="text" class="form-control"
+                       id="status" name="status">
             </div>
             <input type="submit" value="Save">
         </form>

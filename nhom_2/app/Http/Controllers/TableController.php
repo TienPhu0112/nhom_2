@@ -16,7 +16,7 @@ class TableController extends Controller
     {
         $seach_type=$request->seach_type;
         if(isset($seach_type)){
-            $lsTable=Table::where('name','like','%'.$seach_type.'%')->paginate(4);
+            $lsTable=Table::where('type','like','%'.$seach_type.'%')->paginate(4);
         }else {
             $lsTable = Table::paginate(4);
         }

@@ -57,7 +57,7 @@
                                data-tableid="{{$table->id}}" href="#">Change status</a>
                         @endif
                             <form onsubmit="return" method="POST" action="{{route('table.destroy', $table->id)}}">
-
+                                @csrf
                                 @method('DELETE')
                                 <input type="submit" value="Delete"/>
                             </form>

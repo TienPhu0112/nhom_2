@@ -3,12 +3,17 @@
 @section('content')
     <form>
         <div class="row mb-3">
+
             <label for="inputText" class="col-sm-2 col-form-label">Text</label>
+
+            <label for="inputText" class="col-sm-2 col-form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Loại Bàn</font></font></label>
+
             <div class="col-sm-10">
                 <input type="text" class="form-control">
             </div>
         </div>
         <div class="row mb-3">
+
             <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-10">
                 <input type="email" class="form-control">
@@ -140,4 +145,19 @@
         </div>
 
     </form>
+
+            <label for="inputTime" class="col-sm-2 col-form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Trạng thái</font></font></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control">
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-sm-2 col-form-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nút gửi</font></font></label>
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gửi biểu mẫu</font></font></button>
+            </div>
+        </div>
+
+
+
 @endsection
