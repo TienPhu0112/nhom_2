@@ -12,9 +12,9 @@ class CustomerController extends Controller
     {
         $search_name = $request->search_name;
         if (isset($search_name)) {
-            $lsCustomer = Customer::where('name', 'like', '%'.$search_name.'%')->paginate(3);
+            $lsCustomer = Customer::where('name', 'like', '%'.$search_name.'%')->paginate(4);
         } else {
-            $lsCustomer = Customer::paginate(3);
+            $lsCustomer = Customer::paginate(4);
         }
         return  view("customer.index")->with([
                 "lsCustomer" => $lsCustomer, 'title' => 'Trang quản trị Customer']

@@ -1,8 +1,6 @@
 @extends('admin.main')
 @section('content')
-
     <div class="container">
-        <p>Customer Management</p>
 
         @if(session('msg'))
             <div @class('alert alert-success')>
@@ -24,12 +22,12 @@
         <hr>
         <table class="table">
             <tr>
-                <th>ID</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Age</th>
-                <th>Action</th>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Age</th>
+                <th scope="col">Action</th>
             </tr>
             @foreach($lsCustomer as $customer)
                 <tr>
