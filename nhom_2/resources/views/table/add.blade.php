@@ -16,7 +16,7 @@
             <div class="row mb-3">
                 <label for="inputType" class="col-sm-2 col-form-label">Type</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="type" name="type">
+                    <input type="number" class="form-control" id="type" name="type">
                 </div>
             </div>
 

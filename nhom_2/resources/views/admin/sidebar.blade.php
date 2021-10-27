@@ -28,11 +28,11 @@
             </a>
             <ul id="components-nav5" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="{{asset('table')}}">
+                    <a href="{{asset('admin/table')}}">
                         <i class="bi bi-circle"></i><span>Danh Sách Bàn</span>
                     </a>
 
-                    <a href="{{asset('table/create')}}">
+                    <a href="{{asset('admin/table/create')}}">
                         <i class="bi bi-circle"></i><span>Thêm Bàn</span>
                     </a>
             </ul>
@@ -44,11 +44,11 @@
             </a>
             <ul id="components-nav2" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="{{asset('customer')}}">
+                    <a href="{{asset('admin/customer')}}">
 
                         <i class="bi bi-circle"></i><span>Danh Sách Khách Hàng</span>
                     </a>
-                    <a href="{{asset('customer/create')}}">
+                    <a href="{{asset('admin/customer/create')}}">
                         <i class="bi bi-circle"></i><span>Thêm Khách Hàng</span>
                     </a>
                 </li>

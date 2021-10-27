@@ -47,7 +47,6 @@ class TableController extends Controller
             $request->validate([
                 'type' => 'required|min:1|',
                 'status' => 'required'
-
             ]);
 
             $table=new Table();
