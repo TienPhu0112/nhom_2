@@ -1,16 +1,31 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\Admin\Users\LoginController;
+use \App\Http\Controllers\Admin\MainController;
+use \App\Http\Controllers\Admin\OrderController;
+
+Route::get('admin/users/login',[LoginController::class,'index'])->name('login');
+Route::post('admin/users/login/store',[LoginController::class,'store']);
+
+Route::middleware(['auth'])->group(function(){
+    Route::prefix('admin')->group(function(){
+        Route::get('/',[MainController::class,'index'])->name('admin');
+        Route::get('main',[MainController::class,'index']);
+
+        #Order
+        Route::resource("order",OrderController::class);
+
+    });
+
+});
 
 
-Route::get('admin',[\App\Http\Controllers\Admin\MainController::class,'index'])->name('admin');
-Route::get('admin/main',[\App\Http\Controllers\Admin\MainController::class,'index']);
 
 Route::resource("customer",\App\Http\Controllers\CustomerController::class);
 
-Route::resource("table",App\Http\Controllers\TableController::class);
+Route::resource("table",\App\Http\Controllers\TableController::class);
 
-Route::resource("admin/order",\App\Http\Controllers\Admin\OrderController::class);
 
 // Dish type
 Route::resource('admin/type', App\Http\Controllers\TypeController::class );
