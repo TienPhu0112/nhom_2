@@ -29,11 +29,8 @@
                 </div>
             </div>
 
-            <div class="row mb-3">
-                <label class="col-sm-2 col-form-label">Submit Button</label>
-                <div class="col-sm-10">
-                    <button type="submit" class="btn btn-primary">Submit Form</button>
-                </div>
+            <div class="col-sm-12 text-center">
+                <button type="submit" class="btn btn-primary">Submit Form</button>
             </div>
 
         </form>
