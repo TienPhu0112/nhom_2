@@ -5,7 +5,7 @@
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav1" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Đơn đặt bàn</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bx bxs-receipt"></i><span>Đơn đặt bàn</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="components-nav1" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
@@ -24,7 +24,7 @@
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav5" data-bs-toggle="collapse" href="#">
 
-                <i class="bi bi-menu-button-wide"></i><span> Bàn</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="ri-reserved-line"></i><span> Bàn</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="components-nav5" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
@@ -40,7 +40,7 @@
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav2" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Khách Hàng</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bx bxs-face"></i><span>Khách Hàng</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="components-nav2" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
@@ -56,7 +56,7 @@
         </li>
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav3" data-bs-toggle="collapse" href="#">
-                <i class="bi bi-menu-button-wide"></i><span>Menu</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bx bxs-food-menu"></i><span>Menu</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="components-nav3" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
