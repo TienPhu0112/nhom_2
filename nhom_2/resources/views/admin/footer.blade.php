@@ -8,5 +8,7 @@
 <script src="/template/admin/assets/vendor/apexcharts/apexcharts.min.js"></script>
 <script src="/template/admin/assets/vendor/echarts/echarts.min.js"></script>
 
+
+
 <!-- Template Main JS File -->
 <script src="/template/admin/assets/js/main.js"></script>

@@ -4,7 +4,7 @@
     <form action="{{route('order.store')}}" method="POST">
         @csrf
         <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Customer ID</label>
+            <label class="col-sm-2 col-form-label">ID Khách Hàng</label>
             <div class="col-sm-10">
                 <select class="form-select" name="customer_id">
                     @foreach($lsCus as $cus)
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="row mb-3">
-            <label class="col-sm-2 col-form-label">Table Type</label>
+            <label class="col-sm-2 col-form-label">Loại Bàn</label>
             <div class="col-sm-10">
                 <select class="form-select" name="table_id">
                     @foreach($lsTable as $table)
@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="row mb-3">
-            <label for="inputDate" class="col-sm-2 col-form-label">Date</label>
+            <label for="inputDate" class="col-sm-2 col-form-label">Ngày Hẹn</label>
             <div class="col-sm-10">
                 <input type="datetime-local" class="form-control" name="booking_date">
             </div>

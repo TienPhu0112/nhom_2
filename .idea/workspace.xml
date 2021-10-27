@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test" />
+    <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/CustomerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/head.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/head.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/customer/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/customer/index.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -148,17 +155,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../T2011E/Laravel/shoping" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\nhom_2\nhom_2\public\template\admin\plugins" />
       <recent name="C:\xampp\htdocs\nhom_2\nhom_2\public\template\admin\assets" />
       <recent name="C:\xampp\htdocs\nhom_2\nhom_2\public\template\admin" />
       <recent name="C:\xampp\htdocs\nhom_2\nhom_2\public\template\admin\assets\vendor\simple-datatables" />
       <recent name="C:\xampp\htdocs\nhom_2\nhom_2\public\template\admin\assets\vendor\quill" />
-      <recent name="C:\xampp\htdocs\nhom_2\nhom_2\public\template\admin\assets\vendor\boxicons\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\nhom_2\nhom_2\app\Http\Controllers\Admin" />
@@ -180,7 +187,7 @@
       <workItem from="1634901323738" duration="4362000" />
       <workItem from="1635044455549" duration="8130000" />
       <workItem from="1635162099043" duration="5361000" />
-      <workItem from="1635337962769" duration="4337000" />
+      <workItem from="1635337962769" duration="11213000" />
     </task>
     <task id="LOCAL-00001" summary="push test view">
       <created>1634559544613</created>

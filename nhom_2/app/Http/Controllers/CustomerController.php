@@ -95,17 +95,21 @@ class CustomerController extends Controller
         return  redirect(route("customer.index"));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id, Request $request)
+
+    public function destroy( Request $request)
     {
+        $id = (int) $request->input('id');
         $customer = Customer::find($id);
-        $customer->delete();
-        $request->session()->flash("msg", "Delete customer successfully.");
-        return redirect(route("customer.index"));
+        if($customer->delete()){
+            return response()->json([
+               'error' => false,
+               'message' => 'Xóa thành công danh mục'
+            ]);
+        }
+
+        return response()->json([
+            'error' => true
+        ]);
     }
+
 }

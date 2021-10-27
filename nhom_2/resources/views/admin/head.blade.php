@@ -25,3 +25,5 @@
 <!-- Template Main CSS File -->
 <link href="/template/admin/assets/css/style.css" rel="stylesheet">
 
+<meta name="csrf-token" content="{{ csrf_token() }}">
+
