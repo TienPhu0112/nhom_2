@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/sidebar.blade.php" afterDir="false" />
-    </list>
+    <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +180,7 @@
       <workItem from="1634901323738" duration="4362000" />
       <workItem from="1635044455549" duration="8130000" />
       <workItem from="1635162099043" duration="5361000" />
-      <workItem from="1635337962769" duration="3791000" />
+      <workItem from="1635337962769" duration="4337000" />
     </task>
     <task id="LOCAL-00001" summary="push test view">
       <created>1634559544613</created>

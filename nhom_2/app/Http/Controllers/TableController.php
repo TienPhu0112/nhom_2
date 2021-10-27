@@ -32,7 +32,7 @@ class TableController extends Controller
     public function create()
     {
         $lsTable = Table::all();
-        return view("table.add")->with(['lsTable'=>$lsTable,'title' => 'Trang quản trị Bàn']);
+        return view("table.add")->with(['lsTable'=>$lsTable,'title' => 'Thêm bàn mới']);
     }
 
     /**

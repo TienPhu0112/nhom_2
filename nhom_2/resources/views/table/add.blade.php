@@ -1,7 +1,6 @@
 @extends('admin.main')
 @section('content')
     <div @class('container')>
-        <p>Add new</p>
 
         @if(count($errors) > 0)
             <div @class('alert alert-danger')>
@@ -33,7 +32,9 @@
 
                 </div>
             </fieldset>
-            <input type="submit" value="Save">
+            <div class="col-sm-12 text-center">
+                <button type="submit" class="btn btn-primary">Thêm Mới</button>
+            </div>
         </form>
     </div>
 
