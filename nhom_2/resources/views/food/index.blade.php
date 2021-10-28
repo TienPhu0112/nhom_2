@@ -25,7 +25,7 @@
             <th scope="col">Sale Price</th>
             <th scope="col">Status</th>
             <th scope="col">Dish Type</th>
-            <th scope="col">Option</th>
+            <th scope="col">Edit</th>
             <th scope="col">Delete</th>
         </tr>
         </thead>
@@ -40,7 +40,9 @@
                 <td>{{$food->status === 0 ? "Đang phục vụ" : "Dừng phục vụ"}}</td>
                 <td>{{ $food->dishTypes->name }}</td>
                 <td>
-                    <a class="btn btn-link" href="{{route("food.edit",$food->id)}}">Edit</a>
+                    <a href="{{route("food.edit", $food->id)}}" class="btn btn-primary rounded-pill">
+                        <i class="bx bxs-edit"></i>
+                    </a>
                 </td>
                 <td>
                     <form onsubmit="return confirm('Delete food {{$food->name}}?')" method="POST" action="{{route('food.destroy',$food->id)}}">

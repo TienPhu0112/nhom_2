@@ -22,7 +22,7 @@
             <th scope="col">Name</th>
             <th scope="col">Created at</th>
             <th scope="col">Updated at</th>
-            <th scope="col">Option</th>
+            <th scope="col">Edit</th>
             <th scope="col">Delete</th>
         </tr>
         </thead>
@@ -36,7 +36,9 @@
                 <td>{{$type->updated_at->format('d/m/Y')}}
                     - {{ $type->updated_at->diffForHumans() }}</td>
                 <td>
-                    <a href="{{route("type.edit",$type->id)}}">Edit</a>
+                    <a href="{{route("type.edit", $type->id)}}" class="btn btn-primary rounded-pill">
+                        <i class="bx bxs-edit"></i>
+                    </a>
                 </td>
                 <td>
                     <form onsubmit="return confirm('Delete type {{$type->name}}?')" method="POST" action="{{route('type.destroy',$type->id)}}">
