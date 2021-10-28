@@ -8,7 +8,6 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">FOOD</h5>
-                        <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
 {{--                        Add--}}
                         <a class="btn btn-primary rounded-pill"
                            style="margin-bottom: 10px;"
@@ -65,7 +64,7 @@
                                         <form onsubmit="return confirm('Delete food {{$food->name}}?')" method="POST" action="{{route('food.destroy',$food->id)}}">
                                             @csrf
                                             @method('DELETE')
-                                            <button class="btn btn-primary rounded-pill" type="submit"><i class="bi bi-trash"></i></button>
+                                            <button class="btn btn-danger rounded-pill" type="submit"><i class="bi bi-trash"></i></button>
                                         </form>
                                     </td>
                                 </tr>

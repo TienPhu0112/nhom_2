@@ -1,70 +1,55 @@
 @extends('admin.main')
 
 @section('content')
-    <section class="section">
-        <div class="row">
-            <div class="col-lg-12">
+    <a class="btn btn-primary rounded-pill"
+       style="margin-bottom: 10px;"
+       href="{{asset('admin/type/create')}}">Add New</a>
 
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">DISH TYPE</h5>
-                        <p>Add lightweight datatables to your project with using the <a href="https://github.com/fiduswriter/Simple-DataTables" target="_blank">Simple DataTables</a> library. Just add <code>.datatable</code> class name to any table you wish to conver to a datatable</p>
-                        <a class="btn btn-primary rounded-pill"
-                           style="margin-bottom: 10px;"
-                           href="{{asset('admin/type/create')}}">Add New</a>
-
-                    @if(session('msg'))
-                            <div @class('alert alert-success')>
-                                {{session('msg')}}
-                            </div>
-                        @endif
-
-                        @if(session('error'))
-                            <div @class('alert alert-danger')>
-                                {{session('error')}}
-                            </div>
-                    @endif
-
-                    <!-- Table with stripped rows -->
-                        <table class="table datatable">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Created at</th>
-                                    <th scope="col">Updated at</th>
-                                    <th scope="col">Option</th>
-                                    <th scope="col">Delete</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                            @foreach($lsType as $type)
-                                <tr>
-                                    <th>{{$type->id}}</th>
-                                    <td>{{$type->name}}</td>
-                                    <th>{{$type->created_at}}</th>
-                                    <td>{{$type->updated_at}}</td>
-                                    <td>
-                                        <a href="{{route("type.edit",$type->id)}}">Edit</a>
-                                    </td>
-                                    <td>
-                                        <form onsubmit="return confirm('Delete type {{$type->name}}?')" method="POST" action="{{route('type.destroy',$type->id)}}">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-primary rounded-pill" type="submit"><i class="bi bi-trash"></i></button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            @endforeach
-                            </tbody>
-                        </table>
-                        <!-- End Table with stripped rows -->
-                    </div>
-                </div>
-            </div>
+    @if(session('msg'))
+        <div @class('alert alert-success')>
+            {{session('msg')}}
         </div>
+    @endif
 
-    </section>
+    @if(session('error'))
+        <div @class('alert alert-danger')>
+            {{session('error')}}
+        </div>
+    @endif
+
+    <!-- Table with stripped rows -->
+    <table class="table datatable">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Created at</th>
+            <th scope="col">Updated at</th>
+            <th scope="col">Option</th>
+            <th scope="col">Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach($lsType as $type)
+            <tr>
+                <th>{{$type->id}}</th>
+                <td>{{$type->name}}</td>
+                <th>{{$type->created_at}}</th>
+                <td>{{$type->updated_at}}</td>
+                <td>
+                    <a href="{{route("type.edit",$type->id)}}">Edit</a>
+                </td>
+                <td>
+                    <form onsubmit="return confirm('Delete type {{$type->name}}?')" method="POST" action="{{route('type.destroy',$type->id)}}">
+                        @csrf
+                        @method('DELETE')
+                        <button class="btn btn-danger rounded-pill" type="submit"><i class="bi bi-trash"></i></button>
+                    </form>
+                </td>
+            </tr>
+        @endforeach
+        </tbody>
+    </table>
     <!-- Vendor JS Files -->
 
     <script src="public/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
