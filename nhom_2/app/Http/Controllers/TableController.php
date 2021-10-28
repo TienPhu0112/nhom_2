@@ -94,17 +94,20 @@ class TableController extends Controller
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id, Request $request)
+
+    public function destroy(Request $request)
     {
+        $id = (int) $request->input('id');
         $table = Table::find($id);
-        $table->delete();
-        $request->session()->flash("msg", "Delete table successfully.");
-        return redirect(route("table.index"));
+        if($table->delete()){
+            return response()->json([
+                'error' => false,
+                'message' => 'Xóa bàn thành công'
+            ]);
+        }
+
+        return response()->json([
+            'error' => true
+        ]);
     }
 }

@@ -103,7 +103,7 @@ class CustomerController extends Controller
         if($customer->delete()){
             return response()->json([
                'error' => false,
-               'message' => 'Xóa thành công danh mục'
+               'message' => 'Xóa thành công khách hàng'
             ]);
         }
 
