@@ -10,7 +10,7 @@ class Food extends Model
     use HasFactory;
 
     public function dishTypes(){
-        return $this -> belongsTo('App\Models\DishType');
+        return $this -> belongsTo('App\Models\DishType','dishtype_id','id');
     }
 
     public function foodOrders(){

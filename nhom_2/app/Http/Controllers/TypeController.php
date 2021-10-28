@@ -47,7 +47,7 @@ class TypeController extends Controller
     public function edit($id)
     {
         $type = DishType::find($id);
-        return view('type.edit')->with(['type'=>$type, 'title' => 'Edit type']);
+        return view('type.edit')->with(['type'=>$type, 'title' => 'Cập nhật loại đồ ăn']);
     }
 
 

@@ -56,16 +56,33 @@
         </li>
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav3" data-bs-toggle="collapse" href="#">
-                <i class="bx bxs-food-menu"></i><span>Menu</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="bx bxs-food-menu"></i><span>Loại Đồ Ăn</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="components-nav3" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="{{asset('admin/type')}}">
 
-                        <i class="bi bi-circle"></i><span>Dish Type</span>
+                        <i class="bi bi-circle"></i><span>Danh Sách Loại Đồ Ăn</span>
                     </a>
+                    <a href="{{asset('admin/type/create')}}">
+                        <i class="bi bi-circle"></i><span>Thêm Loại Đồ Ăn</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav4" data-bs-toggle="collapse" href="#">
+                <i class="ri-restaurant-line"></i><span>Món Ăn</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav4" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
                     <a href="{{asset('admin/food')}}">
-                        <i class="bi bi-circle"></i><span>Food</span>
+
+                        <i class="bi bi-circle"></i><span>Danh Sách Món Ăn</span>
+                    </a>
+                    <a href="{{asset('admin/food/create')}}">
+                        <i class="bi bi-circle"></i><span>Thêm Món Ăn</span>
                     </a>
                 </li>
             </ul>

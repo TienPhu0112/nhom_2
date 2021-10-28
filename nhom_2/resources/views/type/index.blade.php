@@ -1,9 +1,6 @@
 @extends('admin.main')
 
 @section('content')
-    <a class="btn btn-primary rounded-pill"
-       style="margin-bottom: 10px;"
-       href="{{asset('admin/type/create')}}">Add New</a>
 
     @if(session('msg'))
         <div @class('alert alert-success')>
@@ -34,8 +31,10 @@
             <tr>
                 <th>{{$type->id}}</th>
                 <td>{{$type->name}}</td>
-                <th>{{$type->created_at}}</th>
-                <td>{{$type->updated_at}}</td>
+                <td>{{$type->created_at->format('d/m/Y')}}
+                    - {{ $type->created_at->diffForHumans() }}</td>
+                <td>{{$type->updated_at->format('d/m/Y')}}
+                    - {{ $type->updated_at->diffForHumans() }}</td>
                 <td>
                     <a href="{{route("type.edit",$type->id)}}">Edit</a>
                 </td>

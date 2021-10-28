@@ -71,7 +71,7 @@ class FoodController extends Controller
         $lsType = DishType::all();
         $food = Food::find($id);
         return view('food.edit')->with(['food' => $food, 'lsType' => $lsType,
-                                            'title' => 'Edit food']);
+                                            'title' => 'Cập nhật món ăn']);
     }
 
     /**
