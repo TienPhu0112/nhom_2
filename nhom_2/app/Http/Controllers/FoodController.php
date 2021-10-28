@@ -8,38 +8,24 @@ use Illuminate\Http\Request;
 
 class FoodController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index(Request $request)
     {
         $lsFood = Food::all();
         return view('food.index')->with(
-            ["lsFood" => $lsFood, 'title' => 'Trang quản trị món ăn']
+            ["lsFood" => $lsFood, 'title' => 'Danh sách các món ăn']
         );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         $lsType = DishType::all();
         return view('food.add')->with(
-            ['lsType' => $lsType, 'title' => 'Thêm mới']
+            ['lsType' => $lsType, 'title' => 'Thêm món ăn']
         );
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -79,12 +65,7 @@ class FoodController extends Controller
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         $lsType = DishType::all();

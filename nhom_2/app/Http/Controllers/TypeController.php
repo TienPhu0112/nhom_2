@@ -7,37 +7,24 @@ use Illuminate\Http\Request;
 
 class TypeController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index(Request $request)
     {
         $lsType = DishType::all();
         return view('type.index')->with(
-            ["lsType" => $lsType, 'title' => 'Trang quản trị loại đồ ăn']
+            ["lsType" => $lsType, 'title' => 'Danh sách loại đồ ăn']
         );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         return view('type.add')->with(
-                ['title' => 'Thêm mới']
+                ['title' => 'Thêm loại đồ ăn']
             );
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
     public function store(Request $request)
     {
         $request->validate([
@@ -50,36 +37,20 @@ class TypeController extends Controller
         return redirect(route("type.index"));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         $type = DishType::find($id);
         return view('type.edit')->with(['type'=>$type, 'title' => 'Edit type']);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
         $request->validate([
