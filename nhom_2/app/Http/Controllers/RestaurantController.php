@@ -8,10 +8,10 @@ use App\Models\Food;
 
 class RestaurantController extends Controller
 {
-    public function welcome()
+    public function welcome(Request $request)
     {
         $lsType = DishType::all();
         $lsFood = Food::orderBy('created_at', 'desc')->take(6)->get();
-        return view("home")->with(['lsType'=>$lsType, 'lsFood'=>$lsFood]);
+        return view("layout")->with(['lsType'=>$lsType, 'lsFood'=>$lsFood]);
     }
 }
