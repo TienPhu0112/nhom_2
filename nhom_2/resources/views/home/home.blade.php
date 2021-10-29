@@ -96,9 +96,9 @@
                     </ul><!-- @end #filter-list -->
                     <ul id="portfolio">
                         @foreach($lsFood as $food)
-                        <li class="item breakfast"><img src="{{asset($food->image)}}" alt="Food" >
-                            <h2 class="white">{{$food->price}}</h2>
-                        </li>
+                            <li class="item {{$food->name}} mix_all" style="display: inline-block;  opacity: 1;"><img src="{{asset($food->image)}}" alt="Food">
+                                <h2 class="white">{{$food->price}}</h2>
+                            </li>
                         @endforeach
                     </ul><!-- @end #portfolio -->
                 </div><!-- @end #w -->

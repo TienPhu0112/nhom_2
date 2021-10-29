@@ -12,6 +12,6 @@ class RestaurantController extends Controller
     {
         $lsType = DishType::all();
         $lsFood = Food::orderBy('created_at', 'desc')->take(6)->get();
-        return view("home")->with(['lsType'=>$lsType, 'lsFood'=>$lsFood]);
+        return view("home.home")->with(['lsType'=>$lsType, 'lsFood'=>$lsFood]);
     }
 }
