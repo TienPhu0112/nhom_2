@@ -329,8 +329,8 @@
      * @param {(number|string)} [opt.boundIQR=1.5] Data less than min bound is outlier.
      *      default 1.5, means Q1 - 1.5 * (Q3 - Q1).
      *      If 'none'/0 passed, min bound will not be used.
-     * @param {(number|string)} [opt.layout='horizontal']
-     *      Box plot layout, can be 'horizontal' or 'vertical'
+     * @param {(number|string)} [opt.home='horizontal']
+     *      Box plot home, can be 'horizontal' or 'vertical'
      * @return {Object} {
      *      boxData: Array.<Array.<number>>
      *      outliers: Array.<Array.<number>>
