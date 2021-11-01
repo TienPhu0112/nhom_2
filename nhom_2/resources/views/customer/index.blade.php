@@ -24,7 +24,7 @@
             <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
-            <th scope="col">Age</th>
+            <th scope="col">Address</th>
             <th scope="col">Action</th>
         </tr>
         </thead>
@@ -35,7 +35,7 @@
                 <td>{{$customer->name}}</td>
                 <td>{{$customer->email}}</td>
                 <td>{{$customer->phone}}</td>
-                <td>{{$customer->age}}</td>
+                <td>{{$customer->address}}</td>
                 <td>
                     <a href="{{route("customer.edit", $customer->id)}}" class="btn btn-primary btn-sm">
                         <i class="bx bxs-edit"></i>
