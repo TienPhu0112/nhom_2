@@ -10,8 +10,7 @@ class RestaurantController extends Controller
 {
     public function welcome(Request $request)
     {
-        $lsType = DishType::all();
-        $lsFood = Food::orderBy('created_at', 'desc')->take(6)->get();
-        return view("home.home")->with(['lsType'=>$lsType, 'lsFood'=>$lsFood]);
+        $lsFood = Food::orderBy('created_at', 'desc')->take(9)->get();
+        return view("welcome")->with(['lsFood'=>$lsFood, 'title'=>'PATO PLACE']);
     }
 }

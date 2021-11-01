@@ -5606,7 +5606,7 @@
       output$1('placement', placement$1)
     ];
 
-    var labelPrefix$1 = 'link-home';
+    var labelPrefix$1 = 'link-layout';
     var eastX = function (anchor) {
       return anchor.x + anchor.width;
     };
@@ -9294,7 +9294,7 @@
       }
     });
 
-    var labelPrefix = 'home-inset';
+    var labelPrefix = 'layout-inset';
     var westEdgeX = function (anchor) {
       return anchor.x;
     };

@@ -207,7 +207,7 @@
       }
 
       bmap = bmapModel.__bmap; // Set bmap options
-      // centerAndZoom before home and render
+      // centerAndZoom before layout and render
 
       var center = bmapModel.get('center');
       var zoom = bmapModel.get('zoom');
