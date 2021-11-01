@@ -88,6 +88,23 @@
             </ul>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav6" data-bs-toggle="collapse" href="#">
+                <i class="ri-restaurant-line"></i><span>Tin Tức</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav6" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{asset('admin/news')}}">
+
+                        <i class="bi bi-circle"></i><span>Danh Sách Tin Tức</span>
+                    </a>
+                    <a href="{{asset('admin/news/create')}}">
+                        <i class="bi bi-circle"></i><span>Thêm Tin Tức</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
         <!-- End Components Nav -->
 
     </ul>

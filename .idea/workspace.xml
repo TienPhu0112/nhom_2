@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test">
-      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/food/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/food/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_11_01_083820_update_news_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/news/add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/news/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +155,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../shop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../T2011E/Laravel/shoping" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -183,7 +188,10 @@
       <workItem from="1635044455549" duration="8130000" />
       <workItem from="1635162099043" duration="5361000" />
       <workItem from="1635337962769" duration="16949000" />
-      <workItem from="1635435980054" duration="4850000" />
+      <workItem from="1635435980054" duration="5050000" />
+      <workItem from="1635499486900" duration="2624000" />
+      <workItem from="1635515022938" duration="1210000" />
+      <workItem from="1635752970477" duration="4667000" />
     </task>
     <task id="LOCAL-00001" summary="push test view">
       <created>1634559544613</created>

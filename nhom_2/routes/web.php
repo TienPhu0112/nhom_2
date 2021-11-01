@@ -8,6 +8,7 @@ use \App\Http\Controllers\CustomerController;
 use \App\Http\Controllers\TableController;
 use \App\Http\Controllers\TypeController;
 use \App\Http\Controllers\FoodController;
+use \App\Http\Controllers\Admin\NewsController;
 
 Route::get('admin/users/login',[LoginController::class,'index'])->name('login');
 Route::post('admin/users/login/store',[LoginController::class,'store']);
@@ -34,6 +35,9 @@ Route::middleware(['auth'])->group(function(){
 
         #Table
         Route::resource("table",TableController::class);
+
+        #News
+        Route::resource("news",NewsController::class);
     });
 
 });
