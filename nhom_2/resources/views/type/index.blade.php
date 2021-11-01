@@ -33,8 +33,11 @@
                 <td>{{$type->name}}</td>
                 <td>{{$type->created_at->format('d/m/Y')}}
                     - {{ $type->created_at->diffForHumans() }}</td>
-                <td>{{$type->updated_at->format('d/m/Y')}}
+                <td>
+                    @if(isset($type->updated_at))
+                        {{$type->updated_at->format('d/m/Y')}}
                     - {{ $type->updated_at->diffForHumans() }}</td>
+                    @endif
                 <td>
                     <a href="{{route("type.edit", $type->id)}}" class="btn btn-primary rounded-pill">
                         <i class="bx bxs-edit"></i>

@@ -18,3 +18,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 Route::get('admin/changeStatusJson',[App\Http\Controllers\TableController::class,'changeStatusJson']);
+

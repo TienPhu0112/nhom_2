@@ -10,6 +10,6 @@ class DishType extends Model
     use HasFactory;
 
     public function foods(){
-        return $this -> hasMany('App\Models\Food');
+        return $this -> hasMany('App\Models\Food', 'dishtype_id', 'id');
     }
 }
