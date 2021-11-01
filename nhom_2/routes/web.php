@@ -8,10 +8,15 @@ use \App\Http\Controllers\CustomerController;
 use \App\Http\Controllers\TableController;
 use \App\Http\Controllers\TypeController;
 use \App\Http\Controllers\FoodController;
-use \App\Http\Controllers\Admin\NewsController;
 
 Route::get('admin/users/login',[LoginController::class,'index'])->name('login');
 Route::post('admin/users/login/store',[LoginController::class,'store']);
+
+//Home
+Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Menu
+Route::get('/menu', [App\Http\Controllers\ToGoOrderController::class, 'menu']);
 
 Route::middleware(['auth'])->group(function(){
     Route::prefix('admin')->group(function(){
@@ -35,15 +40,11 @@ Route::middleware(['auth'])->group(function(){
 
         #Table
         Route::resource("table",TableController::class);
-
-        #News
-        Route::resource("news",NewsController::class);
     });
 
 });
 
 
-Route::get("/",[App\Http\Controllers\RestaurantController::class,'welcome']);
 
 
 

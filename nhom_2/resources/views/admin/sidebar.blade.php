@@ -2,6 +2,11 @@
 <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="{{asset('/home')}}">
+                <i class="bx bxs-receipt"></i><span>Dashboard</span>
+            </a>
+        </li>
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav1" data-bs-toggle="collapse" href="#">
