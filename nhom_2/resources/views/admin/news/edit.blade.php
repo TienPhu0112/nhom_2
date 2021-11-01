@@ -1,14 +1,15 @@
 @extends('admin.main')
 
 @section('content')
-    <form class="row g-3" action="{{route('news.store')}}" method="POST">
+    <form class="row g-3" action="{{route('news.update',$news->id)}}" method="POST">
         @csrf
+        @method('PUT')
         <div class="col-12">
             <label class="form-label">Author ID</label>
             <div class="col-sm-12">
                 <select class="form-select" aria-label="Default select example" name="author_id">
                     @foreach($lsUser as $user)
-                        <option value="{{ $user->id }}">{{ $user->name }}</option>
+                        <option value="{{ $user->id }}" {{ $news->author_id===$user->id ? 'selected=""' : '' }}>{{ $user->name }}</option>
                     @endforeach
                 </select>
             </div>
@@ -17,27 +18,31 @@
             <label class="form-label">Topic</label>
             <div class="col-sm-12">
                 <select class="form-select" aria-label="Default select example" name="topic">
-                    <option value="1">Cooking Recipe</option>
-                    <option value="2">Delicious Foods</option>
-                    <option value="3">Event Design</option>
-                    <option value="4">Restaurant Place</option>
+                    <option value="1" {{ $news->topic==1  ? 'selected=""' : ''}}>Cooking Recipe</option>
+                    <option value="2" {{ $news->topic==2  ? 'selected=""' : ''}}>Delicious Foods</option>
+                    <option value="3" {{ $news->topic==3  ? 'selected=""' : ''}}>Event Design</option>
+                    <option value="4" {{ $news->topic==4  ? 'selected=""' : ''}}>Restaurant Place</option>
                 </select>
             </div>
         </div>
         <div class="col-12">
             <label for="inputNanme4" class="form-label">Title</label>
-            <input type="text" class="form-control" id="inputNanme4" name="title">
+            <input type="text" class="form-control" id="inputNanme4" name="title" value="{{ $news->title }}">
         </div>
         <div class="col-12">
             <label for="inputPassword" class="col-sm-2 col-form-label">Content</label>
             <div class="col-sm-12">
-                <textarea id="content" name="content"></textarea>
+                <textarea id="content" name="content">
+                    {!! $news->content !!}
+                </textarea>
             </div>
         </div>
         <div class="col-12">
             <label for="inputPassword" class="col-sm-2 col-form-label">Sub Content</label>
             <div class="col-sm-12">
-                <textarea id="sub_content" name="sub_content"></textarea>
+                <textarea id="sub_content" name="sub_content">
+                    {!! $news->sub_content !!}
+                </textarea>
             </div>
         </div>
         <div class="text-center">
@@ -76,3 +81,4 @@
             } );
     </script>
 @endsection
+
