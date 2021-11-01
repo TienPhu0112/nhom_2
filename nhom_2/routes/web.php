@@ -39,7 +39,7 @@ Route::middleware(['auth'])->group(function(){
 });
 
 
-Route::get('/',[\App\Http\Controllers\RestaurantController::class,'welcome']);
+Route::get("/",[App\Http\Controllers\RestaurantController::class,'welcome']);
 
 
 
