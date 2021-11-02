@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\DishType;
 use App\Models\Food;
+
 
 class RestaurantController extends Controller
 {
