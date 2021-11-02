@@ -15,4 +15,5 @@
                     @endforeach
                 @endif
             @endforeach
+    </div>
 @endif
