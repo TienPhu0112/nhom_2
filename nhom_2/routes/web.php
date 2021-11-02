@@ -16,6 +16,11 @@ Route::post('admin/users/login/store',[LoginController::class,'store']);
 //Home
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+//Blog
+Route::get('/blog',[\App\Http\Controllers\BlogController::class,'welcome']);
+Route::get('/blog/{topic}',[\App\Http\Controllers\BlogController::class,'welcome'])->name('cate');
+Route::get('/blog',[\App\Http\Controllers\BlogController::class,'welcome'])->name('search');
+
 //Menu
 Route::get('/menu', [App\Http\Controllers\ToGoOrderController::class, 'menu']);
 
@@ -44,6 +49,7 @@ Route::middleware(['auth'])->group(function(){
 
         #News
         Route::resource("news",NewsController::class);
+
     });
 
 });

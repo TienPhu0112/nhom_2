@@ -8,6 +8,7 @@
             <th scope="col">Author</th>
             <th scope="col">Title</th>
             <th scope="col">Topic</th>
+            <th scope="col">Image</th>
             <th scope="col">Content</th>
             <th scope="col">Sub Content</th>
             <th scope="col">Created At</th>
@@ -25,6 +26,9 @@
                     {{ $news->topic == 2 ? "Delicious Foods" : "" }}
                     {{ $news->topic == 3 ? "Event Design" : "" }}
                     {{ $news->topic == 4 ? "Restaurant Place" : "" }}
+                </td>
+                <td>
+                    <img src="{{ asset($news->image) }}" alt="" style="width: 200px">
                 </td>
                 <td>{{ $news->content }}</td>
                 <td>{{ $news->sub_content }}</td>

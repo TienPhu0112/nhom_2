@@ -1,7 +1,7 @@
 @extends('admin.main')
 
 @section('content')
-    <form class="row g-3" action="{{route('news.store')}}" method="POST">
+    <form class="row g-3" action="{{route('news.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="col-12">
             <label class="form-label">Author ID</label>
@@ -27,6 +27,10 @@
         <div class="col-12">
             <label for="inputNanme4" class="form-label">Title</label>
             <input type="text" class="form-control" id="inputNanme4" name="title">
+        </div>
+        <div class="col-12">
+            <label for="upload" class="form-label">Image</label>
+            <input class="form-control" type="file" name="image" id="upload">
         </div>
         <div class="col-12">
             <label for="inputPassword" class="col-sm-2 col-form-label">Content</label>
@@ -75,4 +79,5 @@
                 console.error( err.stack );
             } );
     </script>
+
 @endsection

@@ -46,6 +46,12 @@ class NewsController extends Controller
         $news->title = $request->input('title');
         $news->content = $request->input('content');
         $news->sub_content = $request->input('sub_content');
+        $imagePath = "";
+        if($request->hasFile("image")) {
+            $imagePath = $request->image->store('news-img');
+            $imagePath = 'img/'.$imagePath;
+        }
+        $news->image = $imagePath;
 
         $news->save();
         $request->session()->flash("msg","Thêm tin tức thành công");
@@ -86,8 +92,15 @@ class NewsController extends Controller
         $news->title = $request->input('title');
         $news->content = $request->input('content');
         $news->sub_content = $request->input('sub_content');
+        $imagePath = "";
+        if($request->hasFile("image")) {
+            $imagePath = $request->image->store('news-img');
+            $imagePath = 'img/'.$imagePath;
+            $news->image = $imagePath;
+        }
 
         $news->save();
+
         $request->session()->flash("msg","Sửa tin tức thành công");
         return redirect(route("news.index"));
     }

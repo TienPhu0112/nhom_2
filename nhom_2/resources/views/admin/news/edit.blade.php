@@ -1,7 +1,7 @@
 @extends('admin.main')
 
 @section('content')
-    <form class="row g-3" action="{{route('news.update',$news->id)}}" method="POST">
+    <form class="row g-3" action="{{route('news.update',$news->id)}}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="col-12">
@@ -28,6 +28,12 @@
         <div class="col-12">
             <label for="inputNanme4" class="form-label">Title</label>
             <input type="text" class="form-control" id="inputNanme4" name="title" value="{{ $news->title }}">
+        </div>
+        <div class="col-12">
+            <label for="formFile" class="form-label">Image</label>
+            <input class="form-control" type="file" id="formFile" name="image">
+            <br>
+            <img src="{{asset($news->image)}}" style="width:250px; margin-bottom: 5px;">
         </div>
         <div class="col-12">
             <label for="inputPassword" class="col-sm-2 col-form-label">Content</label>
