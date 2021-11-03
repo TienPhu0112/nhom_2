@@ -11,6 +11,7 @@
             <th scope="col">Image</th>
             <th scope="col">Content</th>
             <th scope="col">Sub Content</th>
+            <th scope="col">Favorite</th>
             <th scope="col">Created At</th>
             <th scope="col">Actions</th>
         </tr>
@@ -32,6 +33,7 @@
                 </td>
                 <td>{{ $news->content }}</td>
                 <td>{{ $news->sub_content }}</td>
+                <td>{{ $news->favorite == 1 ? "Yes" : "No" }}</td>
                 <td>{{ $news->created_at }}</td>
                 <td style="width: 100px">
                     <a href="{{route("news.edit", $news->id)}}" class="btn btn-primary btn-sm">

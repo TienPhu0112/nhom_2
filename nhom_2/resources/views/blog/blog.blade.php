@@ -3,15 +3,15 @@
 @section('bread-crumb')
     <div class="bread-crumb bo5-b p-t-17 p-b-17">
         <div class="container">
-            <a href="index.html" class="txt27">
+            <a href="{{ route('home') }}" class="txt27">
                 Home
             </a>
 
             <span class="txt29 m-l-10 m-r-10">/</span>
 
-            <span class="txt29">
-					Blog
-				</span>
+            <a href="{{ asset('/blog') }}" class="txt27">
+                Blog
+            </a>
         </div>
     </div>
 @endsection

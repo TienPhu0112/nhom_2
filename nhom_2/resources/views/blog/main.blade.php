@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Blog</title>
+    <title>{{ $title }}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
@@ -251,95 +251,26 @@
                         </h4>
 
                         <ul>
+                            @foreach($popular_news as $news1)
                             <li class="flex-w m-b-25">
                                 <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                    <a href="#">
-                                        <img src="/images/blog-11.jpg" alt="IMG-BLOG">
+                                    <a href="{{ route('detail',$news1->id) }}">
+                                        <img src="{{ asset($news1->image) }}" alt="IMG-BLOG">
                                     </a>
                                 </div>
 
                                 <div class="size28">
-                                    <a href="#" class="dis-block txt28 m-b-8">
-                                        Best Places for Wine
+                                    <a href="{{ route('detail',$news1->id) }}" class="dis-block txt28 m-b-8">
+                                        {{ $news1->title }}
                                     </a>
 
                                     <span class="txt14">
-											3 days ago
+											{{ $news1->created_at->diffForHumans() }}
 										</span>
                                 </div>
                             </li>
+                            @endforeach
 
-                            <li class="flex-w m-b-25">
-                                <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                    <a href="#">
-                                        <img src="/images/blog-12.jpg" alt="IMG-BLOG">
-                                    </a>
-                                </div>
-
-                                <div class="size28">
-                                    <a href="#" class="dis-block txt28 m-b-8">
-                                        Eggs and Cheese
-                                    </a>
-
-                                    <span class="txt14">
-											July 2, 2017
-										</span>
-                                </div>
-                            </li>
-
-                            <li class="flex-w m-b-25">
-                                <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                    <a href="#">
-                                        <img src="/images/blog-13.jpg" alt="IMG-BLOG">
-                                    </a>
-                                </div>
-
-                                <div class="size28">
-                                    <a href="#" class="dis-block txt28 m-b-8">
-                                        Style the Wedding Party
-                                    </a>
-
-                                    <span class="txt14">
-											May 28, 2017
-										</span>
-                                </div>
-                            </li>
-
-                            <li class="flex-w m-b-25">
-                                <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                    <a href="#">
-                                        <img src="/images/blog-14.jpg" alt="IMG-BLOG">
-                                    </a>
-                                </div>
-
-                                <div class="size28">
-                                    <a href="#" class="dis-block txt28 m-b-8">
-                                        Cooking recipe Delicious
-                                    </a>
-
-                                    <span class="txt14">
-											May 25, 2017
-										</span>
-                                </div>
-                            </li>
-
-                            <li class="flex-w m-b-25">
-                                <div class="size16 bo-rad-10 wrap-pic-w of-hidden m-r-18">
-                                    <a href="#">
-                                        <img src="/images/blog-15.jpg" alt="IMG-BLOG">
-                                    </a>
-                                </div>
-
-                                <div class="size28">
-                                    <a href="#" class="dis-block txt28 m-b-8">
-                                        Pizza is prepared fresh
-                                    </a>
-
-                                    <span class="txt14">
-											May 2, 2017
-										</span>
-                                </div>
-                            </li>
                         </ul>
                     </div>
 

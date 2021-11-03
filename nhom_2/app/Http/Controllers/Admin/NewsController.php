@@ -38,6 +38,7 @@ class NewsController extends Controller
             'title' => 'required',
             'content' => 'required',
             'sub_content' => 'required',
+            'favorite' => 'required|numeric'
         ]);
 
         $news = new News();
@@ -46,6 +47,7 @@ class NewsController extends Controller
         $news->title = $request->input('title');
         $news->content = $request->input('content');
         $news->sub_content = $request->input('sub_content');
+        $news->favorite = $request->input('favorite');
         $imagePath = "";
         if($request->hasFile("image")) {
             $imagePath = $request->image->store('news-img');
@@ -84,6 +86,7 @@ class NewsController extends Controller
             'title' => 'required',
             'content' => 'required',
             'sub_content' => 'required',
+            'favorite' => 'required|numeric'
         ]);
 
         $news = News::find($id);
@@ -92,6 +95,7 @@ class NewsController extends Controller
         $news->title = $request->input('title');
         $news->content = $request->input('content');
         $news->sub_content = $request->input('sub_content');
+        $news->favorite = $request->input('favorite');
         $imagePath = "";
         if($request->hasFile("image")) {
             $imagePath = $request->image->store('news-img');

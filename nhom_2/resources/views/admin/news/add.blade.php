@@ -32,6 +32,23 @@
             <label for="upload" class="form-label">Image</label>
             <input class="form-control" type="file" name="image" id="upload">
         </div>
+        <fieldset class="col-12">
+            <legend class="col-form-label col-sm-2 pt-0">Favorite</legend>
+            <div class="col-sm-12">
+                <div class="form-check" style="display: inline-block">
+                    <input class="form-check-input" type="radio" name="favorite" id="gridRadios1" value="0" checked="">
+                    <label class="form-check-label" for="gridRadios1">
+                        No
+                    </label>
+                </div>
+                <div class="form-check" style="display: inline-block">
+                    <input class="form-check-input" type="radio" name="favorite" id="gridRadios2" value="1">
+                    <label class="form-check-label" for="gridRadios2">
+                        Yes
+                    </label>
+                </div>
+            </div>
+        </fieldset>
         <div class="col-12">
             <label for="inputPassword" class="col-sm-2 col-form-label">Content</label>
             <div class="col-sm-12">
