@@ -83,13 +83,13 @@ class CustomerController extends Controller
             'name' => 'required|min:3|max:191',
             'email' => 'required',
             'phone' => 'required|numeric',
-            'age' => 'required|numeric'
+            'address' => 'required'
         ]);
         $customer = Customer::find($id);
         $customer->name = $request->input('name');
         $customer->email = $request->input('email');
         $customer->phone = $request->input('phone');
-        $customer->age = $request->input('age');
+        $customer->address = $request->input('address');
         $customer->save();
         $request->session()->flash("msg", "Update customer successfully.");
         return  redirect(route("customer.index"));

@@ -32,9 +32,9 @@
                 </div>
             </div>
             <div class="row mb-3">
-                <label for="inputAge" class="col-sm-2 col-form-label">Address</label>
+                <label for="inputAddress" class="col-sm-2 col-form-label">Address</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="address" name="address" value="{{$customer->address}}">
+                    <input type="text" class="form-control" id="address" name="address" value="{{$customer->address}}">
                 </div>
             </div>
 
