@@ -59,7 +59,7 @@
                             </li>
 
                             <li>
-                                <a href="reservation.html">Reservation</a>
+                                <a href="{{asset('/reservation')}}">Reservation</a>
                             </li>
 
                             <li>
