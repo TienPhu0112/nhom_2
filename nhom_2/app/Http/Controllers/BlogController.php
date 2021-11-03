@@ -13,11 +13,9 @@ class BlogController extends Controller
         $topic = $request->topic;
         if(isset($topic)){
             $lsNews = News::where('topic','=',$topic)->paginate(4);
-            $lsNews = $lsNews->get();
         }else{
             if (isset($search_title)){
-                $lsNews = News::where('title','like','%'.$search_title.'%')->paginate(4);
-                $lsNews = $lsNews->get();
+                $lsNews = News::where('title','like','%'.$search_title.'%')->paginate(1);
             }else{
                 $lsNews = News::paginate(4);
             }
@@ -26,6 +24,15 @@ class BlogController extends Controller
             'lsNews' => $lsNews
         ]);
 
+    }
+
+    public function detail($id){
+        if(isset($id)){
+            $news = News::find($id);
+        }
+        return view("blog.blog_detail",[
+            'news' => $news
+        ]);
     }
 
 }

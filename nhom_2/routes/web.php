@@ -20,6 +20,7 @@ Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->nam
 Route::get('/blog',[\App\Http\Controllers\BlogController::class,'welcome']);
 Route::get('/blog/{topic}',[\App\Http\Controllers\BlogController::class,'welcome'])->name('cate');
 Route::get('/blog',[\App\Http\Controllers\BlogController::class,'welcome'])->name('search');
+Route::get('/blog-detail/{id}',[\App\Http\Controllers\BlogController::class,'detail'])->name('detail');
 
 //Menu
 Route::get('/menu', [App\Http\Controllers\ToGoOrderController::class, 'menu']);

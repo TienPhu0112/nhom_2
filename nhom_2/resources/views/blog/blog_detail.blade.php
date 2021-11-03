@@ -9,21 +9,27 @@
 
             <span class="txt29 m-l-10 m-r-10">/</span>
 
+            <a href="blog.html" class="txt27">
+                Blog
+            </a>
+
+            <span class="txt29 m-l-10 m-r-10">/</span>
+
             <span class="txt29">
-					Blog
-				</span>
+					{{ $news->title }}
+            </span>
         </div>
     </div>
 @endsection
 
 @section('content')
     <div class="col-md-8 col-lg-9">
-    <div class="p-t-80 p-b-124 bo5-r h-full p-r-50 p-r-0-md bo-none-md">
-    @foreach($lsNews as $news)
-        <!-- Block4 -->
+        <div class="p-t-80 p-b-124 bo5-r p-r-50 h-full p-r-0-md bo-none-md">
+            <!-- Block4 -->
             <div class="blo4 p-b-63">
+                <!-- - -->
                 <div class="pic-blo4 hov-img-zoom bo-rad-10 pos-relative">
-                    <a href="{{ route('detail',$news->id) }}">
+                    <a href="{{ route('detail', $news->id) }}">
                         <img src="{{ asset($news->image) }}" alt="IMG-BLOG">
                     </a>
 
@@ -38,6 +44,7 @@
                     </div>
                 </div>
 
+                <!-- - -->
                 <div class="text-blo4 p-t-33">
                     <h4 class="p-b-16">
                         <a href="{{ route('detail', $news->id) }}" class="tit9">{{ $news->title }}</a>
@@ -60,21 +67,16 @@
                             {{ $news->topic == 3 ? "Event Design" : "" }}
                             {{ $news->topic == 4 ? "Restaurant Place" : "" }}
                         </span>
+
                     </div>
 
                     <p>
-                        {!! $news->sub_content !!}
+                        {!! $news->content !!}
                     </p>
-
-                    <a href="blog-detail.html" class="dis-block txt4 m-t-30">
-                        Continue Reading
-                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                    </a>
                 </div>
             </div>
-    @endforeach
-    <!-- Pagination -->
-        {{ $lsNews->links('blog.paginator') }}
+
+
+        </div>
     </div>
-</div>
 @endsection
