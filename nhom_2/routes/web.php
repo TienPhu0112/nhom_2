@@ -10,21 +10,25 @@ use \App\Http\Controllers\TypeController;
 use \App\Http\Controllers\FoodController;
 use \App\Http\Controllers\Admin\NewsController;
 use \App\Http\Controllers\Admin\GalleryController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\GalleryController2;
+use App\Http\Controllers\RestaurantController;
 
 Route::get('admin/users/login',[LoginController::class,'index'])->name('login');
 Route::post('admin/users/login/store',[LoginController::class,'store']);
 
 //Home
-Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 //Blog
-Route::get('/blog',[\App\Http\Controllers\BlogController::class,'welcome']);
-Route::get('/blog/{topic}',[\App\Http\Controllers\BlogController::class,'welcome'])->name('cate');
-Route::get('/blog',[\App\Http\Controllers\BlogController::class,'welcome'])->name('search');
-Route::get('/blog-detail/{id}',[\App\Http\Controllers\BlogController::class,'detail'])->name('detail');
+Route::get('/blog',[BlogController::class,'welcome']);
+Route::get('/blog/{topic}',[BlogController::class,'welcome'])->name('cate');
+Route::get('/blog',[BlogController::class,'welcome'])->name('search');
+Route::get('/blog-detail/{id}',[BlogController::class,'detail'])->name('detail');
 
 //Gallery
-Route::get('/gallery',[\App\Http\Controllers\GalleryController::class,'welcome']);
+Route::get('/gallery',[GalleryController2::class,'welcome']);
 
 //Menu
 Route::get('/menu', [App\Http\Controllers\ToGoOrderController::class, 'menu']);
@@ -62,9 +66,9 @@ Route::middleware(['auth'])->group(function(){
 });
 
 
-Route::get("/",[App\Http\Controllers\RestaurantController::class,'welcome']);
+Route::get("/",[RestaurantController::class,'welcome']);
 
-Route::get("/reservation",[App\Http\Controllers\RestaurantController::class,'reservation']);
+Route::get("/reservation",[RestaurantController::class,'reservation']);
 
 
 
