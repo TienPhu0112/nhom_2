@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Gallery;
 use App\Models\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -9,6 +10,7 @@ use Illuminate\Support\Facades\DB;
 class BlogController extends Controller
 {
     public function welcome(Request $request){
+        $lsImg = Gallery::all();
         $popular_news = News::where('favorite','=',1)->get();
         $search_title = $request->search_title;
         $topic = $request->topic;
@@ -24,12 +26,14 @@ class BlogController extends Controller
         return view("blog.blog",[
             'lsNews' => $lsNews,
             'popular_news' => $popular_news,
-            'title' => 'Blog'
+            'title' => 'Blog',
+            'lsImg' => $lsImg
         ]);
 
     }
 
     public function detail($id){
+        $lsImg = Gallery::all();
         $popular_news = News::where('favorite','=',1)->get();
         if(isset($id)){
             $news = News::find($id);
@@ -37,7 +41,8 @@ class BlogController extends Controller
         return view("blog.blog_detail",[
             'news' => $news,
             'popular_news' => $popular_news,
-            'title' => 'Blog Detail'
+            'title' => 'Blog Detail',
+            'lsImg' => $lsImg
         ]);
     }
 

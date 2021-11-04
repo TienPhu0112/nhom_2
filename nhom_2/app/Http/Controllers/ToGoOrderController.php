@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\FoodOrder;
+use App\Models\Gallery;
 use Illuminate\Http\Request;
 use App\Models\DishType;
 use App\Models\Food;
@@ -18,13 +19,16 @@ class ToGoOrderController extends Controller
     }
 
     public function menu(Request $request) {
+        $lsImg = Gallery::all();
         $lsType = DishType::all();
         $lsFood = Food::orderBy('created_at', 'desc')->get();
+
 
         return view('menu')->with([
             'lsType' => $lsType,
             'lsFood'=> $lsFood,
             'title' => 'Menu',
+            'lsImg' => $lsImg,
         ]);
     }
     public function add_food(Request $request, $fid) {

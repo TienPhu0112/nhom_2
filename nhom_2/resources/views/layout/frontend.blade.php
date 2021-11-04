@@ -24,24 +24,24 @@
         </li>
 
         <li class="t-center m-b-13">
-            <a href="gallery.html" class="txt19">Gallery</a>
+            <a href="{{ asset('/gallery') }}" class="txt19">Gallery</a>
         </li>
 
         <li class="t-center m-b-13">
-            <a href="about.html" class="txt19">About</a>
+            <a href="#" class="txt19">About</a>
         </li>
 
         <li class="t-center m-b-13">
-            <a href="blog.html" class="txt19">Blog</a>
+            <a href="{{ asset('/blog') }}" class="txt19">Blog</a>
         </li>
 
         <li class="t-center m-b-33">
-            <a href="contact.html" class="txt19">Contact</a>
+            <a href="#" class="txt19">Contact</a>
         </li>
 
         <li class="t-center">
             <!-- Button3 -->
-            <a href="reservation.html" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
+            <a href="{{ asset('/reservation') }}" class="btn3 flex-c-m size13 txt11 trans-0-4 m-l-r-auto">
                 Reservation
             </a>
         </li>
@@ -56,41 +56,14 @@
 
         <!-- Gallery -->
         <div class="wrap-gallery-sidebar flex-w">
-            <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-01.jpg" data-lightbox="gallery-footer">
-                <img src="images/photo-gallery-thumb-01.jpg" alt="GALLERY">
-            </a>
-
-            <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-02.jpg" data-lightbox="gallery-footer">
-                <img src="images/photo-gallery-thumb-02.jpg" alt="GALLERY">
-            </a>
-
-            <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-03.jpg" data-lightbox="gallery-footer">
-                <img src="images/photo-gallery-thumb-03.jpg" alt="GALLERY">
-            </a>
-
-            <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-05.jpg" data-lightbox="gallery-footer">
-                <img src="images/photo-gallery-thumb-05.jpg" alt="GALLERY">
-            </a>
-
-            <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-06.jpg" data-lightbox="gallery-footer">
-                <img src="images/photo-gallery-thumb-06.jpg" alt="GALLERY">
-            </a>
-
-            <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-07.jpg" data-lightbox="gallery-footer">
-                <img src="images/photo-gallery-thumb-07.jpg" alt="GALLERY">
-            </a>
-
-            <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-09.jpg" data-lightbox="gallery-footer">
-                <img src="images/photo-gallery-thumb-09.jpg" alt="GALLERY">
-            </a>
-
-            <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-10.jpg" data-lightbox="gallery-footer">
-                <img src="images/photo-gallery-thumb-10.jpg" alt="GALLERY">
-            </a>
-
-            <a class="item-gallery-sidebar wrap-pic-w" href="images/photo-gallery-11.jpg" data-lightbox="gallery-footer">
-                <img src="images/photo-gallery-thumb-11.jpg" alt="GALLERY">
-            </a>
+            @foreach($lsImg as $key => $img)
+                <a class="item-gallery-sidebar wrap-pic-w" href="{{ asset($img -> image) }}" data-lightbox="gallery-footer">
+                    <img src="{{ asset($img -> image) }}" alt="GALLERY">
+                </a>
+                @if($key == 8)
+                    @break
+                @endif
+            @endforeach
         </div>
     </div>
 </aside>
@@ -117,7 +90,7 @@
         <div class="close-mo-video-01 trans-0-4" data-dismiss="modal" aria-label="Close">&times;</div>
 
         <div class="wrap-video-mo-01">
-            <div class="w-full wrap-pic-w op-0-0"><img src="images/icons/video-16-9.jpg" alt="IMG"></div>
+            <div class="w-full wrap-pic-w op-0-0"><img src="/images/icons/video-16-9.jpg" alt="IMG"></div>
             <div class="video-mo-01">
                 <iframe src="https://www.youtube.com/embed/5k1hSu2gdKE?rel=0&amp;showinfo=0" allowfullscreen></iframe>
             </div>

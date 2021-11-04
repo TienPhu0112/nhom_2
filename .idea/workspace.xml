@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test">
-      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/GalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/GalleryController2.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/BlogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/RestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/RestaurantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/ToGoOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/ToGoOrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/layout/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/layout/frontend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/layout/frontend.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/layout/header.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
