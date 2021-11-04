@@ -2,18 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test">
-      <change afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/Admin/GalleryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/GalleryController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhom_2/app/Models/Gallery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_11_04_131657_create_galleries_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/gallery/add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/gallery/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/gallery/index.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/blog/blog_search.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/gallery/gallery.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/layout/footer.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/layout/head.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/layout/header.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/layout/script_foot.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/layout/top_button.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/GalleryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/GalleryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/blog/blog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/blog/blog.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/blog/blog_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/blog/blog_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/blog/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/blog/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/gallery/gallery.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/gallery/gallery.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/layout/frontend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/layout/frontend.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +170,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/nhom_2/resources/views/admin/gallery" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../T2011E/Laravel/shoping" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>

@@ -16,7 +16,7 @@
     </div>
 @endsection
 
-@section('content')
+@section('content1')
     <div class="col-md-8 col-lg-9">
     <div class="p-t-80 p-b-124 bo5-r h-full p-r-50 p-r-0-md bo-none-md">
     @foreach($lsNews as $news)

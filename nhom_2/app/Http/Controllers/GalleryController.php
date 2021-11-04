@@ -11,6 +11,7 @@ class GalleryController extends Controller
         $lsImg = Gallery::all();
         return view("gallery.gallery",[
             'lsImg' => $lsImg,
+            'title' => 'Gallery'
         ]);
     }
 

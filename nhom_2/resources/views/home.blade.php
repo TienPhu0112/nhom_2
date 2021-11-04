@@ -350,7 +350,7 @@
                                         @foreach($lsBooking as $booking)
                                            <tr>
                                                 <td>{{$booking->id}}</td>
-                                                <td><a href="#" class="text-primary">{{$booking->customer->name}}</td>
+                                                <td><a href="#" class="text-primary">{{$booking->customers->name}}</td>
                                                 <td>{{$booking->tables->type}}</a></td>
                                                 <td>{{$booking->booking_date}}</td>
                                                 <td><span class="badge bg-success"> {{$booking->status}}</span></td>
