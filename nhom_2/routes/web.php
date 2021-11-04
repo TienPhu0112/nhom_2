@@ -9,6 +9,7 @@ use \App\Http\Controllers\TableController;
 use \App\Http\Controllers\TypeController;
 use \App\Http\Controllers\FoodController;
 use \App\Http\Controllers\Admin\NewsController;
+use \App\Http\Controllers\Admin\GalleryController;
 
 Route::get('admin/users/login',[LoginController::class,'index'])->name('login');
 Route::post('admin/users/login/store',[LoginController::class,'store']);
@@ -21,6 +22,9 @@ Route::get('/blog',[\App\Http\Controllers\BlogController::class,'welcome']);
 Route::get('/blog/{topic}',[\App\Http\Controllers\BlogController::class,'welcome'])->name('cate');
 Route::get('/blog',[\App\Http\Controllers\BlogController::class,'welcome'])->name('search');
 Route::get('/blog-detail/{id}',[\App\Http\Controllers\BlogController::class,'detail'])->name('detail');
+
+//Gallery
+Route::get('/gallery',[\App\Http\Controllers\GalleryController::class,'welcome']);
 
 //Menu
 Route::get('/menu', [App\Http\Controllers\ToGoOrderController::class, 'menu']);
@@ -51,6 +55,8 @@ Route::middleware(['auth'])->group(function(){
         #News
         Route::resource("news",NewsController::class);
 
+        #Gallery
+        Route::resource("gallery",GalleryController::class);
     });
 
 });

@@ -66,7 +66,7 @@
                         {!! $news->sub_content !!}
                     </p>
 
-                    <a href="blog-detail.html" class="dis-block txt4 m-t-30">
+                    <a href="{{ route('detail', $news->id) }}" class="dis-block txt4 m-t-30">
                         Continue Reading
                         <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
                     </a>

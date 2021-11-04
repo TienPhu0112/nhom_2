@@ -110,6 +110,23 @@
             </ul>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav7" data-bs-toggle="collapse" href="#">
+                <i class="bx bx-news"></i><span>Bộ Sưu Tập</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav7" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{asset('admin/gallery')}}">
+
+                        <i class="bi bi-circle"></i><span>Danh Sách Hình Ảnh</span>
+                    </a>
+                    <a href="{{asset('admin/gallery/create')}}">
+                        <i class="bi bi-circle"></i><span>Thêm Hình Ảnh</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
         <!-- End Components Nav -->
 
     </ul>
