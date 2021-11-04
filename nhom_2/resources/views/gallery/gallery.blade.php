@@ -1,5 +1,4 @@
 @extends('layout.frontend')
-
 @section('content')
     <!-- Title Page -->
     <section class="bg-title-page flex-c-m p-t-160 p-b-80 p-l-15 p-r-15" style="background-image: url(/images/bg-title-page-02.jpg);">
@@ -55,6 +54,15 @@
 
     </div>
 @endsection
+
+
+@section('gallery_script')
+    <script type="text/javascript" src="/vendor/isotope/isotope.pkgd.min.js"></script>
+    <!--===============================================================================================-->
+@endsection
+
+
+
 
 
 

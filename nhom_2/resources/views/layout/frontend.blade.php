@@ -104,6 +104,7 @@
 <!-- Footer -->
 @include('layout.footer')
 
+
 @include('layout.top_button')
 
 <!-- Container Selection1 -->
@@ -127,6 +128,7 @@
 
 
 @include('layout.script_foot')
+@yield('gallery_script')
 
 </body>
 </html>
