@@ -12,7 +12,7 @@ class TypeController extends Controller
     {
         $lsType = DishType::all();
         return view('type.index')->with(
-            ["lsType" => $lsType, 'title' => 'Danh sách loại đồ ăn']
+            ["lsType" => $lsType, 'title' => 'Food Type List']
         );
     }
 
@@ -20,7 +20,7 @@ class TypeController extends Controller
     public function create()
     {
         return view('type.add')->with(
-                ['title' => 'Thêm loại đồ ăn']
+                ['title' => 'Food Category']
             );
     }
 
@@ -47,7 +47,7 @@ class TypeController extends Controller
     public function edit($id)
     {
         $type = DishType::find($id);
-        return view('type.edit')->with(['type'=>$type, 'title' => 'Cập nhật loại đồ ăn']);
+        return view('type.edit')->with(['type'=>$type, 'title' => 'Food Type Update']);
     }
 
 

@@ -13,7 +13,7 @@ class GalleryController extends Controller
     {
         $lsImg = Gallery::all();
         return view('admin.gallery.index',[
-            'title' => 'Danh sách Hình ảnh',
+            'title' => 'List of Images',
             'lsImg' => $lsImg
         ]);
     }
@@ -22,7 +22,7 @@ class GalleryController extends Controller
     public function create()
     {
         return view('admin.gallery.add',[
-            'title' => 'Thêm hình ảnh',
+            'title' => 'More photos',
         ]);
     }
 
@@ -43,7 +43,7 @@ class GalleryController extends Controller
         $gallery->image = $imagePath;
 
         $gallery->save();
-        $request->session()->flash("msg","Thêm hình ảnh thành công");
+        $request->session()->flash("msg","More Pictures of Success");
         return redirect(route("gallery.index"));
     }
 
@@ -64,7 +64,7 @@ class GalleryController extends Controller
         $gallery = Gallery::find($id);
         return view("admin.gallery.edit")
             ->with(['gallery' => $gallery,
-                'title' => 'Sửa nội dung hình ảnh',]);
+                'title' => 'Edit Image Content',]);
     }
 
 
@@ -83,7 +83,7 @@ class GalleryController extends Controller
             $gallery->image = $imagePath;
         }
         $gallery->save();
-        $request->session()->flash("msg","Thêm hình ảnh thành công");
+        $request->session()->flash("msg","Add successful image");
         return redirect(route("gallery.index"));
     }
 
@@ -95,7 +95,7 @@ class GalleryController extends Controller
         if($gallery->delete()){
             return response()->json([
                 'error' => false,
-                'message' => 'Xóa hình ảnh thành công'
+                'message' => 'Delete image successfully'
             ]);
         }
 

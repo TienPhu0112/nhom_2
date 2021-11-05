@@ -60,7 +60,7 @@
             }
         });
         function removeRow(id,url){
-            if(confirm('Xóa mà không thể khôi phục. Bạn có chắc?')){
+            if(confirm('Deleted Without Recovering Are You Sure?')){
                 $.ajax({
                     type:'DELETE',
                     datatype: 'JSON',
@@ -71,7 +71,7 @@
                             alert(result.message);
                             location.reload();
                         }else {
-                            alert('Xóa lỗi vui lòng thử lại');
+                            alert('Delete Error Please Try Again');
                         }
                     }
                 })

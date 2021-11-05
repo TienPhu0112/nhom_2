@@ -5,11 +5,11 @@
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Tên Khách</th>
-            <th scope="col">Số Điện Thoại</th>
-            <th scope="col">Bàn Đặt</th>
-            <th scope="col">Ngày Hẹn Đặt</th>
-            <th scope="col">Trạng Thái</th>
+            <th scope="col">Guest Name</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Table Set</th>
+            <th scope="col">Date of Appointment Book</th>
+            <th scope="col">Status</th>
         </tr>
         </thead>
         <tbody>
@@ -18,16 +18,16 @@
                 <th scope="row">{{ $key+1 }}</th>
                 <td>{{ $order->customers->name }}</td>
                 <td>{{ $order->customers->phone }}</td>
-                <td>Bàn {{ $order->tables->type }}</td>
+                <td>Table {{ $order->tables->type }}</td>
                 <td>{{ $order->booking_date }}</td>
                 @if($order->status == 0)
-                <td>Đang chờ</td>
+                <td>Booked a table</td>
                 @endif
                 @if($order->status == 1)
-                    <td>Đang sử dụng</td>
+                    <td>Using</td>
                 @endif
                 @if($order->status == 2)
-                    <td>Đã sử dụng</td>
+                    <td>End or Cancel</td>
                 @endif
             </tr>
         @endforeach

@@ -38,10 +38,17 @@
             @foreach($lsTable as $table)
                 <tr>
                     <td>{{$table->id}}</td>
-                    <td>Bàn {{$table->type}}</td>
+                    <td>Table {{$table->type}}</td>
                     <td>@if($table->status == 0)
-                            Đang chờ
-                        @endif</td>
+                            Booked a table
+                        @endif
+                        @if($table->status == 1)
+                            Using
+                        @endif
+                        @if($table->status == 2)
+                            End or Cancel
+                        @endif
+                    </td>
                     <td>
                         <a href="#" class="btn btn-danger btn-sm"
                            onclick="removeRow({{ $table->id }}, '/admin/table/{{ $table->id }}')"
@@ -64,7 +71,7 @@
             }
         });
         function removeRow(id,url){
-            if(confirm('Xóa mà không thể khôi phục. Bạn có chắc?')){
+            if(confirm('Deleted Without Recovering Are You Sure?')){
                 $.ajax({
                     type:'DELETE',
                     datatype: 'JSON',
@@ -75,7 +82,7 @@
                             alert(result.message);
                             location.reload();
                         }else {
-                            alert('Xóa lỗi vui lòng thử lại');
+                            alert('Delete Error Please Try Again');
                         }
                     }
                 })

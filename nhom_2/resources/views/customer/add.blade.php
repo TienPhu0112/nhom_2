@@ -30,7 +30,7 @@
             </div>
 
             <div class="col-sm-12 text-center">
-                <button type="submit" class="btn btn-primary">Thêm Mới</button>
+                <button type="submit" class="btn btn-primary">Add New</button>
             </div>
 
         </form>
