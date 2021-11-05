@@ -85,6 +85,7 @@ class ToGoOrderController extends Controller
     public function place_order(Request $request) {
         $lsType = DishType::all();
         $lsFood = Food::all();
+        $lsImg = Gallery::all();
 
         //save customer
         $cus = new Customer();
@@ -94,6 +95,8 @@ class ToGoOrderController extends Controller
         $cus->email = $request->input('email');
         $cus->save();
         $cus_id = $cus->id;
+
+
 
         //save order
         $order = new TogoOrder();
@@ -132,6 +135,7 @@ class ToGoOrderController extends Controller
 
         return view('foodorder_success')->with(['lsType' => $lsType,
                                                         'lsFood'=> $lsFood,
-                                                        'title' => 'Order Success']);
+                                                        'title' => 'Order Success',
+            'lsImg'=>$lsImg]);
     }
 }
