@@ -14,7 +14,7 @@ class NewsController extends Controller
     {
         $lsNews = News::all();
         return view('admin.news.index',[
-            'title' => 'Danh sách Tin tức',
+            'title' => 'News List',
             'lsNews' => $lsNews
         ]);
     }
@@ -24,7 +24,7 @@ class NewsController extends Controller
     {
         $lsUser = User::all();
         return view('admin.news.add',[
-            'title' => 'Thêm tin tức ',
+            'title' => 'More News ',
             'lsUser' => $lsUser
         ]);
     }
@@ -56,7 +56,7 @@ class NewsController extends Controller
         $news->image = $imagePath;
 
         $news->save();
-        $request->session()->flash("msg","Thêm tin tức thành công");
+        $request->session()->flash("msg","More Success News");
         return redirect(route("news.index"));
     }
 

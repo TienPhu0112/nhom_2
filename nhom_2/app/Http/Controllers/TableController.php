@@ -20,7 +20,7 @@ class TableController extends Controller
         }else {
             $lsTable = Table::paginate(4);
         }
-        return view("table.index")->with(['lsTable' => $lsTable, 'title' => 'Trang quản trị Bàn']);
+        return view("table.index")->with(['lsTable' => $lsTable, 'title' => 'Table Administration Page']);
     }
 
 
@@ -32,7 +32,7 @@ class TableController extends Controller
     public function create()
     {
         $lsTable = Table::all();
-        return view("table.add")->with(['lsTable'=>$lsTable,'title' => 'Thêm bàn mới']);
+        return view("table.add")->with(['lsTable'=>$lsTable,'title' => 'Add New Table']);
     }
 
     /**
@@ -102,7 +102,7 @@ class TableController extends Controller
         if($table->delete()){
             return response()->json([
                 'error' => false,
-                'message' => 'Xóa bàn thành công'
+                'message' => 'Clear Success Table'
             ]);
         }
 

@@ -55,13 +55,13 @@
                 <div class="form-check">
                     <input class="form-check-input" value="0" type="radio" name="status" id="gridRadios1" checked="">
                     <label class="form-check-label" for="gridRadios1">
-                        Đang phục vụ
+                        In service
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" value="1" type="radio" name="status" id="gridRadios2">
                     <label class="form-check-label" for="gridRadios2">
-                        Dừng phục vụ
+                        Stop serving
                     </label>
                 </div>
             </div>

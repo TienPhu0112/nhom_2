@@ -13,7 +13,7 @@ class FoodController extends Controller
     {
         $lsFood = Food::all();
         return view('food.index')->with(
-            ["lsFood" => $lsFood, 'title' => 'Danh sách các món ăn']
+            ["lsFood" => $lsFood, 'title' => 'List of Dishes']
         );
     }
 
@@ -22,7 +22,7 @@ class FoodController extends Controller
     {
         $lsType = DishType::all();
         return view('food.add')->with(
-            ['lsType' => $lsType, 'title' => 'Thêm món ăn']
+            ['lsType' => $lsType, 'title' => 'More Food']
         );
     }
 
@@ -71,7 +71,7 @@ class FoodController extends Controller
         $lsType = DishType::all();
         $food = Food::find($id);
         return view('food.edit')->with(['food' => $food, 'lsType' => $lsType,
-                                            'title' => 'Cập nhật món ăn']);
+                                            'title' => 'Food Update']);
     }
 
     /**

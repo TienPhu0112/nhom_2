@@ -15,7 +15,7 @@ class OrderController extends Controller
     {
         $lsOrder = Order::all();
         return view('admin.order.index',[
-            'title' => 'Danh sách Đơn đặt bàn',
+            'title' => 'Table Reservations List',
             'lsOrder' => $lsOrder
         ]);
     }
@@ -26,7 +26,7 @@ class OrderController extends Controller
         $lsCus = Customer::all();
         $lsTable = Table::all();
         return view('admin.order.add',[
-            'title' => 'Thêm đơn đặt bàn ',
+            'title' => 'More Table Reservations ',
             'lsCus' => $lsCus,
             'lsTable' => $lsTable
         ]);
@@ -49,7 +49,7 @@ class OrderController extends Controller
         $order->status = $request->input('status');
 
         $order->save();
-        $request->session()->flash("msg","Thêm đơn đặt bàn thành công");
+        $request->session()->flash("msg","More Successful Orders");
         return redirect(route("order.index"));
     }
 
