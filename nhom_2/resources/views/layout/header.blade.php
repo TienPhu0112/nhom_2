@@ -50,7 +50,7 @@
                 <div class="social flex-w flex-l-m p-r-20">
                     <a href="{{asset('/cart')}}" id="header-cart-btn" target="_blank">
                         <i class="fa fa-shopping-cart"></i>
-                        <span class="cart_quantity">{{Cart::count()}}</span>
+                        <span class="cart">{{Cart::count()}}</span>
                     </a>
                     <a href="#"><i class="fa fa-tripadvisor m-l-21" aria-hidden="true"></i></a>
                     <a href="#"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
