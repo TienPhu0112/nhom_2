@@ -56,6 +56,7 @@ class ToGoOrderController extends Controller
     }
 
     public function cart(Request $request) {
+        $lsImg = Gallery::all();
         $lsType = DishType::all();
         $lsFood = Food::orderBy('created_at', 'desc')->get();
 
@@ -63,6 +64,7 @@ class ToGoOrderController extends Controller
             'lsType' => $lsType,
             'lsFood'=> $lsFood,
             'title' => 'Cart',
+            'lsImg' => $lsImg
         ]);
     }
 
