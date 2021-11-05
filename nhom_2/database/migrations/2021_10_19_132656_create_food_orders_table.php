@@ -14,9 +14,11 @@ class CreateFoodOrdersTable extends Migration
     public function up()
     {
         Schema::create('food_orders', function (Blueprint $table) {
+            $table->id();
             $table->integer('food_id');
             $table->integer('order_id');
             $table->integer('food_quantity');
+            $table->float('food_price');
             $table->timestamps();
         });
     }

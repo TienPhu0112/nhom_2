@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\DishType;
+use App\Models\Food;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Admin\Users\LoginController;
 use \App\Http\Controllers\Admin\MainController;
@@ -32,6 +34,24 @@ Route::get('/gallery',[GalleryController2::class,'welcome']);
 
 //Menu
 Route::get('/menu', [App\Http\Controllers\ToGoOrderController::class, 'menu']);
+//Route::get('/foodorder_success', [App\Http\Controllers\ToGoOrderController::class, 'foodorder_success']); TEST form mail
+
+// cart
+Route::get('/cart', [App\Http\Controllers\ToGoOrderController::class, 'cart'])->name('cart');
+Route::post('/add_food/{fid}', [App\Http\Controllers\ToGoOrderController::class, 'add_food'])->name('add_food');
+Route::post('update_cart',[App\Http\Controllers\ToGoOrderController::class, 'update_cart'])->name('update_cart');
+Route::get('/clear_cart', function (){
+    \Cart::destroy();
+    return redirect('/menu');
+});
+Route::post('update_cart',[App\Http\Controllers\ToGoOrderController::class, 'update_cart'])->name('update_cart');
+Route::get('/checkoutcart', function () {
+    $lsType = DishType::all();
+    $lsFood = Food::all();
+    return view('checkoutcart')->with(['lsType' => $lsType, 'lsFood'=> $lsFood, 'title' => 'Checkout']);
+})->name('checkoutcart');
+Route::post('place_order',[App\Http\Controllers\ToGoOrderController::class, 'place_order'])->name('place_order');
+// end cart
 
 Route::middleware(['auth'])->group(function(){
     Route::prefix('admin')->group(function(){

@@ -75,17 +75,28 @@
                                 </div>
 
                                 <div class="text-blo3 size21 flex-col-l-m">
-                                    <a href="#" class="txt21 m-b-3">
+                                    <a href="#" class="txt22">
                                         {{$food->name}}
                                     </a>
 
-                                    <span class="txt23">
+                                    <span class="txt23 m-b-3">
                                         Aenean pharetra tortor dui in pellentesque
                                     </span>
 
-                                    <span class="txt22 m-t-20">
+                                    <span class="txt22 m-b-3">
                                         ${{$food->price}}
                                     </span>
+                                    <span>
+
+                                        <form class="cart txt2" method="post"
+                                              action="{{route('add_food', $food->id)}}">
+                                            @csrf
+                                            <button type="submit" name="addtocart" value="5" class="btn3 flex-c-m size13 txt11 trans-0-4"> <i class="fa fa-shopping-cart"></i>&nbsp;Add to cart</button>
+                                            <input type="number" class="qty-text" id="qty" step="1" name="quantity" value="1" hidden>
+                                        </form>
+                                    </span>
+                                    <!-- Add to Cart Form -->
+
                                 </div>
                             </div>
                         </div>

@@ -1,14 +1,145 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test">
+    <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="Sửa lại chút">
+      <change afterPath="$PROJECT_DIR$/nhom_2/config/cart.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/css/animate.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/css/core-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/css/jquery-ui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/css/magnific-popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/css/nouislider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/css/owl.carousel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/css/responsive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/css/themify-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/fonts/themify.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/fonts/themify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/fonts/themify.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/fonts/themify.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/bg-img/bg-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/bg-img/bg-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/bg-img/bg-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/bg-img/bg-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/bg-img/bg-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/bg-img/tes-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/core-img/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/core-img/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/Od5GquEPJ3aSDr9RzRz6RDAXNa2pOPSp93p4vi62.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/Pu1abuLl9qHWWgxDJ4UsOWnXeZuYQhGHL8xCxmYt.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/YNyUWW8K84zaJh4MX6RId9UkAJEKafQOGFbYmicV.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/img/gmlooTNJitFVvgYdOtKID9y9Gcra3Sqgy6GRohps.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/lY4BOUl77kKuX4fzUmJbFHbvi2vn5io6CRgh0qVr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/product-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/product-10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/product-11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/product-12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/product-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/product-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/product-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/product-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/product-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/product-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/product-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/product-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/rAbH5b2OvQOEldp9VRQC0HVoxV1H1du4tWK6DffA.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product-img/zuZxDe85KQZCvoqE3BPcHD872GSm42t0AZoR4x08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/img/product/img/9CKJgD7CQ7y5g5yV5KY7HX8iJnTTbZ5dKhv2I8aF.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/js/active.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/js/jquery/jquery-2.2.4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/js/plugins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cartfile/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/css/font-awesome.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/css/jquery-ui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/css/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/css/picto-foundry-food.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/css/style-portfolio.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/fontawesome-webfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/fontawesome-webfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/icomoonacfe.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/icomoonacfe.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/icomoonacfe.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/icomoonacfe.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/icomoond41d.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/picto-foundry-food.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/picto-foundry-food.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/picto-foundry-food.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/fonts/picto-foundry-food.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/bagel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/beer.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/beer_spec.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/bread.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/bread1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/bread2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/breakfast.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/corn.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/featured.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/food_icon01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/food_icon02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/food_icon03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/food_icon04.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/food_icon05.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/food_icon06.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/food_icon07.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/food_icon08.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/kabob.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/limes.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/pricing.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/radish.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/reservation-seat.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/seeds.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/slider1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/slider2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/slider3.JPG" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/images/steak.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/js/jquery-1.10.2.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/js/jquery-1.10.2.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/js/jquery.mixitup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/cus/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/img/bgemail_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/img/food-img/0mMHiQPo8ydqGtFlZnvo00DIf3IpHz3MaE0HMP2b.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/img/food-img/BUOKuomnGQBbYZkV9KIT18SHktHeSJ1hNc244WdI.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/img/food-img/E9sI7FsWF0f6MFFDVWpJCqeiJ09ptmJ075GT8fUW.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/img/food-img/G945PHBMYpSWpi1v1nadAlaZ1CDfTOXlGoNXg3wB.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/img/food-img/OB04O0UWkYFtwonTqtEC3kXuevYiG93ygrJ9N9MW.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/img/food-img/WpcXf4Mvaho3GrL0mhkyLleI3P0l1L2BzPMVtZRf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/img/food-img/aBYPFE20UW8ifwgTvwVusgsOPSzUS4EtmU58ugPK.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/img/food-img/lz1gHacSeEF8rTmn0DT75tq5xLroAKi5wzLzxj5s.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/public/img/food-img/tRXjAwSnatZIxt4a9f0IrQcSD4PXIecNZYkzhvK9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/cart.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/checkoutcart.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/emails/order.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/foodorder/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/foodorder_success.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/BlogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/BlogController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/RestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/RestaurantController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/ToGoOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/ToGoOrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/layout/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Models/Order.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/database/migrations/2021_10_19_132656_create_food_orders_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/database/migrations/2021_10_19_132656_create_food_orders_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/public/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/public/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/index.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/layout/frontend.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/layout/frontend.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/layout/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +285,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1zg6CDamZyY2Rq07ualeKDcncRZ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -163,17 +296,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../T2011E/Laravel/shoping" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/nhom_2" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\nhom_2\nhom_2\resources\views\admin\gallery" />
       <recent name="C:\xampp\htdocs\nhom_2\nhom_2\public" />
       <recent name="C:\xampp\htdocs\nhom_2\nhom_2\public\template\admin\plugins" />
       <recent name="C:\xampp\htdocs\nhom_2\nhom_2\public\template\admin\assets" />
       <recent name="C:\xampp\htdocs\nhom_2\nhom_2\public\template\admin" />
+      <recent name="C:\xampp\htdocs\nhom_2\nhom_2\public\template\admin\assets\vendor\simple-datatables" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\nhom_2\nhom_2\app\Http\Controllers\Admin" />

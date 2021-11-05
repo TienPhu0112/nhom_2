@@ -16,8 +16,8 @@
         @foreach($lsOrder as $key => $order)
             <tr>
                 <th scope="row">{{ $key+1 }}</th>
-                <td>{{ $order->customers->name }}</td>
-                <td>{{ $order->customers->phone }}</td>
+                <td>{{ $order->customer->name }}</td>
+                <td>{{ $order->customer->phone }}</td>
                 <td>Bàn {{ $order->tables->type }}</td>
                 <td>{{ $order->booking_date }}</td>
                 @if($order->status == 0)

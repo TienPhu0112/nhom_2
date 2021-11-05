@@ -13,8 +13,8 @@ class Order extends Model
         return $this -> hasMany('App\Models\TableOrder');
     }
 
-    public function customers(){
-        return $this -> belongsTo('App\Models\Customer','customer_id','id');
+    public function customer(){
+        return $this -> belongsTo('App\Models\Customer');
     }
 
     public function tables(){
