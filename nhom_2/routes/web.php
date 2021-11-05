@@ -2,6 +2,7 @@
 
 use App\Models\DishType;
 use App\Models\Food;
+use App\Models\Gallery;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Admin\Users\LoginController;
 use \App\Http\Controllers\Admin\MainController;
@@ -47,9 +48,10 @@ Route::get('/clear_cart', function (){
 });
 Route::post('update_cart',[App\Http\Controllers\ToGoOrderController::class, 'update_cart'])->name('update_cart');
 Route::get('/checkoutcart', function () {
+    $lsImg = Gallery::all();
     $lsType = DishType::all();
     $lsFood = Food::all();
-    return view('checkoutcart')->with(['lsType' => $lsType, 'lsFood'=> $lsFood, 'title' => 'Checkout']);
+    return view('checkoutcart')->with(['lsType' => $lsType, 'lsFood'=> $lsFood, 'title' => 'Checkout','lsImg' => $lsImg]);
 })->name('checkoutcart');
 Route::post('place_order',[App\Http\Controllers\ToGoOrderController::class, 'place_order'])->name('place_order');
 // end cart
