@@ -13,6 +13,7 @@ use \App\Http\Controllers\Admin\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\GalleryController2;
+use \App\Http\Controllers\EventController;
 use App\Http\Controllers\RestaurantController;
 
 Route::get('admin/users/login',[LoginController::class,'index'])->name('login');
@@ -61,6 +62,9 @@ Route::middleware(['auth'])->group(function(){
 
         #Gallery
         Route::resource("gallery",GalleryController::class);
+
+        #Event
+        Route::resource("event",EventController::class);
     });
 
 });

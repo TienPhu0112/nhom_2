@@ -127,6 +127,23 @@
             </ul>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav8" data-bs-toggle="collapse" href="#">
+                <i class="bx bxs-receipt"></i><span>Event</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav8" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{asset('admin/event')}}">
+                        <i class="bi bi-circle"></i><span>List Of Events</span>
+                    </a>
+
+                    <a href="{{asset('admin/event/create')}}">
+                        <i class="bi bi-circle"></i><span>Add events</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
         <!-- End Components Nav -->
 
     </ul>
