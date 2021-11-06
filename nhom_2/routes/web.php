@@ -22,9 +22,6 @@ use App\Http\Controllers\RestaurantController;
 Route::get('admin/users/login',[LoginController::class,'index'])->name('login');
 Route::post('admin/users/login/store',[LoginController::class,'store']);
 
-//Home
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-
 //Blog
 Route::get('/blog',[BlogController::class,'welcome']);
 Route::get('/blog/{topic}',[BlogController::class,'welcome'])->name('cate');
@@ -58,8 +55,9 @@ Route::post('place_order',[App\Http\Controllers\ToGoOrderController::class, 'pla
 
 Route::middleware(['auth'])->group(function(){
     Route::prefix('admin')->group(function(){
-        Route::get('/',[MainController::class,'index'])->name('admin');
-        Route::get('main',[MainController::class,'index']);
+        #Home
+        Route::get('/', [HomeController::class, 'index'])->name('admin');
+        Route::get('main',[HomeController::class,'index']);
 
         #Order
         Route::resource("order",OrderController::class);

@@ -30,7 +30,7 @@ class HomeController extends Controller
         $lsTogoOrder = TogoOrder::orderBy('created_at', 'desc')->get();
         $lsBooking = Order::orderBy('created_at', 'desc')->get();
 
-        return view('home')->with([
+        return view('admin.home')->with([
 
             // Total
             'total_Table' => $total_Table,

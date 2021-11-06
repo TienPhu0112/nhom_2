@@ -1,16 +1,6 @@
 @extends('admin.main')
 @section('content')
 
-    <div class="container">
-        <div class="pagetitle">
-            <h1>Dashboard</h1>
-            <nav>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{asset('/home')}}">Home</a></li>
-                    <li class="breadcrumb-item active">Dashboard</li>
-                </ol>
-            </nav>
-        </div><!-- End Page Title -->
 
         <section class="section dashboard">
             <div class="row">
@@ -347,15 +337,13 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                        @foreach($lsBooking as $booking)
                                            <tr>
-                                                <td>{{$booking->id}}</td>
-                                                <td><a href="#" class="text-primary">{{$booking->customers->name}}</td>
-                                                <td>{{$booking->tables->type}}</a></td>
-                                                <td>{{$booking->booking_date}}</td>
-                                                <td><span class="badge bg-success"> {{$booking->status}}</span></td>
+                                                <td>1</td>
+                                               <td><a href="#" class="text-primary">vẫn tĩnh</a></td>
+                                                <td><a>vẫn tĩnh</a></td>
+                                                <td>vẫn tĩnh</td>
+                                                <td><span class="badge bg-success"> vẫn tĩnh</span></td>
                                            </tr>
-                                        @endforeach
                                         </tbody>
                                     </table>
 
@@ -728,7 +716,6 @@
 
             </div>
         </section>
-    </div>
 
 <!-- End #main -->
 

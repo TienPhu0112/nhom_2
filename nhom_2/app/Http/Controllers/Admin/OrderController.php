@@ -26,7 +26,7 @@ class OrderController extends Controller
         $lsCus = Customer::all();
         $lsTable = Table::all();
         return view('admin.order.add',[
-            'title' => 'More Table Reservations ',
+            'title' => 'Add Table Reservations ',
             'lsCus' => $lsCus,
             'lsTable' => $lsTable
         ]);
@@ -36,65 +36,81 @@ class OrderController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'customer_id' => 'required|numeric',
-            'table_id' => 'required|numeric',
+            'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'type' => 'required|numeric',
             'booking_date' => 'required',
+            'booking_time' => 'required',
             'status' => 'required|numeric'
         ]);
 
         $order = new Order();
-        $order->customer_id = $request->input('customer_id');
-        $order->table_id = $request->input('table_id');
+        $order->name = $request->input('name');
+        $order->phone = $request->input('phone');
+        $order->email = $request->input('email');
+        $order->type = $request->input('type');
         $order->booking_date = $request->input('booking_date');
+        $order->booking_time = $request->input('booking_time');
         $order->status = $request->input('status');
 
         $order->save();
-        $request->session()->flash("msg","More Successful Orders");
+        $request->session()->flash("msg","Add Order Succesfully");
         return redirect(route("order.index"));
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
-        //
+        $order = Order::find($id);
+        return view("admin.order.edit")->with(['order' => $order, 'title' => 'Edit Table Reservation Information']);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'type' => 'required|numeric',
+            'booking_date' => 'required',
+            'booking_time' => 'required',
+            'status' => 'required|numeric'
+        ]);
+        $order = Order::find($id);
+        $order->name = $request->input('name');
+        $order->phone = $request->input('phone');
+        $order->email = $request->input('email');
+        $order->type = $request->input('type');
+        $order->booking_date = $request->input('booking_date');
+        $order->booking_time = $request->input('booking_time');
+        $order->status = $request->input('status');
+        $order->save();
+        $request->session()->flash("msg", "Update table reservation successfully.");
+        return  redirect(route("order.index"));
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
+
+    public function destroy(Request $request)
     {
-        //
+        $id = (int) $request->input('id');
+        $order = Order::find($id);
+        if($order->delete()){
+            return response()->json([
+                'error' => false,
+                'message' => 'Delete Table Reservation Successfully'
+            ]);
+        }
+
+        return response()->json([
+            'error' => true
+        ]);
     }
 }

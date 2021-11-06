@@ -3,7 +3,7 @@
 
     <ul class="sidebar-nav" id="sidebar-nav">
         <li class="nav-item">
-            <a class="nav-link collapsed" href="{{asset('/home')}}">
+            <a class="nav-link collapsed" href="{{route('admin')}}">
                 <i class="bx bxs-receipt"></i><span>Dashboard</span>
             </a>
         </li>
