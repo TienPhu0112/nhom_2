@@ -22,7 +22,7 @@
                     </h3>
                 </div>
 
-                <form class="wrap-form-reservation size22 m-l-r-auto" >
+                <form class="wrap-form-reservation size22 m-l-r-auto" action="" method="POST">
                     @csrf
                     <div class="row">
                         <div class="col-md-4">
@@ -32,7 +32,7 @@
 								</span>
 
                             <div class="wrap-inputdate pos-relative txt10 size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                                <input class="my-calendar bo-rad-10 sizefull txt10 p-l-20" type="text"  id="booking_date" name="booking_date" value=""required>
+                                <input class="my-calendar bo-rad-10 sizefull txt10 p-l-20" type="text"  id="booking_date" name="booking_date">
                                 <i class="btn-calendar fa fa-calendar ab-r-m hov-pointer m-r-18" aria-hidden="true"></i>
                             </div>
                         </div>
@@ -45,26 +45,13 @@
 
                             <div class="wrap-inputtime size12 bo2 bo-rad-10 m-t-3 m-b-23">
                                 <!-- Select2 -->
-                                <select class="selection-1" name="time" >
+                                <select class="selection-1" name="booking_time" >
                                     <option>9:00</option>
-                                    <option>9:30</option>
-                                    <option>10:00</option>
-                                    <option>10:30</option>
                                     <option>11:00</option>
-                                    <option>11:30</option>
-                                    <option>12:00</option>
-                                    <option>12:30</option>
                                     <option>13:00</option>
-                                    <option>13:30</option>
-                                    <option>14:00</option>
-                                    <option>14:30</option>
                                     <option>15:00</option>
-                                    <option>15:30</option>
-                                    <option>16:00</option>
-                                    <option>16:30</option>
                                     <option>17:00</option>
-                                    <option>17:30</option>
-                                    <option>18:00</option>
+                                    <option>19:00</option>
                                 </select>
                             </div>
                         </div>
@@ -78,9 +65,18 @@
                             <div class="wrap-inputpeople size12 bo2 bo-rad-10 m-t-3 m-b-23">
                                 <!-- Select2 -->
                                 <select class="selection-1" name="people" >
-                                @foreach($lsTable as $table )
-                                    <option>{{$table->type}}</option>
-                                    @endforeach
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                    <option>6</option>
+                                    <option>7</option>
+                                    <option>8</option>
+                                    <option>9</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
                                 </select>
 
                             </div>
@@ -120,7 +116,17 @@
                                 <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" id="email" name="email" placeholder="Email">
                             </div>
                         </div>
-
+                        <input type="hidden" value="0" name="status">
+                        @if(session('msg'))
+                            <div @class('alert alert-success')>
+                                {{session('msg')}}
+                            </div>
+                        @endif
+                        @if(session('msg_f'))
+                            <div @class('alert alert-danger')>
+                                {{session('msg_f')}}
+                            </div>
+                        @endif
                     </div>
 
                     <div class="wrap-btn-booking flex-c-m m-t-6">

@@ -92,7 +92,8 @@ Route::middleware(['auth'])->group(function(){
 
 Route::get("/",[RestaurantController::class,'welcome']);
 
-Route::get("/reservation",[RestaurantController::class,'reservation']);
+Route::get("/reservation",[RestaurantController::class,'reservation'])->name('reservation');
+Route::post("/reservation",[RestaurantController::class,'booking']);
 
 
 

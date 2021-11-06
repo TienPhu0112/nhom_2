@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test">
-      <change afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/Admin/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/Admin/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/Admin/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/Admin/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/app/Models/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Models/Order.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/add.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/RestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/RestaurantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/reservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/reservation.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nhom_2/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +203,8 @@
       <workItem from="1635844767808" duration="12407000" />
       <workItem from="1635923987735" duration="2788000" />
       <workItem from="1636115588133" duration="26000" />
-      <workItem from="1636168735263" duration="5322000" />
+      <workItem from="1636168735263" duration="9254000" />
+      <workItem from="1636223094585" duration="3004000" />
     </task>
     <task id="LOCAL-00001" summary="push test view">
       <created>1634559544613</created>
