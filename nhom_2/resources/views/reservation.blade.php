@@ -117,6 +117,10 @@
                             </div>
                         </div>
                         <input type="hidden" value="0" name="status">
+
+                    </div>
+
+                    <div class="wrap-btn-booking flex-c-m m-t-6">
                         @if(session('msg'))
                             <div @class('alert alert-success')>
                                 {{session('msg')}}

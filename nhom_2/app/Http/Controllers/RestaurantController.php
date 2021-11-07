@@ -92,12 +92,13 @@ class RestaurantController extends Controller
             $order->phone = $request->input('phone');
             $order->email = $request->input('email');
             $order->type = $type;
+            $order->guest_number = $request->input('people');
             $order->booking_date = $booking_date;
             $order->booking_time = $request->input('booking_time');
             $order->status = $request->input('status');
 
             $order->save();
-            $request->session()->flash("msg","Add Order Succesfully!");
+            $request->session()->flash("msg","Add Order Succesfully! Thanks For Choosing Our Restaurant!");
             return redirect(route("reservation"));
         }else{
             $request->session()->flash("msg_f","Add Order Failed! We Don't Have Available Table For You!");

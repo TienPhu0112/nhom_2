@@ -47,9 +47,16 @@
             </div>
         </div>
         <div class="row mb-3">
-            <label for="inputTime" class="col-sm-2 col-form-label">Booking Time</label>
+            <label class="col-sm-2 col-form-label">Booking Time</label>
             <div class="col-sm-10">
-                <input type="time" class="form-control" name="booking_time">
+                <select class="selection-1" name="booking_time" >
+                    <option>9:00</option>
+                    <option>11:00</option>
+                    <option>13:00</option>
+                    <option>15:00</option>
+                    <option>17:00</option>
+                    <option>19:00</option>
+                </select>
             </div>
         </div>
         <fieldset class="row mb-3">

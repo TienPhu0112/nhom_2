@@ -48,9 +48,16 @@
             </div>
         </div>
         <div class="row mb-3">
-            <label for="inputTime" class="col-sm-2 col-form-label">Booking Time</label>
+            <label class="col-sm-2 col-form-label">Booking Time</label>
             <div class="col-sm-10">
-                <input type="time" class="form-control" name="booking_time" value="{{$order->booking_time}}">
+                <select class="form-select" name="booking_time" >
+                    <option {{ $order->booking_time === "9:00:00" ? 'selected' : "" }}>9:00</option>
+                    <option {{ $order->booking_time === "11:00:00" ? 'selected' : "" }}>11:00</option>
+                    <option {{ $order->booking_time === "13:00:00" ? 'selected' : "" }}>13:00</option>
+                    <option {{ $order->booking_time === "15:00:00" ? 'selected' : "" }}>15:00</option>
+                    <option {{ $order->booking_time === "17:00:00" ? 'selected' : "" }}>17:00</option>
+                    <option {{ $order->booking_time === "19:00:00" ? 'selected' : "" }}>19:00</option>
+                </select>
             </div>
         </div>
         <fieldset class="row mb-3">
