@@ -26,12 +26,12 @@
             <label class="col-sm-2 col-form-label">Type</label>
             <div class="col-sm-10">
                 <select class="form-select" aria-label="Default select example" name="type">
-                    <option value="2" {{ $order->type == 2 ? 'selected' : "" }}>Bàn 2</option>
-                    <option value="4" {{ $order->type == 4 ? 'selected' : "" }}>Bàn 4</option>
-                    <option value="6" {{ $order->type == 6 ? 'selected' : "" }}>Bàn 6</option>
-                    <option value="8" {{ $order->type == 8 ? 'selected' : "" }}>Bàn 8</option>
-                    <option value="10" {{ $order->type == 10 ? 'selected' : "" }}>Bàn 10</option>
-                    <option value="12" {{ $order->type == 12 ? 'selected' : "" }}>Bàn 12</option>
+                    <option value="2" {{ $order->type == 2 ? 'selected' : "" }}>2 Seats</option>
+                    <option value="4" {{ $order->type == 4 ? 'selected' : "" }}>4 Seats</option>
+                    <option value="6" {{ $order->type == 6 ? 'selected' : "" }}>6 Seats</option>
+                    <option value="8" {{ $order->type == 8 ? 'selected' : "" }}>8 Seats</option>
+                    <option value="10" {{ $order->type == 10 ? 'selected' : "" }}>10 Seats</option>
+                    <option value="12" {{ $order->type == 12 ? 'selected' : "" }}>12 Seats</option>
                 </select>
             </div>
         </div>
@@ -59,19 +59,19 @@
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="0" {{$order->status == 0 ? 'checked=""' : ""}}>
                     <label class="form-check-label" for="gridRadios1">
-                        Đang chờ
+                        Waiting
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="1" {{$order->status == 1 ? 'checked=""' : ""}}>
                     <label class="form-check-label" for="gridRadios2">
-                        Đã phục vụ
+                        Already Served
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="status" id="gridRadios3" value="2" {{$order->status == 2 ? 'checked=""' : ""}}>
                     <label class="form-check-label" for="gridRadios3">
-                        Đã hủy
+                        Cancelled
                     </label>
                 </div>
             </div>

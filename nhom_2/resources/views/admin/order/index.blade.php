@@ -5,14 +5,14 @@
         <thead>
         <tr>
             <th scope="col">#</th>
-            <th scope="col">Tên Khách</th>
-            <th scope="col">Số Điện Thoại</th>
+            <th scope="col">Guest Name</th>
+            <th scope="col">Phone Number</th>
             <th scope="col">Email</th>
-            <th scope="col">Loại Bàn Đặt</th>
-            <th scope="col">Số lượng khách</th>
-            <th scope="col">Ngày Hẹn Đặt</th>
-            <th scope="col">Thời gian Hẹn Đặt</th>
-            <th scope="col">Trạng Thái</th>
+            <th scope="col">Tabe Type</th>
+            <th scope="col">Guest Number</th>
+            <th scope="col">Booking Date</th>
+            <th scope="col">Booking Time</th>
+            <th scope="col">Status</th>
             <th scope="col">Actions</th>
         </tr>
         </thead>
@@ -23,18 +23,18 @@
                 <td>{{ $order->name }}</td>
                 <td>{{ $order->phone }}</td>
                 <td>{{ $order->email }}</td>
-                <td>Bàn {{ $order->type }}</td>
+                <td>{{ $order->type }} Seats</td>
                 <td>{{ $order->guest_number }}</td>
                 <td>{{ $order->booking_date }}</td>
                 <td>{{ $order->booking_time }}</td>
                 @if($order->status == 0)
-                    <td>Đang chờ</td>
+                    <td>Waiting</td>
                 @endif
                 @if($order->status == 1)
-                    <td>Đã phục vụ</td>
+                    <td>Already Served</td>
                 @endif
                 @if($order->status == 2)
-                    <td>Đã hủy</td>
+                    <td>Cancelled</td>
                 @endif
                 <td style="width: 85px">
                     <a href="{{route("order.edit", $order->id)}}" class="btn btn-primary btn-sm">

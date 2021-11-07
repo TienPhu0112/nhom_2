@@ -71,14 +71,18 @@ class RestaurantController extends Controller
             $type = 12;
         }
 
+        $status = $request->input('status');
+
         $filter_booking = DB::table('orders')->where('booking_date',$booking_date)
             ->where('booking_time',$booking_time)
-            ->where('type',$type)->count();
+            ->where('type',$type)
+            ->where('status',$status)
+            ->count();
 
         $count_table = DB::table('tables')->where('type',$type)->value('quantity');
 
         if (($booking_date_time - $now < 0)){
-            $request->session()->flash("msg_f","Add Order Failed!Order in Future!");
+            $request->session()->flash("msg_f","Add Order Failed! Please don't select a time period in the past!");
             return redirect(route("reservation"));
         }
 
@@ -96,7 +100,7 @@ class RestaurantController extends Controller
             $request->session()->flash("msg","Add Order Succesfully!");
             return redirect(route("reservation"));
         }else{
-            $request->session()->flash("msg_f","Add Order Failed! Not Enough Table For You!");
+            $request->session()->flash("msg_f","Add Order Failed! We Don't Have Available Table For You!");
             return redirect(route("reservation"));
         }
 

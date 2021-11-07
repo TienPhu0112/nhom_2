@@ -25,12 +25,12 @@
             <label class="col-sm-2 col-form-label">Type</label>
             <div class="col-sm-10">
                 <select class="form-select" aria-label="Default select example" name="type">
-                    <option value="2">Bàn 2</option>
-                    <option value="4">Bàn 4</option>
-                    <option value="6">Bàn 6</option>
-                    <option value="8">Bàn 8</option>
-                    <option value="10">Bàn 10</option>
-                    <option value="12">Bàn 12</option>
+                    <option value="2">2 Seats</option>
+                    <option value="4">4 Seats</option>
+                    <option value="6">6 Seats</option>
+                    <option value="8">8 Seats</option>
+                    <option value="10">10 Seats</option>
+                    <option value="12">12 Seats</option>
                 </select>
             </div>
         </div>
@@ -58,19 +58,19 @@
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="0" checked="">
                     <label class="form-check-label" for="gridRadios1">
-                        Đang chờ
+                        Waiting
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="1">
                     <label class="form-check-label" for="gridRadios2">
-                        Đã phục vụ
+                        Already Served
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" type="radio" name="status" id="gridRadios3" value="2">
                     <label class="form-check-label" for="gridRadios3">
-                        Đã hủy
+                        Cancelled
                     </label>
                 </div>
             </div>
