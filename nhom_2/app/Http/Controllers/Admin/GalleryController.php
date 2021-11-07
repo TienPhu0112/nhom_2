@@ -43,7 +43,7 @@ class GalleryController extends Controller
         $gallery->image = $imagePath;
 
         $gallery->save();
-        $request->session()->flash("msg","More Pictures of Success");
+        $request->session()->flash("success","More Pictures of Success");
         return redirect(route("gallery.index"));
     }
 
@@ -83,7 +83,7 @@ class GalleryController extends Controller
             $gallery->image = $imagePath;
         }
         $gallery->save();
-        $request->session()->flash("msg","Add successful image");
+        $request->session()->flash("success","Add successful image");
         return redirect(route("gallery.index"));
     }
 

@@ -9,6 +9,7 @@
             <th scope="col">Số Điện Thoại</th>
             <th scope="col">Email</th>
             <th scope="col">Loại Bàn Đặt</th>
+            <th scope="col">Số lượng khách</th>
             <th scope="col">Ngày Hẹn Đặt</th>
             <th scope="col">Thời gian Hẹn Đặt</th>
             <th scope="col">Trạng Thái</th>
@@ -23,6 +24,7 @@
                 <td>{{ $order->phone }}</td>
                 <td>{{ $order->email }}</td>
                 <td>Bàn {{ $order->type }}</td>
+                <td>{{ $order->guest_number }}</td>
                 <td>{{ $order->booking_date }}</td>
                 <td>{{ $order->booking_time }}</td>
                 @if($order->status == 0)
@@ -34,7 +36,7 @@
                 @if($order->status == 2)
                     <td>Đã hủy</td>
                 @endif
-                <td>
+                <td style="width: 85px">
                     <a href="{{route("order.edit", $order->id)}}" class="btn btn-primary btn-sm">
                         <i class="bx bxs-edit"></i>
                     </a>

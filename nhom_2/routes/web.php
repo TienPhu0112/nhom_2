@@ -13,7 +13,6 @@ use \App\Http\Controllers\TypeController;
 use \App\Http\Controllers\FoodController;
 use \App\Http\Controllers\Admin\NewsController;
 use \App\Http\Controllers\Admin\GalleryController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\GalleryController2;
 use \App\Http\Controllers\EventController;
@@ -56,8 +55,8 @@ Route::post('place_order',[App\Http\Controllers\ToGoOrderController::class, 'pla
 Route::middleware(['auth'])->group(function(){
     Route::prefix('admin')->group(function(){
         #Home
-        Route::get('/', [HomeController::class, 'index'])->name('admin');
-        Route::get('main',[HomeController::class,'index']);
+        Route::get('/', [MainController::class, 'index'])->name('admin');
+        Route::get('main',[MainController::class,'index']);
 
         #Order
         Route::resource("order",OrderController::class);

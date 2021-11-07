@@ -56,7 +56,7 @@ class NewsController extends Controller
         $news->image = $imagePath;
 
         $news->save();
-        $request->session()->flash("msg","More Success News");
+        $request->session()->flash("success","More Success News");
         return redirect(route("news.index"));
     }
 
@@ -105,7 +105,7 @@ class NewsController extends Controller
 
         $news->save();
 
-        $request->session()->flash("msg","Sửa tin tức thành công");
+        $request->session()->flash("success","Sửa tin tức thành công");
         return redirect(route("news.index"));
     }
 

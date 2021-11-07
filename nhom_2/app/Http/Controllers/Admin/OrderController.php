@@ -40,6 +40,7 @@ class OrderController extends Controller
             'phone' => 'required',
             'email' => 'required',
             'type' => 'required|numeric',
+            'guest_number' => 'required|numeric',
             'booking_date' => 'required',
             'booking_time' => 'required',
             'status' => 'required|numeric'
@@ -50,12 +51,13 @@ class OrderController extends Controller
         $order->phone = $request->input('phone');
         $order->email = $request->input('email');
         $order->type = $request->input('type');
+        $order->guest_number = $request->input('guest_number');
         $order->booking_date = $request->input('booking_date');
         $order->booking_time = $request->input('booking_time');
         $order->status = $request->input('status');
 
         $order->save();
-        $request->session()->flash("msg","Add Order Succesfully");
+        $request->session()->flash("success","Add Order Succesfully");
         return redirect(route("order.index"));
     }
 
@@ -80,6 +82,7 @@ class OrderController extends Controller
             'phone' => 'required',
             'email' => 'required',
             'type' => 'required|numeric',
+            'guest_number' => 'required|numeric',
             'booking_date' => 'required',
             'booking_time' => 'required',
             'status' => 'required|numeric'
@@ -89,11 +92,12 @@ class OrderController extends Controller
         $order->phone = $request->input('phone');
         $order->email = $request->input('email');
         $order->type = $request->input('type');
+        $order->guest_number = $request->input('guest_number');
         $order->booking_date = $request->input('booking_date');
         $order->booking_time = $request->input('booking_time');
         $order->status = $request->input('status');
         $order->save();
-        $request->session()->flash("msg", "Update table reservation successfully.");
+        $request->session()->flash("success", "Update table reservation successfully.");
         return  redirect(route("order.index"));
     }
 
