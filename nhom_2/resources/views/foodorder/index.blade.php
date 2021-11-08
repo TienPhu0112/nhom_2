@@ -80,7 +80,7 @@
                         <form>
                             <div class="form-group">
                                 <label for="recipient-name" class="col-form-label">Status:</label>
-                                <input type="text" name="selected_orderid" id="selected_orderid">
+                                <input type="hidden" name="selected_orderid" id="selected_orderid">
                                 <select class="form-control" name="new_status" id="new_status">
                                     <option value="1">CONFIRM</option>
                                     <option value="2">DONE</option>

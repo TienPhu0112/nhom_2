@@ -87,6 +87,8 @@ Route::middleware(['auth'])->group(function(){
 
         #FoodOrder
         Route::resource("food_order",\App\Http\Controllers\OrderFoodController::class);
+        Route::get('changeOrderStatus/{status}/{order}',[App\Http\Controllers\OrderFoodController::class, 'changeOrderStatus']);
+
     });
 
 });
