@@ -233,6 +233,7 @@
     <section class="section-event">
         <div class="wrap-slick2">
             <div class="slick2">
+                @foreach($lsEvent as $event)
                 <div class="item-slick2 item1-slick2" style="background-image: url(images/bg-event-01.jpg);">
                     <div class="wrap-content-slide2 p-t-115 p-b-208">
                         <div class="container">
@@ -248,7 +249,7 @@
                             </div>
 
                             <!-- Block2 -->
-                            @foreach($lsEvent as $event)
+
                             <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="zoomIn">
                                 <!-- Pic block2 -->
                                 <a href="#" class="wrap-pic-blo2 bg1-blo2" style="background-image: url({{$event->image}});">
@@ -317,10 +318,11 @@
                                     </a>
                                 </div>
                             </div>
-                            @endforeach
+
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
 
             <div class="wrap-slick2-dots"></div>
