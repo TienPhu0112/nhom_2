@@ -210,12 +210,14 @@
             <div class="row">
                 <div class="col-md-6">
                     <!-- Item our menu -->
-                    @foreach($lsFood as $food)
+                    @foreach($lsType as $type)
                         <div class="item-ourmenu bo-rad-10 hov-img-zoom pos-relative m-t-30">
-                            <img src="{{$food->image}}" alt="IMG-MENU">
+                            @foreach($lsFood as $food)
+                                <img src="{{$food->image}}" alt="IMG-MENU">
+                            @endforeach
                             <!-- Button2 -->
                             <a href="#" class="btn2 flex-c-m txt5 ab-c-m size4">
-                                {{$food->name}}
+                                {{$type->name}}
                             </a>
                         </div>
                     @endforeach
@@ -246,12 +248,13 @@
                             </div>
 
                             <!-- Block2 -->
+                            @foreach($lsEvent as $event)
                             <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="zoomIn">
                                 <!-- Pic block2 -->
-                                <a href="#" class="wrap-pic-blo2 bg1-blo2" style="background-image: url(images/event-02.jpg);">
+                                <a href="#" class="wrap-pic-blo2 bg1-blo2" style="background-image: url({{$event->image}});">
                                     <div class="time-event size10 txt6 effect1">
 										<span class="txt-effect1 flex-c-m t-center">
-											08:00 PM Tuesday - 21 November 2018
+											{{$event->start_time}}
 										</span>
                                     </div>
                                 </a>
@@ -259,11 +262,11 @@
                                 <!-- Text block2 -->
                                 <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
                                     <h4 class="tit7 t-center m-b-10">
-                                        Wines during specific nights
+                                        {{$event->title}}
                                     </h4>
 
                                     <p class="t-center">
-                                        Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia
+                                        {!!$event->content!!}
                                     </p>
 
                                     <div class="flex-sa-m flex-w w-full m-t-40">
@@ -314,184 +317,10 @@
                                     </a>
                                 </div>
                             </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>
-
-                <div class="item-slick2 item2-slick2" style="background-image: url(images/bg-event-02.jpg);">
-                    <div class="wrap-content-slide2 p-t-115 p-b-208">
-                        <div class="container">
-                            <!-- - -->
-                            <div class="title-event t-center m-b-52">
-								<span class="tit2 p-l-15 p-r-15">
-									Upcomming
-								</span>
-
-                                <h3 class="tit6 t-center p-l-15 p-r-15 p-t-3">
-                                    Events
-                                </h3>
-                            </div>
-
-                            <!-- Block2 -->
-                            <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="fadeInDown">
-                                <!-- Pic block2 -->
-                                <a href="#" class="wrap-pic-blo2 bg2-blo2" style="background-image: url(images/event-06.jpg);">
-                                    <div class="time-event size10 txt6 effect1">
-										<span class="txt-effect1 flex-c-m">
-											08:00 PM Tuesday - 21 November 2018
-										</span>
-                                    </div>
-                                </a>
-
-                                <!-- Text block2 -->
-                                <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
-                                    <h4 class="tit7 t-center m-b-10">
-                                        Wines during specific nights
-                                    </h4>
-
-                                    <p class="t-center">
-                                        Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia
-                                    </p>
-
-                                    <div class="flex-sa-m flex-w w-full m-t-40">
-                                        <div class="size11 flex-col-c-m">
-											<span class="dis-block t-center txt7 m-b-2 days">
-												25
-											</span>
-
-                                            <span class="dis-block t-center txt8">
-												Days
-											</span>
-                                        </div>
-
-                                        <div class="size11 flex-col-c-m">
-											<span class="dis-block t-center txt7 m-b-2 hours">
-												12
-											</span>
-
-                                            <span class="dis-block t-center txt8">
-												Hours
-											</span>
-                                        </div>
-
-                                        <div class="size11 flex-col-c-m">
-											<span class="dis-block t-center txt7 m-b-2 minutes">
-												59
-											</span>
-
-                                            <span class="dis-block t-center txt8">
-												Minutes
-											</span>
-                                        </div>
-
-                                        <div class="size11 flex-col-c-m">
-											<span class="dis-block t-center txt7 m-b-2 seconds">
-												56
-											</span>
-
-                                            <span class="dis-block t-center txt8">
-												Seconds
-											</span>
-                                        </div>
-                                    </div>
-
-                                    <a href="#" class="txt4 m-t-40">
-                                        View Details
-                                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item-slick2 item3-slick2" style="background-image: url(images/bg-event-04.jpg);">
-                    <div class="wrap-content-slide2 p-t-115 p-b-208">
-                        <div class="container">
-                            <!-- - -->
-                            <div class="title-event t-center m-b-52">
-								<span class="tit2 p-l-15 p-r-15">
-									Upcomming
-								</span>
-
-                                <h3 class="tit6 t-center p-l-15 p-r-15 p-t-3">
-                                    Events
-                                </h3>
-                            </div>
-
-                            <!-- Block2 -->
-                            <div class="blo2 flex-w flex-str flex-col-c-m-lg animated visible-false" data-appear="rotateInUpLeft">
-                                <!-- Pic block2 -->
-                                <a href="#" class="wrap-pic-blo2 bg3-blo2" style="background-image: url(images/event-01.jpg);">
-                                    <div class="time-event size10 txt6 effect1">
-										<span class="txt-effect1 flex-c-m">
-											08:00 PM Tuesday - 21 November 2018
-										</span>
-                                    </div>
-                                </a>
-
-                                <!-- Text block2 -->
-                                <div class="wrap-text-blo2 flex-col-c-m p-l-40 p-r-40 p-t-45 p-b-30">
-                                    <h4 class="tit7 t-center m-b-10">
-                                        Wines during specific nights
-                                    </h4>
-
-                                    <p class="t-center">
-                                        Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia
-                                    </p>
-
-                                    <div class="flex-sa-m flex-w w-full m-t-40">
-                                        <div class="size11 flex-col-c-m">
-											<span class="dis-block t-center txt7 m-b-2 days">
-												25
-											</span>
-
-                                            <span class="dis-block t-center txt8">
-												Days
-											</span>
-                                        </div>
-
-                                        <div class="size11 flex-col-c-m">
-											<span class="dis-block t-center txt7 m-b-2 hours">
-												12
-											</span>
-
-                                            <span class="dis-block t-center txt8">
-												Hours
-											</span>
-                                        </div>
-
-                                        <div class="size11 flex-col-c-m">
-											<span class="dis-block t-center txt7 m-b-2 minutes">
-												59
-											</span>
-
-                                            <span class="dis-block t-center txt8">
-												Minutes
-											</span>
-                                        </div>
-
-                                        <div class="size11 flex-col-c-m">
-											<span class="dis-block t-center txt7 m-b-2 seconds">
-												56
-											</span>
-
-                                            <span class="dis-block t-center txt8">
-												Seconds
-											</span>
-                                        </div>
-                                    </div>
-
-                                    <a href="#" class="txt4 m-t-40">
-                                        View Details
-                                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
 
             <div class="wrap-slick2-dots"></div>
@@ -769,24 +598,25 @@
             </div>
 
             <div class="row">
+                @foreach($lsNews as $news)
                 <div class="col-md-4 p-t-30">
                     <!-- Block1 -->
                     <div class="blo1">
                         <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="blog-detail.html"><img src="images/blog-01.jpg" alt="IMG-INTRO"></a>
+                            <a href="blog-detail.html"><img src="{{$news->image}}" alt="IMG-INTRO" style="height: 230px"></a>
 
                             <div class="time-blog">
-                                21 Dec 2017
+                                {{$news->created_at}}
                             </div>
                         </div>
 
                         <div class="wrap-text-blo1 p-t-35">
                             <a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Best Places for Wine
+                                {{$news->title}}
                                 </h4></a>
 
                             <p class="m-b-20">
-                                Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
+                                {!! $news->content !!}
                             </p>
 
                             <a href="blog-detail.html" class="txt4">
@@ -796,63 +626,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="blog-detail.html"><img src="images/blog-02.jpg" alt="IMG-INTRO"></a>
-
-                            <div class="time-blog">
-                                15 Dec 2017
-                            </div>
-                        </div>
-
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Eggs and Cheese
-                                </h4></a>
-
-                            <p class="m-b-20">
-                                Duis elementum, risus sit amet lobortis nunc justo condimentum ligula, vitae feugiat
-                            </p>
-
-                            <a href="blog-detail.html" class="txt4">
-                                Continue Reading
-                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4 p-t-30">
-                    <!-- Block1 -->
-                    <div class="blo1">
-                        <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="blog-detail.html"><img src="images/blog-03.jpg" alt="IMG-INTRO"></a>
-
-                            <div class="time-blog">
-                                12 Dec 2017
-                            </div>
-                        </div>
-
-                        <div class="wrap-text-blo1 p-t-35">
-                            <a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                    Style the Wedding Party
-                                </h4></a>
-
-                            <p class="m-b-20">
-                                Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
-                            </p>
-
-                            <a href="blog-detail.html" class="txt4">
-                                Continue Reading
-                                <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
         </div>
     </section>

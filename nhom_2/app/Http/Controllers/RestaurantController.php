@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use App\Models\DishType;
+use App\Models\Event;
 use App\Models\Gallery;
+use App\Models\News;
 use App\Models\Order;
 use Illuminate\Http\Request;
 use App\Models\Food;
@@ -16,8 +19,16 @@ class RestaurantController extends Controller
     public function welcome(Request $request)
     {
         $lsImg = Gallery::all();
-        $lsFood = Food::orderBy('created_at', 'desc')->take(9)->get();
-        return view("welcome")->with(['lsFood'=>$lsFood, 'lsImg' => $lsImg, 'title'=>'PATO PLACE']);
+        $lsFood = Food::orderBy('created_at', 'desc')->take(1)->get();
+        $lsType = DishType::orderBy('created_at', 'desc')->take(9)->get();
+        $lsEvent = Event::orderBy('created_at', 'desc')->take(1)->get();
+        $lsNews = News::orderBy('created_at', 'desc')->take(3)->get();
+        return view("welcome")->with(['lsType'=>$lsType,
+                                            'lsFood'=>$lsFood,
+                                            'lsImg'=>$lsImg,
+                                            'lsEvent'=>$lsEvent,
+                                            'lsNews'=>$lsNews,
+                                            'title'=>'Home']);
     }
 
     public  function  reservation(Request  $request){

@@ -136,6 +136,6 @@ class ToGoOrderController extends Controller
         return view('foodorder_success')->with(['lsType' => $lsType,
                                                         'lsFood'=> $lsFood,
                                                         'title' => 'Order Success',
-            'lsImg'=>$lsImg]);
+                                                        'lsImg'=>$lsImg]);
     }
 }
