@@ -94,6 +94,19 @@
         </li>
 
         <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav8" data-bs-toggle="collapse" href="#">
+                <i class="ri-restaurant-line"></i><span>Order</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav8" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{asset('admin/food_order')}}">
+                        <i class="bi bi-circle"></i><span>Orders list</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav6" data-bs-toggle="collapse" href="#">
                 <i class="ri-newspaper-fill"></i><span>News</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
@@ -128,10 +141,10 @@
         </li>
 
         <li class="nav-item">
-            <a class="nav-link collapsed" data-bs-target="#components-nav8" data-bs-toggle="collapse" href="#">
+            <a class="nav-link collapsed" data-bs-target="#components-nav9" data-bs-toggle="collapse" href="#">
                 <i class="ri-calendar-event-fill"></i><span>Event</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
-            <ul id="components-nav8" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+            <ul id="components-nav9" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="{{asset('admin/event')}}">
                         <i class="bi bi-circle"></i><span>Events List</span>

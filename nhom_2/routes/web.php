@@ -84,6 +84,9 @@ Route::middleware(['auth'])->group(function(){
 
         #Event
         Route::resource("event",EventController::class);
+
+        #FoodOrder
+        Route::resource("food_order",\App\Http\Controllers\OrderFoodController::class);
     });
 
 });
@@ -93,6 +96,7 @@ Route::get("/",[RestaurantController::class,'welcome']);
 
 Route::get("/reservation",[RestaurantController::class,'reservation'])->name('reservation');
 Route::post("/reservation",[RestaurantController::class,'booking']);
+
 
 
 

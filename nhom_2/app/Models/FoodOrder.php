@@ -10,10 +10,10 @@ class FoodOrder extends Model
     use HasFactory;
 
     public function foods(){
-        return $this -> belongsTo('App/Models/Food');
+        return $this -> belongsTo('App\Models\Food', 'food_id', 'id');
     }
 
     public function togoOrders(){
-        return $this -> belongsTo('App/Models/TogoOrder');
+        return $this -> belongsTo('App/Models/TogoOrder', 'order_id', 'id');
     }
 }

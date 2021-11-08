@@ -10,11 +10,11 @@ class TogoOrder extends Model
     use HasFactory;
 
     public function foodOrders(){
-        return $this -> hasMany('App\Models\FoodOrder');
+        return $this -> hasMany('App\Models\FoodOrder', 'order_id', 'id');
     }
 
     public function customers(){
-        return $this -> belongsTo('App\Models\Customer');
+        return $this -> belongsTo('App\Models\Customer','customer_id', 'id');
     }
 
     public function foods(){

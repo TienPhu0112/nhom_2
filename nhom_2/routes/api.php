@@ -19,3 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::get('admin/changeStatusJson',[App\Http\Controllers\TableController::class,'changeStatusJson']);
 
+// Change status order
+Route::get('admin/changeStatusOrderJson',[App\Http\Controllers\OrderFoodController::class, 'changeStatusOrderJson']);
+
