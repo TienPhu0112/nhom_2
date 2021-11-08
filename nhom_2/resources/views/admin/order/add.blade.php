@@ -49,7 +49,7 @@
         <div class="row mb-3">
             <label class="col-sm-2 col-form-label">Booking Time</label>
             <div class="col-sm-10">
-                <select class="selection-1" name="booking_time" >
+                <select class="form-select" name="booking_time" >
                     <option>9:00</option>
                     <option>11:00</option>
                     <option>13:00</option>

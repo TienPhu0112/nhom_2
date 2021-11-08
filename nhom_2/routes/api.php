@@ -22,3 +22,6 @@ Route::get('admin/changeStatusJson',[App\Http\Controllers\TableController::class
 // Change status order
 Route::get('admin/changeStatusOrderJson',[App\Http\Controllers\OrderFoodController::class, 'changeStatusOrderJson']);
 
+// Change status ordercontroller
+Route::get('admin/changeStatus',[\App\Http\Controllers\Admin\OrderController::class, 'changeStatus']);
+

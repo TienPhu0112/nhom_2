@@ -3,7 +3,7 @@
 @section('bread-crumb')
     <div class="bread-crumb bo5-b p-t-17 p-b-17">
         <div class="container">
-            <a href="{{ route('home') }}" class="txt27">
+            <a href="{{ asset("/") }}" class="txt27">
                 Home
             </a>
 

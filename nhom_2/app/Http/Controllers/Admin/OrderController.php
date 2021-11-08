@@ -64,7 +64,10 @@ class OrderController extends Controller
 
     public function show($id)
     {
-        //
+        $order = Order::find($id);
+        return view('admin.order.detail')->with(
+            ["order" => $order, "title" => "Reservation Detail"]
+        );
     }
 
 
@@ -115,6 +118,18 @@ class OrderController extends Controller
 
         return response()->json([
             'error' => true
+        ]);
+    }
+
+    public function changeStatus(Request $request) {
+        $id = $request->id;
+        $status = $request->status;
+        $order = Order::find($id);
+        $order->status = $status;
+        $order->save();
+        return response()->json([
+            'status' => 'OK',
+            'desc' => 'Change status success',
         ]);
     }
 }
