@@ -94,7 +94,8 @@ class OrderFoodController extends Controller
         $order = TogoOrder::find($id);
         $order->status = $status;
         $order->save();
-        return redirect()->route('foodorder.show',$id);
+        session()->flash('success', 'Status changed successfully.');
+        return redirect()->route('food_order.show',$id);
     }
 
     public function changeStatusOrderJson(Request $request) {

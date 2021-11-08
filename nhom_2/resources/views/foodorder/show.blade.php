@@ -1,5 +1,9 @@
 @extends('admin.main')
 @section('content')
+    <div class="container">
+        @if(session()->has('success'))
+        @endif
+    </div>
     <a href="{{route('food_order.index')}}">Back</a>
         <hr/>
         <p>Customer Name: {{$order->customers->name}} </p>
@@ -45,14 +49,14 @@
             @endif
         </h4>
     @if($order->status == 0)
-        <a class="btn btn-primary" href="{{asset('admin/changeStatus')}}/1/{{$order->id}}">Change to CONFIRM</a>
-        <a class="btn btn-primary" href="{{asset('admin/changeStatus')}}/3/{{$order->id}}">Change to CANCEL</a>
+        <a class="btn btn-primary" href="{{asset('admin/changeOrderStatus')}}/1/{{$order->id}}">Change to CONFIRM</a>
+        <a class="btn btn-primary" href="{{asset('admin/changeOrderStatus')}}/3/{{$order->id}}">Change to CANCEL</a>
     @endif
     @if($order->status == 1)
-        <a class="btn btn-primary" href="{{asset('admin/changeStatus')}}/2/{{$order->id}}">Change to DONE</a>
-        <a class="btn btn-primary" href="{{asset('admin/changeStatus')}}/3/{{$order->id}}">Change to CANCEL</a>
+        <a class="btn btn-primary" href="{{asset('admin/changeOrderStatus')}}/2/{{$order->id}}">Change to DONE</a>
+        <a class="btn btn-primary" href="{{asset('admin/changeOrderStatus')}}/3/{{$order->id}}">Change to CANCEL</a>
     @endif
     @if($order->status == 2)
-        <a class="btn btn-primary" href="{{asset('admin/changeStatus')}}/3/{{$order->id}}">Change to CANCEL</a>
+        <a class="btn btn-primary" href="{{asset('admin/changeOrderStatus')}}/3/{{$order->id}}">Change to CANCEL</a>
     @endif
 @endsection
