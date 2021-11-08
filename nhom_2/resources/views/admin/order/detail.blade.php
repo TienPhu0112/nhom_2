@@ -1,7 +1,7 @@
 @extends('admin.main')
 
 @section('content')
-    <div class="card">
+    <div class="card profile">
         <div class="card-body pt-3">
             <!-- Bordered Tabs -->
             <ul class="nav nav-tabs nav-tabs-bordered">

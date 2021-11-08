@@ -488,7 +488,7 @@
                                 </h4></a>
 
                             <p class="m-b-20">
-                                {!! $news->content !!}
+                                {!! $news->sub_content !!}
                             </p>
 
                             <a href="{{asset('/blog')}}" class="txt4">
