@@ -23,11 +23,13 @@ class RestaurantController extends Controller
         $lsType = DishType::orderBy('created_at', 'desc')->take(9)->get();
         $lsEvent = Event::orderBy('created_at', 'desc')->take(3)->get();
         $lsNews = News::orderBy('created_at', 'desc')->take(3)->get();
+        $length = count($lsEvent);
         return view("welcome")->with(['lsType'=>$lsType,
                                             'lsFood'=>$lsFood,
                                             'lsImg'=>$lsImg,
                                             'lsEvent'=>$lsEvent,
                                             'lsNews'=>$lsNews,
+                                            'length' => $length,
                                             'title'=>'Home']);
     }
 
@@ -94,7 +96,11 @@ class RestaurantController extends Controller
 
         if (($booking_date_time - $now < 0)){
             $request->session()->flash("msg_f","Add Order Failed! Please don't select a time period in the past!");
-            return redirect(route("reservation"));
+            if($request->input('route') == 1){
+                return redirect(route("welcome"));
+            }else{
+                return redirect(route("reservation"));
+            }
         }
 
         if ($filter_booking < $count_table){
@@ -110,10 +116,19 @@ class RestaurantController extends Controller
 
             $order->save();
             $request->session()->flash("msg","Add Order Succesfully! Thanks For Choosing Our Restaurant!");
-            return redirect(route("reservation"));
+            if($request->input('route') == 1){
+                return redirect(route("welcome"));
+            }else{
+                return redirect(route("reservation"));
+            }
         }else{
             $request->session()->flash("msg_f","Add Order Failed! We Don't Have Available Table For You!");
-            return redirect(route("reservation"));
+            if($request->input('route') == 1){
+                return redirect(route("welcome"));
+            }else{
+                return redirect(route("reservation"));
+            }
+
         }
 
 

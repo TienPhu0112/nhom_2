@@ -233,7 +233,7 @@
     <section class="section-event">
         <div class="wrap-slick2">
             <div class="slick2">
-                @foreach($lsEvent as $event)
+                @foreach($lsEvent as $key => $event)
                 <div class="item-slick2 item1-slick2" style="background-image: url(images/bg-event-01.jpg);">
                     <div class="wrap-content-slide2 p-t-115 p-b-208">
                         <div class="container">
@@ -255,7 +255,7 @@
                                 <a href="#" class="wrap-pic-blo2 bg1-blo2" style="background-image: url({{$event->image}});">
                                     <div class="time-event size10 txt6 effect1">
 										<span class="txt-effect1 flex-c-m t-center">
-											{{$event->start_time}}
+											{{date('H:i l - d F Y',strtotime($event->start_time))}}
 										</span>
                                     </div>
                                 </a>
@@ -270,8 +270,10 @@
                                         {!!$event->content!!}
                                     </p>
 
-                                    <div class="flex-sa-m flex-w w-full m-t-40">
+                                    <div class="flex-sa-m flex-w w-full m-t-40 get-date" data-number="{{$length}}" data-date="{{ date('d M Y H:i:s',strtotime($event->start_time))." GMT+7" }}">
                                         <div class="size11 flex-col-c-m">
+
+
 											<span class="dis-block t-center txt7 m-b-2 days">
 												25
 											</span>
@@ -326,6 +328,139 @@
             </div>
 
             <div class="wrap-slick2-dots"></div>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section class="section-booking bg1-pattern p-t-100 p-b-110">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 p-b-30">
+                    <div class="t-center">
+						<span class="tit2 t-center">
+							Reservation
+						</span>
+
+                        <h3 class="tit3 t-center m-b-35 m-t-2">
+                            Book table
+                        </h3>
+                    </div>
+
+                    <form class="wrap-form-booking" action="" method="POST">
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- Date -->
+                                <span class="txt9">
+									Date
+								</span>
+
+                                <div class="wrap-inputdate pos-relative txt10 size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                    <input class="my-calendar bo-rad-10 sizefull txt10 p-l-20" type="text" name="booking_date">
+                                    <i class="btn-calendar fa fa-calendar ab-r-m hov-pointer m-r-18" aria-hidden="true"></i>
+                                </div>
+
+                                <!-- Time -->
+                                <span class="txt9">
+									Time
+								</span>
+
+                                <div class="wrap-inputtime size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                    <!-- Select2 -->
+                                    <select class="selection-1 select2-hidden-accessible" name="booking_time" tabindex="-1" aria-hidden="true">
+                                        <option>9:00</option>
+                                        <option>11:00</option>
+                                        <option>13:00</option>
+                                        <option>15:00</option>
+                                        <option>17:00</option>
+                                        <option>19:00</option>
+                                    </select>
+                                </div>
+
+                                <!-- People -->
+                                <span class="txt9">
+									People
+								</span>
+
+                                <div class="wrap-inputpeople size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                    <!-- Select2 -->
+                                    <select class="selection-1 select2-hidden-accessible" name="people" tabindex="-1" aria-hidden="true">
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option>6</option>
+                                        <option>7</option>
+                                        <option>8</option>
+                                        <option>9</option>
+                                        <option>10</option>
+                                        <option>11</option>
+                                        <option>12</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <!-- Name -->
+                                <span class="txt9">
+									Name
+								</span>
+
+                                <div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                    <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Name">
+                                </div>
+
+                                <!-- Phone -->
+                                <span class="txt9">
+									Phone
+								</span>
+
+                                <div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                    <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" placeholder="Phone">
+                                </div>
+
+                                <!-- Email -->
+                                <span class="txt9">
+									Email
+								</span>
+
+                                <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
+                                    <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email" placeholder="Email">
+                                </div>
+                            </div>
+                            <input type="hidden" value="0" name="status">
+                            <input type="hidden" value="1" name="route">
+                        </div>
+
+                        <div class="wrap-btn-booking flex-c-m m-t-6">
+                            @if(session('msg'))
+                                <div @class('alert alert-success')>
+                                    {{session('msg')}}
+                                </div>
+                            @endif
+                            @if(session('msg_f'))
+                                <div @class('alert alert-danger')>
+                                    {{session('msg_f')}}
+                                </div>
+                            @endif
+                        </div>
+
+                        <div class="wrap-btn-booking flex-c-m m-t-6">
+                            <!-- Button3 -->
+                            <button type="submit" class="btn3 flex-c-m size13 txt11 trans-0-4" style="background: #111111">
+                                Book Table
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="col-lg-6 p-b-30 p-t-18">
+                    <div class="wrap-pic-booking size2 bo-rad-10 hov-img-zoom m-l-r-auto">
+                        <img src="images/booking-01.jpg" alt="IMG-OUR">
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -504,3 +639,4 @@
     </section>
 
 @endsection
+
