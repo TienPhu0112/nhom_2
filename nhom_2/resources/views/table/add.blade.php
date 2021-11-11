@@ -19,29 +19,17 @@
                 </div>
             </div>
 
-            <fieldset class="row mb-3">
-                <legend class="col-form-label col-sm-2 pt-0">Status</legend>
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">Quantity</label>
                 <div class="col-sm-10">
-                    <div class="form-check">
-                        <input class="form-check-input" value="0" type="radio" name="status" id="gridRadios1" checked="">
-                        <label class="form-check-label" for="gridRadios1">
-                            Booked a table
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" value="1" type="radio" name="status" id="gridRadios1" checked="">
-                        <label class="form-check-label" for="gridRadios1">
-                            Using
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" value="2" type="radio" name="status" id="gridRadios1" checked="">
-                        <label class="form-check-label" for="gridRadios1">
-                            End or Cancel
-                        </label>
-                    </div>
+                    <select class="form-select" aria-label="Default select example" name="quantity">
+                        <option value="1">1 Seats</option>
+                        <option value="2">2 Seats</option>
+                        <option value="4">4 Seats</option>
+                        <option value="6">6 Seats</option>
+                    </select>
                 </div>
-            </fieldset>
+            </div>
             <div class="col-sm-12 text-center">
                 <button type="submit" class="btn btn-primary">Add New</button>
             </div>

@@ -46,12 +46,12 @@ class TableController extends Controller
         {
             $request->validate([
                 'type' => 'required|min:1|',
-                'status' => 'required'
+                'quantity' => 'required'
             ]);
 
             $table=new Table();
             $table->type=$request->input('type');
-            $table->status=$request->input('status');
+            $table->quantity=$request->input('quantity');
             $table->Save();
 
             $request->session()->flash("msg", "Insert table successfully.");

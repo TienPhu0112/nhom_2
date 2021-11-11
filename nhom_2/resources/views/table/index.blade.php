@@ -30,7 +30,7 @@
             <tr>
                 <th scope="col">ID</th>
                 <th scope="col">Type</th>
-                <th scope="col">Status</th>
+                <th scope="col">Quantity</th>
                 <th scope="col">Action</th>
             </tr>
             </thead>
@@ -39,16 +39,7 @@
                 <tr>
                     <td>{{$table->id}}</td>
                     <td>Table {{$table->type}}</td>
-                    <td>@if($table->status == 0)
-                            Booked a table
-                        @endif
-                        @if($table->status == 1)
-                            Using
-                        @endif
-                        @if($table->status == 2)
-                            End or Cancel
-                        @endif
-                    </td>
+                   <td>{{$table->quantity}}</td>
                     <td>
                         <a href="#" class="btn btn-danger btn-sm"
                            onclick="removeRow({{ $table->id }}, '/admin/table/{{ $table->id }}')"
