@@ -131,7 +131,7 @@
                                     </h4></a>
 
                                 <p class="m-b-20">
-                                    {!!$news->content!!}                              </p>
+                                    {!!$news->sub_content!!}                              </p>
 
                                 <a href="{{asset('/blog')}}" class="txt4">
                                     Learn More
@@ -267,10 +267,6 @@
                                         </div>
                                     </div>
 
-                                    <a href="#" class="txt4 m-t-40">
-                                        View Details
-                                        <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                                    </a>
                                 </div>
                             </div>
 
@@ -566,7 +562,7 @@
                             <a href="{{ route('detail',$news->id) }}"><img src="{{$news->image}}" alt="IMG-INTRO" style="height: 230px"></a>
 
                             <div class="time-blog">
-                                {{$news->created_at}}
+                                {{ date('d M Y', strtotime($news->created_at)) }}
                             </div>
                         </div>
 
