@@ -401,41 +401,16 @@
                             <td class="bg_white email-section" style="text-align:center;">
                                 <div class="heading-section heading-section-dark">
                                     <h3 style="text-align:left; padding-left:20px">Hi {{ $details['name'] }} </h3>
-                                    <h3 style="text-align:left; padding-left:20px">Address: {{ $details['address'] }} </h3>
+                                    <h3 style="text-align:left; padding-left:20px">Email: {{ $details['email'] }} </h3>
                                     <h3 style="text-align:left; padding-left:20px">Phone: {{ $details['phone'] }} </h3>
-                                    <h2>Your order detail</h2>
+                                    <hr/>
+                                    <h2>You have made a successful reservation!</h2>
+                                    <h3 style="text-align:left; padding-left:20px">Booking date: {{ $details['booking_date'] }} </h3>
+                                    <h3 style="text-align:left; padding-left:20px">Booking time: {{ $details['booking_time'] }} </h3>
+                                    <h3 style="text-align:left; padding-left:20px">Amount of people: {{ $details['guest_number']}} </h3>
 
-                                    <table class="table table-responsive" width="100%">
-                                        <thead class="col-md-12">
-                                        <tr>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Quantity</th>
-                                            <th>Total</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        @foreach(Cart::content() as $row)
-                                            <tr>
-                                                <td class="cart_product_name d-flex align-items-center">
-                                                    <h5>{{$row->name}}</h5>
-                                                </td>
-                                                <td class="price"><span>{{$row->price}}</span></td>
-                                                <td class="qty">
-                                                    <div class="quantity">
-                                                        {{$row->qty}}
-                                                    </div>
-                                                </td>
-                                                <td class="total_price"><span>{{$row->total}}</span></td>
-                                            </tr>
-                                        @endforeach
-                                        </tbody>
-                                    </table>
-                                    <ul class="text-services" width="100%" style="text-align:left;">
-                                        <li><span>Subtotal</span> <span>{{Cart::subtotal()}}</span></li>
-                                        <li><span>Tax</span> <span>{{Cart::tax()}}</span></li>
-                                        <li><span><strong>Total</strong></span> <span><strong>{{Cart::total()}}</strong></span></li>
-                                    </ul>
+                                    <p style="text-align:left; padding-left:20px">We'll reserve your spot for you within 15 minutes.</p>
+                                    <p style="text-align:left; padding-left:20px">Please check the information and arrive on time.</p>
                                 </div>
                             </td>
                         </tr><!-- end: tr -->
@@ -448,11 +423,11 @@
                         <tr>
                             <td class="bg_dark email-section" style="text-align:center; color: #ffffff; background: rgba(31,31,31,0.8)">
                                 <div class="heading-section heading-section-white">
-{{--                                    <span class="subheading">Welcome</span>--}}
-                                    <h2>Thank you for your ordering!</h2>
+                                    {{--                                    <span class="subheading">Welcome</span>--}}
+                                    <h2>Thank you for using our service!</h2>
                                     <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
                                     <h3>HOTLINE: 088888888</h3>
-                                    <h3>Wishing you a delicious!</h3>
+                                    <h2>Wishing you a delicious!</h2>
                                 </div>
                             </td>
                         </tr><!-- end: tr -->

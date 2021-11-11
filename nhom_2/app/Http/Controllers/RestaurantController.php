@@ -117,8 +117,34 @@ class RestaurantController extends Controller
             $order->save();
             $request->session()->flash("msg","Add Order Succesfully! Thanks For Choosing Our Restaurant!");
             if($request->input('route') == 1){
+
+                //send email
+                $data = array(
+                    'name' => $order->name,
+                    'email' => $order->email,
+                    'phone' => $order->phone,
+                    'booking_date' => $order->booking_date,
+                    'booking_time' => $order->booking_time,
+                    'guest_number' => $order->guest_number,
+                );
+                $mail = new \App\Mail\BookingMail($data);
+                \Mail::to($request->email)->send($mail);
+
                 return redirect(route("welcome"));
             }else{
+
+                //send email
+                $data = array(
+                    'name' => $order->name,
+                    'email' => $order->email,
+                    'phone' => $order->phone,
+                    'booking_date' => $order->booking_date,
+                    'booking_time' => $order->booking_time,
+                    'guest_number' => $order->guest_number,
+                );
+                $mail = new \App\Mail\BookingMail($data);
+                \Mail::to($request->email)->send($mail);
+
                 return redirect(route("reservation"));
             }
         }else{
@@ -130,8 +156,6 @@ class RestaurantController extends Controller
             }
 
         }
-
-
     }
 
     public function about(Request $request)
