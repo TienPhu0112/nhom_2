@@ -21,7 +21,7 @@ class RestaurantController extends Controller
         $lsImg = Gallery::all();
         $lsFood = Food::orderBy('created_at', 'desc')->take(1)->get();
         $lsType = DishType::orderBy('created_at', 'desc')->take(9)->get();
-        $lsEvent = Event::orderBy('created_at', 'desc')->take(3)->get();
+        $lsEvent = Event::all();
         $lsNews = News::orderBy('created_at', 'desc')->take(3)->get();
         $length = count($lsEvent);
         return view("welcome")->with(['lsType'=>$lsType,

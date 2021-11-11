@@ -86,7 +86,7 @@
                             Donec quis lorem nulla. Nunc eu odio mi. Morbi nec lobortis est. Sed fringilla, nunc sed imperdiet lacinia, nisl ante egestas mi, ac facilisis ligula sem id neque.
                         </p>
 
-                        <a href="about.html" class="txt4">
+                        <a href="{{asset('/about')}}" class="txt4">
                             Our Story
                             <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
                         </a>
@@ -117,78 +117,31 @@
         <div class="content-intro bg-white p-t-77 p-b-133">
             <div class="container">
                 <div class="row">
+                    @foreach($lsNews as $news)
                     <div class="col-md-4 p-t-30">
                         <!-- Block1 -->
                         <div class="blo1">
                             <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
-                                <a href="#"><img src="images/intro-01.jpg" alt="IMG-INTRO"></a>
+                                <a href="{{asset('/blog')}}"><img src="{{$news->image}}" alt="IMG-INTRO" height="230px"></a>
                             </div>
 
                             <div class="wrap-text-blo1 p-t-35">
-                                <a href="#"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                        Romantic Restaurant
+                                <a href="{{asset('/blog')}}"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                                    {{$news->title}}
                                     </h4></a>
 
                                 <p class="m-b-20">
-                                    Phasellus lorem enim, luctus ut velit eget, con-vallis egestas eros.
-                                </p>
+                                    {!!$news->content!!}                              </p>
 
-                                <a href="#" class="txt4">
+                                <a href="{{asset('/blog')}}" class="txt4">
                                     Learn More
                                     <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
+
                     </div>
-
-                    <div class="col-md-4 p-t-30">
-                        <!-- Block1 -->
-                        <div class="blo1">
-                            <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
-                                <a href="#"><img src="images/intro-02.jpg" alt="IMG-INTRO"></a>
-                            </div>
-
-                            <div class="wrap-text-blo1 p-t-35">
-                                <a href="#"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                        Delicious Food
-                                    </h4></a>
-
-                                <p class="m-b-20">
-                                    Aliquam eget aliquam magna, quis posuere risus ac justo ipsum nibh urna
-                                </p>
-
-                                <a href="#" class="txt4">
-                                    Learn More
-                                    <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 p-t-30">
-                        <!-- Block1 -->
-                        <div class="blo1">
-                            <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
-                                <a href="#"><img src="images/intro-04.jpg" alt="IMG-INTRO"></a>
-                            </div>
-
-                            <div class="wrap-text-blo1 p-t-35">
-                                <a href="#"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
-                                        Red Wines You Love
-                                    </h4></a>
-
-                                <p class="m-b-20">
-                                    Sed ornare ligula eget tortor tempor, quis porta tellus dictum.
-                                </p>
-
-                                <a href="#" class="txt4">
-                                    Learn More
-                                    <i class="fa fa-long-arrow-right m-l-10" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -216,7 +169,7 @@
                                 <img src="{{$food->image}}" alt="IMG-MENU">
                             @endforeach
                             <!-- Button2 -->
-                            <a href="#" class="btn2 flex-c-m txt5 ab-c-m size4">
+                            <a href="{{asset('/menu')}}" class="btn2 flex-c-m txt5 ab-c-m size4">
                                 {{$type->name}}
                             </a>
                         </div>
