@@ -32,7 +32,7 @@
                                         <div class="line-item-mainmenu bg3-pattern"></div>
 
                                         <div class="price-item-mainmenu txt22">
-                                            {{$food->price}}
+                                            ${{$food->price}}
                                         </div>
                                     </div>
 

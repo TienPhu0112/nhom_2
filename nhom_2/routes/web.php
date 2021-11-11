@@ -39,6 +39,7 @@ Route::get('/menu', [App\Http\Controllers\ToGoOrderController::class, 'menu']);
 // cart
 Route::get('/cart', [App\Http\Controllers\ToGoOrderController::class, 'cart'])->name('cart');
 Route::post('/add_food/{fid}', [App\Http\Controllers\ToGoOrderController::class, 'add_food'])->name('add_food');
+Route::get('/remove_food/{rowId}', [App\Http\Controllers\ToGoOrderController::class, 'remove_food'])->name('remove_food');
 Route::post('update_cart',[App\Http\Controllers\ToGoOrderController::class, 'update_cart'])->name('update_cart');
 Route::get('/clear_cart', function (){
     \Cart::destroy();

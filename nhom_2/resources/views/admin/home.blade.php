@@ -340,8 +340,8 @@
                                         @foreach($lsBooking as $booking)
                                            <tr>
                                                 <td>{{$booking->id}}</td>
-                                                <td><a href="#" class="text-primary">{{$booking->customer->name}}</a></td>
-                                                <td>{{$booking->tables->type}}</td>
+                                                <td><a href="#" class="text-primary">{{$booking->name}}</a></td>
+                                                <td>{{$booking->type}}</td>
                                                 <td>{{$booking->created_at}}</td>
                                                 <td>
                                                    @if($booking->status == 0)
@@ -783,6 +783,8 @@
         </section>
 
 <!-- End #main -->
+
+        {{--    Fontawesome--}}
         <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
 
 

@@ -55,6 +55,11 @@ class ToGoOrderController extends Controller
         return redirect()->back();
     }
 
+    public function remove_food(Request $request, $rowId) {
+        \Cart::remove($rowId);
+        return redirect()->back();
+    }
+
     public function cart(Request $request) {
         $lsImg = Gallery::all();
         $lsType = DishType::all();
