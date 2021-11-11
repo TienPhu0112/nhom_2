@@ -32,7 +32,7 @@
                             </li>
 
                             <li>
-                                <a href="#">About</a>
+                                <a href="{{asset('/about')}}">About</a>
                             </li>
 
                             <li>
@@ -40,7 +40,7 @@
                             </li>
 
                             <li>
-                                <a href="#">Contact</a>
+                                <a href="{{asset('/contact')}}">Contact</a>
                             </li>
                         </ul>
                     </nav>

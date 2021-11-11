@@ -21,7 +21,7 @@ class RestaurantController extends Controller
         $lsImg = Gallery::all();
         $lsFood = Food::orderBy('created_at', 'desc')->take(1)->get();
         $lsType = DishType::orderBy('created_at', 'desc')->take(9)->get();
-        $lsEvent = Event::orderBy('created_at', 'desc')->take(3)->get();
+        $lsEvent = Event::all();
         $lsNews = News::orderBy('created_at', 'desc')->take(3)->get();
         $length = count($lsEvent);
         return view("welcome")->with(['lsType'=>$lsType,
@@ -134,4 +134,20 @@ class RestaurantController extends Controller
 
     }
 
+    public function about(Request $request)
+    {
+        $lsImg = Gallery::all();
+        return view("about")->with([
+            'lsImg'=>$lsImg,
+            'title'=>'About']);
+    }
+
+
+    public function contact(Request $request)
+    {
+        $lsImg = Gallery::all();
+        return view("contact")->with([
+            'lsImg'=>$lsImg,
+            'title'=>'Contact']);
+    }
 }
