@@ -121,7 +121,7 @@
                     <div class="col-md-4 p-t-30">
                         <!-- Block1 -->
                         <div class="blo1">
-                            <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom">
+                            <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom {{$news->favorite == 1}}">
                                 <a href="{{asset('/blog')}}"><img src="{{$news->image}}" alt="IMG-INTRO" height="230px"></a>
                             </div>
 
@@ -563,7 +563,7 @@
                     <!-- Block1 -->
                     <div class="blo1">
                         <div class="wrap-pic-blo1 bo-rad-10 hov-img-zoom pos-relative">
-                            <a href="blog-detail.html"><img src="{{$news->image}}" alt="IMG-INTRO" style="height: 230px"></a>
+                            <a href="{{ route('detail',$news->id) }}"><img src="{{$news->image}}" alt="IMG-INTRO" style="height: 230px"></a>
 
                             <div class="time-blog">
                                 {{$news->created_at}}
@@ -571,7 +571,7 @@
                         </div>
 
                         <div class="wrap-text-blo1 p-t-35">
-                            <a href="blog-detail.html"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
+                            <a href="{{ route('detail',$news->id) }}"><h4 class="txt5 color0-hov trans-0-4 m-b-13">
                                 {{$news->title}}
                                 </h4></a>
 
