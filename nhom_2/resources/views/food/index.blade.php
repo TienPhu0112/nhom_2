@@ -35,13 +35,10 @@
                 <th>{{$food->id}}</th>
                 <td>{{$food->name}}</td>
                 <td><img src="{{asset($food->image)}}" style="width:110px"></td>
-                <td>{{$food->price}}</td>
-                <td>{{$food->sale_price}}</td>
+                <td>${{$food->price}}</td>
+                <td>${{$food->sale_price}}</td>
                 <td>{{$food->status === 0 ? "Đang phục vụ" : "Dừng phục vụ"}}</td>
-                <td>
-                    @if(isset($food->dishTypes->name))
-                        {{ $food->dishTypes->name }}</td>
-                     @endif
+                <td>{{$food->dishTypes->name }}</td>
                 <td>
                     <a href="{{route("food.edit", $food->id)}}" class="btn btn-primary rounded-pill">
                         <i class="bx bxs-edit"></i>

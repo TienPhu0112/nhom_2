@@ -33,7 +33,7 @@
                     <td>{{$order->customers->name}}</td>
                     <td>{{$order->customers->phone}}</td>
                     <td>{{$order->created_at->format('d/m/Y H:i:s')}}
-                    <td>{{number_format($order->total,2)}}</td>
+                    <td>${{number_format($order->total,2)}}</td>
                     <td>
                         @if($order->status == 0)
                             OPEN

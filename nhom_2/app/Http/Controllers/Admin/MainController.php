@@ -6,10 +6,12 @@ use App\Http\Controllers\Controller;
 use App\Models\Customer;
 use App\Models\DishType;
 use App\Models\Food;
+use App\Models\FoodOrder;
 use App\Models\Order;
 use App\Models\Table;
 use App\Models\TogoOrder;
 use Illuminate\Http\Request;
+use DB;
 
 class MainController extends Controller
 {
@@ -23,6 +25,7 @@ class MainController extends Controller
         $total_TogoOrder = TogoOrder::all()->count();
         $total_Booking = Order::all()->count();
 
+
         // List
         $lsTable = Table::all();
         $lsType = DishType::all();
@@ -30,6 +33,13 @@ class MainController extends Controller
         $lsCustomer = Customer::all();
         $lsTogoOrder = TogoOrder::orderBy('created_at', 'desc')->get();
         $lsBooking = Order::orderBy('created_at', 'desc')->get();
+
+        $lsSuccess = DB::table('food_orders')->leftjoin('togo_orders', 'togo_orders.id', '=', 'food_orders.order_id')
+                                                ->where('togo_orders.status',2)
+                                                ->get();
+
+
+        // Quantity & Revenue
 
         return view('admin.home')->with([
 
@@ -40,6 +50,8 @@ class MainController extends Controller
             'total_Customer' => $total_Customer,
             'total_TogoOrder' => $total_TogoOrder,
             'total_Booking' => $total_Booking,
+            'lsSuccess' => $lsSuccess,
+
 
             // List
             'lsTable' => $lsTable,

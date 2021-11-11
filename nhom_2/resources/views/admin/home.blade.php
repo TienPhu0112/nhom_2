@@ -31,7 +31,7 @@
 
                                     <div class="d-flex align-items-center">
                                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-cart"></i>
+                                            <i class="bi bi-table"></i>
                                         </div>
                                         <div class="ps-3">
                                             <h6>{{$total_Booking}}</h6>
@@ -67,11 +67,11 @@
 
                                     <div class="d-flex align-items-center">
                                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-currency-dollar"></i>
+                                            <i class="bi bi-cart"></i>
                                         </div>
                                         <div class="ps-3">
                                             <h6>{{$total_TogoOrder}}</h6>
-                                            <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                                            <span class="text-success small pt-1 fw-bold">18%</span> <span class="text-muted small pt-2 ps-1">increase</span>
 
                                         </div>
                                     </div>
@@ -104,7 +104,7 @@
 
                                     <div class="d-flex align-items-center">
                                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-people"></i>
+                                            <i class="fas fa-users"></i>
                                         </div>
                                         <div class="ps-3">
                                             <h6>{{$total_Customer}}</h6>
@@ -141,7 +141,7 @@
 
                                     <div class="d-flex align-items-center">
                                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-cart"></i>
+                                            <i class="fas fa-chair"></i>
                                         </div>
                                         <div class="ps-3">
                                             <h6>{{$total_Table}}</h6>
@@ -175,7 +175,7 @@
 
                                     <div class="d-flex align-items-center">
                                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-cart"></i>
+                                            <i class="fas fa-utensils"></i>
                                         </div>
                                         <div class="ps-3">
                                             <h6>{{$total_Type}}</h6>
@@ -209,7 +209,7 @@
 
                                     <div class="d-flex align-items-center">
                                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="bi bi-cart"></i>
+                                            <i class="fas fa-hamburger"></i>
                                         </div>
                                         <div class="ps-3">
                                             <h6>{{$total_Food}}</h6>
@@ -306,7 +306,7 @@
                         </div>
                         <!-- End Reports -->
 
-                        <!-- Recent Sales -->
+                        <!-- Recent Bookings -->
                         <div class="col-12">
                             <div class="card recent-sales">
 
@@ -331,28 +331,107 @@
                                             <tr>
                                                 <th scope="col">Id</th>
                                                 <th scope="col">Customer</th>
-                                                <th scope="col">Table</th>
+                                                <th scope="col">Table Type</th>
                                                 <th scope="col">Date</th>
                                                 <th scope="col">Status</th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                        @foreach($lsBooking as $booking)
                                            <tr>
-                                                <td>1</td>
-                                               <td><a href="#" class="text-primary">vẫn tĩnh</a></td>
-                                                <td><a>vẫn tĩnh</a></td>
-                                                <td>vẫn tĩnh</td>
-                                                <td><span class="badge bg-success"> vẫn tĩnh</span></td>
+                                                <td>{{$booking->id}}</td>
+                                                <td><a href="#" class="text-primary">{{$booking->customer->name}}</a></td>
+                                                <td>{{$booking->tables->type}}</td>
+                                                <td>{{$booking->created_at}}</td>
+                                                <td>
+                                                   @if($booking->status == 0)
+                                                       <span class="badge bg-primary">Waiting</span>
+                                                   @endif
+
+                                                   @if($booking->status == 1)
+                                                       <span class="badge bg-success">Already Served</span>
+                                                   @endif
+
+                                                   @if($booking->status == 2)
+                                                       <span class="badge bg-danger">Cancelled</span>
+                                                   @endif
+                                                </td>
                                            </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
 
                                 </div>
 
                             </div>
-                        </div><!-- End Recent Sales -->
+                        </div>
+                        <!-- End Recent Bookings -->
 
-                        <!-- Top Selling -->
+                        <!-- Recent Orders -->
+                        <div class="col-12">
+                            <div class="card recent-sales">
+
+                                <div class="filter">
+                                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+                                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+                                        <li class="dropdown-header text-start">
+                                            <h6>Filter</h6>
+                                        </li>
+
+                                        <li><a class="dropdown-item" href="#">Today</a></li>
+                                        <li><a class="dropdown-item" href="#">This Month</a></li>
+                                        <li><a class="dropdown-item" href="#">This Year</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Recent Orders <span>| Today</span></h5>
+
+                                    <table class="table table-borderless datatable">
+                                        <thead>
+                                        <tr>
+                                            <th scope="col">Id</th>
+                                            <th scope="col">Customer</th>
+                                            <th scope="col">Total</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Status</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        @foreach($lsTogoOrder as $order)
+                                            <tr>
+                                                <td>{{$order->id}}</td>
+                                                <td><a href="#" class="text-primary">{{$order->customers->name}}</a></td>
+                                                <td>{{$order->total}}</td>
+                                                <td>{{$order->created_at}}</td>
+                                                <td>
+                                                        @if($order->status == 0)
+                                                            <span class="badge bg-primary">OPEN</span>
+                                                        @endif
+
+                                                        @if($order->status == 1)
+                                                            <span class="badge bg-warning">CONFIRM</span>
+                                                        @endif
+
+                                                        @if($order->status == 2)
+                                                            <span class="badge bg-success">DONE</span>
+                                                        @endif
+                                                        @if($order->status == 3)
+                                                            <span class="badge bg-danger">CANCEL</span>
+                                                        @endif
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                        </tbody>
+                                    </table>
+
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- End Recent Orders -->
+
+                        <!-- Food sales statistics -->
                         <div class="col-12">
                             <div class="card top-selling">
 
@@ -370,61 +449,47 @@
                                 </div>
 
                                 <div class="card-body pb-0">
-                                    <h5 class="card-title">Top Selling <span>| Today</span></h5>
+                                    <h5 class="card-title">Food sales statistics <span>| Today</span></h5>
 
-                                    <table class="table table-borderless">
+                                    <table class="table table-borderless datatable">
                                         <thead>
                                         <tr>
-                                            <th scope="col">Preview</th>
+                                            <th scope="col">ID</th>
                                             <th scope="col">Product</th>
+                                            <th scope="col">Image</th>
                                             <th scope="col">Price</th>
                                             <th scope="col">Sold</th>
                                             <th scope="col">Revenue</th>
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr>
-                                            <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
-                                            <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
-                                            <td>$64</td>
-                                            <td class="fw-bold">124</td>
-                                            <td>$5,828</td>
+                                        @foreach($lsFood as $food)
+                                            <th scope="row">{{$food->id}}</th>
+                                            <td><a href="#" class="text-primary fw-bold">{{$food->name}}</a></td>
+                                            <th scope="row"><img src="{{$food->image}}" width="59.99" height="45.99"></th>
+                                            <td>{{$food->price}}</td>
+                                                <span hidden>
+                                                    {{$qty = 0}}
+                                                    @foreach($lsSuccess as $success)
+                                                        @if($success->food_id == $food->id)
+                                                            {{$qty += $success->food_quantity}}
+                                                        @endif
+                                                    @endforeach
+                                                </span>
+                                            <td class="fw-bold">
+                                                {{$qty}}
+                                            </td>
+                                            <td>${{$food->price * $qty}}</td>
                                         </tr>
-                                        <tr>
-                                            <th scope="row"><a href="#"><img src="assets/img/product-2.jpg" alt=""></a></th>
-                                            <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a></td>
-                                            <td>$46</td>
-                                            <td class="fw-bold">98</td>
-                                            <td>$4,508</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><a href="#"><img src="assets/img/product-3.jpg" alt=""></a></th>
-                                            <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a></td>
-                                            <td>$59</td>
-                                            <td class="fw-bold">74</td>
-                                            <td>$4,366</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><a href="#"><img src="assets/img/product-4.jpg" alt=""></a></th>
-                                            <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum error</a></td>
-                                            <td>$32</td>
-                                            <td class="fw-bold">63</td>
-                                            <td>$2,016</td>
-                                        </tr>
-                                        <tr>
-                                            <th scope="row"><a href="#"><img src="assets/img/product-5.jpg" alt=""></a></th>
-                                            <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus repellendus</a></td>
-                                            <td>$79</td>
-                                            <td class="fw-bold">41</td>
-                                            <td>$3,239</td>
-                                        </tr>
+                                        @endforeach
                                         </tbody>
                                     </table>
 
                                 </div>
 
                             </div>
-                        </div><!-- End Top Selling -->
+                        </div>
+                        <!-- Food sales statistics -->
 
                     </div>
                 </div><!-- End Left side columns -->
@@ -718,5 +783,7 @@
         </section>
 
 <!-- End #main -->
+        <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+
 
 @endsection

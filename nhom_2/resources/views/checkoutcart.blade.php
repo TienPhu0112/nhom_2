@@ -37,7 +37,7 @@
                                 </div>
                                 <div class="col-12 mb-3">
                                     <label for="phone">Phone<span>*</span></label>
-                                    <input type="number" class="form-control" id="phone" name="phone" min="0" value="" required>
+                                    <input type="text" class="form-control" id="phone" name="phone" min="0" value="" required>
                                 </div>
                                 <div class="col-12 mb-4">
                                     <label for="email">Email<span>*</span></label>
