@@ -18,6 +18,8 @@ use App\Http\Controllers\GalleryController2;
 use \App\Http\Controllers\EventController;
 use App\Http\Controllers\RestaurantController;
 
+
+
 Route::get('admin/users/login',[LoginController::class,'index'])->name('login');
 Route::post('admin/users/login/store',[LoginController::class,'store']);
 
@@ -82,6 +84,7 @@ Route::middleware(['auth'])->group(function(){
         #Gallery
         Route::resource("gallery",GalleryController::class);
 
+
         #Event
         Route::resource("event",EventController::class);
 
@@ -100,7 +103,11 @@ Route::post("/",[RestaurantController::class,'booking']);
 Route::get("/reservation",[RestaurantController::class,'reservation'])->name('reservation');
 Route::post("/reservation",[RestaurantController::class,'booking']);
 
+#about
+Route::get("/about",[RestaurantController::class,'about']);
 
+#contact
+Route::get("/contact",[RestaurantController::class,'contact']);
 
 
 

@@ -134,4 +134,20 @@ class RestaurantController extends Controller
 
     }
 
+    public function about(Request $request)
+    {
+        $lsImg = Gallery::all();
+        return view("about")->with([
+            'lsImg'=>$lsImg,
+            'title'=>'About']);
+    }
+
+
+    public function contact(Request $request)
+    {
+        $lsImg = Gallery::all();
+        return view("contact")->with([
+            'lsImg'=>$lsImg,
+            'title'=>'Contact']);
+    }
 }
