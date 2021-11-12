@@ -113,6 +113,9 @@ Route::get("/about",[RestaurantController::class,'about']);
 #contact
 Route::get("/contact",[RestaurantController::class,'contact']);
 
+#Test giao diện đặt đồ thành công
+//Route::get('/foodorder_success',[App\Http\Controllers\ToGoOrderController::class, 'foodorder_success'])->name('foodorder_success');
+
 
 
 

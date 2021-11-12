@@ -143,4 +143,12 @@ class ToGoOrderController extends Controller
                                                         'title' => 'Order Success',
                                                         'lsImg'=>$lsImg]);
     }
+
+//    Test giao diện đặt đồ thành công
+
+//    public function foodorder_success(Request $request) {
+//        $lsImg = Gallery::all();
+//        return view('/foodorder_success')->with(['title' => 'Order Success',
+//                                                             'lsImg'=>$lsImg]);
+//    }
 }
