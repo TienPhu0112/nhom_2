@@ -17,8 +17,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\GalleryController2;
 use \App\Http\Controllers\EventController;
 use App\Http\Controllers\RestaurantController;
-
-
+use \App\Http\Controllers\ContactController;
 
 Route::get('admin/users/login',[LoginController::class,'index'])->name('login');
 Route::post('admin/users/login/store',[LoginController::class,'store']);
@@ -88,6 +87,10 @@ Route::middleware(['auth'])->group(function(){
 
         #Event
         Route::resource("event",EventController::class);
+
+        #Contact
+        Route::resource("contact",ContactController::class);
+
 
         #FoodOrder
         Route::resource("food_order",\App\Http\Controllers\OrderFoodController::class);
