@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/Admin/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/Admin/MainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/home.blade.php" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/welcome.blade.php" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +163,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../T2011E/Laravel/shoping" />
+    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -210,7 +214,12 @@
       <workItem from="1636365405333" duration="10997000" />
       <workItem from="1636558669724" duration="13102000" />
       <workItem from="1636576284428" duration="1797000" />
+<<<<<<< Updated upstream
       <workItem from="1636627410838" duration="12879000" />
+=======
+      <workItem from="1636627410838" duration="1260000" />
+      <workItem from="1636703196636" duration="35000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="push test view">
       <created>1634559544613</created>
