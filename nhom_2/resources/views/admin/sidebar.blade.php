@@ -157,6 +157,20 @@
             </ul>
         </li>
 
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav10" data-bs-toggle="collapse" href="#">
+                <i class="ri-calendar-event-fill"></i><span>Contact</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav10" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{asset('admin/contact')}}">
+                        <i class="bi bi-circle"></i><span>Contact List</span>
+                    </a>
+
+                </li>
+            </ul>
+        </li>
+
         <!-- End Components Nav -->
 
     </ul>

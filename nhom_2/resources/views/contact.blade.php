@@ -15,7 +15,7 @@
         <!-- Map -->
         <div class="container">
             <div class="map bo8 bo-rad-10 of-hidden">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.096841491348!2d105.78049781415747!3d21.0288107931542!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4cd0c66f05%3A0xea31563511af2e54!2zOCBUw7RuIFRo4bqldCBUaHV54bq_dCwgTeG7uSDEkMOsbmgsIEPhuqd1IEdp4bqleSwgSMOgIE7hu5lpLCBWaeG7h3QgTmFt!5e0!3m2!1svi!2s!4v1636615552774!5m2!1svi!2s" width="1250" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3023.5186509933137!2d-74.00957788529786!3d40.72861174453735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c259f2a6784fab%3A0x38cd75721bbf535b!2s379%20Hudson%20St%208th%20floor%2C%20New%20York%2C%20NY%2010018%2C%20Hoa%20K%E1%BB%B3!5e0!3m2!1svi!2s!4v1636698743677!5m2!1svi!2s" width="1250" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
 
@@ -23,8 +23,21 @@
             <h3 class="tit7 t-center p-b-62 p-t-105">
                 Send us a Message
             </h3>
-
-            <form class="wrap-form-reservation size22 m-l-r-auto">
+            <div class="wrap-btn-booking flex-c-m m-t-6">
+                @if(session('msg'))
+                    <div @class('alert alert-success')>
+                        {{session('msg')}}
+                    </div>
+                @endif
+                @if(session('msg_f'))
+                    <div @class('alert alert-danger')>
+                        {{session('msg_f')}}
+                    </div>
+                @endif
+            </div>
+            <form class="wrap-form-reservation size22 m-l-r-auto" method="post"
+                  action="{{route('contact.store')}}" enctype="multipart/form-data">
+                @csrf
                 <div class="row">
                     <div class="col-md-4">
                         <!-- Name -->
@@ -33,7 +46,7 @@
 						</span>
 
                         <div class="wrap-inputname size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="name" placeholder="Name">
+                            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" id="name"  name="name" placeholder="Name">
                         </div>
                     </div>
 
@@ -44,7 +57,7 @@
 						</span>
 
                         <div class="wrap-inputemail size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="email" placeholder="Email">
+                            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" id="email" name="email" placeholder="Email">
                         </div>
                     </div>
 
@@ -55,7 +68,7 @@
 						</span>
 
                         <div class="wrap-inputphone size12 bo2 bo-rad-10 m-t-3 m-b-23">
-                            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" name="phone" placeholder="Phone">
+                            <input class="bo-rad-10 sizefull txt10 p-l-20" type="text" id="phone" name="phone" placeholder="Phone">
                         </div>
                     </div>
 
@@ -64,9 +77,11 @@
                         <span class="txt9">
 							Message
 						</span>
-                        <textarea class="bo-rad-10 size35 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-3" name="message" placeholder="Message"></textarea>
+                        <textarea class="bo-rad-10 size35 bo2 txt10 p-l-20 p-t-15 m-b-10 m-t-3" type="text" id="message" name="message" placeholder="Message"></textarea>
                     </div>
                 </div>
+
+
 
                 <div class="wrap-btn-booking flex-c-m m-t-13">
                     <!-- Button3 -->
