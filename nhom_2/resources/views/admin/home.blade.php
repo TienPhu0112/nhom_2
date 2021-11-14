@@ -284,7 +284,7 @@
                                             <tr>
                                                 <td>{{$order->id}}</td>
                                                 <td><a href="#" class="text-primary">{{$order->customers->name}}</a></td>
-                                                <td>{{$order->total}}</td>
+                                                <td>${{$order->total}}</td>
                                                 <td>{{$order->created_at}}</td>
                                                 <td>
                                                         @if($order->status == 0)
@@ -349,7 +349,7 @@
                                             <th scope="row">{{$food->id}}</th>
                                             <td><a href="#" class="text-primary fw-bold">{{$food->name}}</a></td>
                                             <th scope="row"><img src="{{$food->image}}" width="59.99" height="45.99"></th>
-                                            <td>{{$food->price}}</td>
+                                            <td>${{$food->price}}</td>
                                                 <span hidden>
                                                     {{$qty = 0}}
                                                     @foreach($lsSuccess as $success)

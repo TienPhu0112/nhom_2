@@ -26,12 +26,11 @@
                     <td>{{$foodOrders->foods->id}}</td>
                     <td>{{$foodOrders->foods->name}}</td>
                     <td>{{$foodOrders->food_quantity}}</td>
-                    <td>{{$foodOrders->foods->price}}</td>
+                    <td>${{$foodOrders->foods->price}}</td>
                 </tr>
             @endforeach
         </table>
-        <hr/>
-        <h4>Total: {{number_format($order->total)}}</h4>
+        <h4>Total: ${{number_format($order->total)}}</h4>
         <h4>Status:
             @if($order->status == 0)
                 OPEN

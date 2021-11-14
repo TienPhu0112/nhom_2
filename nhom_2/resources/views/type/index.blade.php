@@ -20,6 +20,7 @@
         <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
+            <th scope="col">Background</th>
             <th scope="col">Created at</th>
             <th scope="col">Updated at</th>
             <th scope="col">Edit</th>
@@ -31,6 +32,7 @@
             <tr>
                 <th>{{$type->id}}</th>
                 <td>{{$type->name}}</td>
+                <td><img src="{{asset($type->bg)}}" style="width:110px"></td>
                 <td>{{$type->created_at->format('d/m/Y')}}
                     - {{ $type->created_at->diffForHumans() }}</td>
                 <td>

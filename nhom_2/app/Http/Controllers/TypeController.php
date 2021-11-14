@@ -28,10 +28,17 @@ class TypeController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required|min:1|max:255|unique:dish_types'
+            'name' => 'required|min:1|max:255|unique:dish_types',
+            'bg' => 'required'
         ]);
         $type = new DishType();
         $type->name = $request->input('name');
+        $imagePath = "";
+        if($request->hasFile("image")) {
+            $imagePath = $request->image->store('type-bg');
+            $imagePath = 'img/'.$imagePath;
+        }
+        $type->bg = $imagePath;
         $type->save();
         $request->session()->flash("msg","Insert new type successfully.");
         return redirect(route("type.index"));
@@ -58,7 +65,12 @@ class TypeController extends Controller
         ]);
         $type = DishType::find($id);
         $type->name = $request->input('name');
-        $type->updated_at = Now();
+        $imagePath = "";
+        if($request->hasFile("image")) {
+            $imagePath = $request->image->store('type-bg');
+            $imagePath = 'img/'.$imagePath;
+            $type->bg = $imagePath;
+        }
         $type->save();
         $request->session()->flash("msg","Edit type successfully.");
         return redirect(route('type.index'));
