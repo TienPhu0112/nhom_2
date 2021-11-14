@@ -9,6 +9,23 @@
         </li>
 
         <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav11" data-bs-toggle="collapse" href="#">
+                <i class="ri-file-user-fill"></i><span>User</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav11" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="{{asset('admin/user')}}">
+                        <i class="bi bi-circle"></i><span>Users List</span>
+                    </a>
+
+                    <a href="{{asset('admin/user/create')}}">
+                        <i class="bi bi-circle"></i><span>Add User</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+
+        <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav1" data-bs-toggle="collapse" href="#">
                 <i class="bx bxs-receipt"></i><span>Table Reservation</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
@@ -159,7 +176,7 @@
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav10" data-bs-toggle="collapse" href="#">
-                <i class="ri-calendar-event-fill"></i><span>Contact</span><i class="bi bi-chevron-down ms-auto"></i>
+                <i class="ri-message-3-fill"></i><span>Contact</span><i class="bi bi-chevron-down ms-auto"></i>
             </a>
             <ul id="components-nav10" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>

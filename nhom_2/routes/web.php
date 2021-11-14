@@ -5,6 +5,7 @@ use App\Models\Food;
 use App\Models\Gallery;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\Admin\Users\LoginController;
+use \App\Http\Controllers\Admin\Users\LogoutController;
 use \App\Http\Controllers\Admin\MainController;
 use \App\Http\Controllers\Admin\OrderController;
 use \App\Http\Controllers\CustomerController;
@@ -18,9 +19,14 @@ use App\Http\Controllers\GalleryController2;
 use \App\Http\Controllers\EventController;
 use App\Http\Controllers\RestaurantController;
 use \App\Http\Controllers\ContactController;
+use App\Http\Controllers\Admin\UserController;
 
+//Login
 Route::get('admin/users/login',[LoginController::class,'index'])->name('login');
 Route::post('admin/users/login/store',[LoginController::class,'store']);
+
+//Logout
+Route::post('logout',[LogoutController::class,'logout'])->name('logout');
 
 //Blog
 Route::get('/blog',[BlogController::class,'welcome']);
@@ -59,6 +65,9 @@ Route::middleware(['auth'])->group(function(){
         #Home
         Route::get('/', [MainController::class, 'index'])->name('admin');
         Route::get('main',[MainController::class,'index']);
+
+        #User
+        Route::resource("user",UserController::class);
 
         #Order
         Route::resource("order",OrderController::class);
@@ -99,6 +108,7 @@ Route::middleware(['auth'])->group(function(){
     });
 
 });
+
 
 
 Route::get("/",[RestaurantController::class,'welcome'])->name("welcome");
