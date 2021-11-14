@@ -1,18 +1,6 @@
 @extends('admin.main')
 @section('content')
     <div class="container">
-        <form action="{{route('table.index')}}" method="GET" class="row g-3">
-            @csrf
-            <div class="col-md-12">
-                <label for="title" class="form-label">Type</label>
-                <input type="number" class="form-control" name="seach_type" id="title">
-            </div>
-            <div class="text-center">
-                <button type="submit" class="btn btn-primary">Search</button>
-            </div>
-        </form>
-        <hr/>
-
         @if(session('msg'))
             <div @class('alert alert-success')>
                 {{session('msg')}}
@@ -25,7 +13,7 @@
             </div>
         @endif
 
-        <table class="table">
+        <table class="table datatable">
             <thead>
             <tr>
                 <th scope="col">ID</th>
@@ -51,8 +39,6 @@
             @endforeach
             </tbody>
         </table>
-
-        {{$lsTable->links("pagination::bootstrap-4")}}
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>

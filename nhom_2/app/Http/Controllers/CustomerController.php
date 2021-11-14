@@ -10,12 +10,7 @@ class CustomerController extends Controller
 
     public function index(Request $request)
     {
-        $search_name = $request->search_name;
-        if (isset($search_name)) {
-            $lsCustomer = Customer::where('name', 'like', '%'.$search_name.'%')->paginate(4);
-        } else {
-            $lsCustomer = Customer::paginate(4);
-        }
+        $lsCustomer = Customer::all();
         return  view("customer.index")->with([
                 "lsCustomer" => $lsCustomer, 'title' => 'List of customers']
         );

@@ -5,7 +5,7 @@
             {{session('msg')}}
         </div>
     @endif
-    <table class="table  datatable" >
+    <table class="table datatable" >
         <thead>
         <tr>
             <th scope="col">ID</th>

@@ -14,12 +14,7 @@ class TableController extends Controller
      */
     public function index(Request $request)
     {
-        $seach_type=$request->seach_type;
-        if(isset($seach_type)){
-            $lsTable=Table::where('type','like','%'.$seach_type.'%')->paginate(4);
-        }else {
-            $lsTable = Table::paginate(4);
-        }
+        $lsTable = Table::all();
         return view("table.index")->with(['lsTable' => $lsTable, 'title' => 'Table Administration Page']);
     }
 
