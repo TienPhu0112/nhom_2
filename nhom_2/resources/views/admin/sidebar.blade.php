@@ -2,12 +2,13 @@
 <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
+        @if(Auth::check())
         <li class="nav-item">
             <a class="nav-link collapsed" href="{{route('admin')}}">
                 <i class="ri-home-4-fill"></i><span>Home</span>
             </a>
         </li>
-
+        @if(Auth::user()->role=0)
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav11" data-bs-toggle="collapse" href="#">
                 <i class="ri-file-user-fill"></i><span>User</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -24,7 +25,9 @@
                 </li>
             </ul>
         </li>
+        @endif
 
+        @if(Auth::user()->role=0 || Auth::user()->role=1)
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav1" data-bs-toggle="collapse" href="#">
                 <i class="bx bxs-receipt"></i><span>Table Reservation</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -41,8 +44,10 @@
                 </li>
             </ul>
         </li>
+        @endif
 
 
+        @if(Auth::user()->role=0)
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav5" data-bs-toggle="collapse" href="#">
 
@@ -59,7 +64,9 @@
                     </a>
             </ul>
         </li>
+        @endif
 
+        @if(Auth::user()->role=0 || Auth::user()->role=1)
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav2" data-bs-toggle="collapse" href="#">
                 <i class="bx bxs-face"></i><span>Customer</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -76,6 +83,9 @@
                 </li>
             </ul>
         </li>
+        @endif
+
+        @if(Auth::user()->role=0)
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav3" data-bs-toggle="collapse" href="#">
                 <i class="bx bxs-food-menu"></i><span>Type Of Food</span><i class="bi bi-chevron-down ms-auto"></i>
@@ -92,6 +102,7 @@
                 </li>
             </ul>
         </li>
+        @endif
 
         <li class="nav-item">
             <a class="nav-link collapsed" data-bs-target="#components-nav4" data-bs-toggle="collapse" href="#">
@@ -189,7 +200,7 @@
         </li>
 
         <!-- End Components Nav -->
-
+        @endif
     </ul>
 
 </aside><!-- End Sidebar-->
