@@ -2094,7 +2094,7 @@ img {
 }
 
 .order-details-confirmation .card-header h6 a {
-    display: block;
+    /*display: block;*/
     font-size: 12px;
     text-transform: uppercase;
 }

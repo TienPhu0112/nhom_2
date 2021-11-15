@@ -96,13 +96,11 @@
                                         </form>
                                     </span>
                                     <!-- Add to Cart Form -->
-
                                 </div>
                             </div>
                         </div>
                     @endif
                 @endforeach
-
             </div>
         </div>
     </section>
