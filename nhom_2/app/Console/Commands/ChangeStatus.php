@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use App\Models\Event;
 use App\Models\Order;
 use Illuminate\Console\Command;
 
@@ -39,19 +40,30 @@ class ChangeStatus extends Command
     public function handle()
     {
         $lsReservation = Order::where('status',0)->get();
+        $lsEvent = Event::whereIn('status',[1,2])->get();
         date_default_timezone_set("Asia/Ho_Chi_Minh");
         $now = time();
-        $count = 0;
+        $count1 = 0;
+        $count2 = 0;
         foreach ($lsReservation as $reservation){
             $booking_date_time = $reservation->booking_date." ".$reservation->booking_time;
             $booking_date_time = strtotime($booking_date_time);
             if (($booking_date_time - $now < 0)){
-                $count++;
+                $count1++;
                 $reservation->status = 1;
                 $reservation->save();
             }
         }
-        echo "Change status of $count reservations";
+        foreach ($lsEvent as $event){
+            $event_time = $event->start_time;
+            $event_time = strtotime($event_time);
+            if (($event_time - $now < 0)){
+                $count2++;
+                $event->status = 3;
+                $event->save();
+            }
+        }
+        echo "Change status of $count1 reservations and $count2 events";
         return 0;
     }
 }
