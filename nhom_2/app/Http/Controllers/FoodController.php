@@ -108,7 +108,7 @@ class FoodController extends Controller
         }
         $food->save();
 
-        $request->session()->flash("msg","Insert food successfully.");
+        $request->session()->flash("msg","Update food successfully.");
         return redirect(route("food.index"));
     }
 
