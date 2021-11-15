@@ -1,6 +1,29 @@
 @extends('admin.main')
 
+@section('print')
+    <style>
+        @media print {
+            /*Hide every other element*/
+            body * {
+                visibility: hidden;
+            }
+            /*Then displaying print container element*/
+            .print-container, .print-container * {
+                visibility: visible;
+            }
+            /*Adjusting the position to always start from top left*/
+            .print-container {
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+    </style>
+    <i class="ri-printer-fill btn btn-primary btn-sm" onclick="window.print()" style="margin-bottom: 10px"></i>
+@endsection
+
 @section('content')
+
     <table class="table datatable">
         <thead>
         <tr>

@@ -11,7 +11,7 @@
 <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-        <a href="{{asset('/home')}}" class="logo d-flex align-items-center">
+        <a href="{{asset('/admin')}}" class="logo d-flex align-items-center">
             <img src="/template/admin/assets/img/logo.png" alt="">
             <span class="d-none d-lg-block">NiceAdmin</span>
         </a>
@@ -65,8 +65,9 @@
         @include('admin.alert')
         <div class="row">
             <div class="col-md-12">
+                @yield('print')
+                <div class="card print-container">
 
-                <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">{{ $title }}</h5>
 

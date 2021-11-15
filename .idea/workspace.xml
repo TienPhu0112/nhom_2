@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="aa873d30-d5f7-4742-86e8-569e68f18340" name="Changes" comment="commit adcd view test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/app/Console/Commands/ChangeStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Console/Commands/ChangeStatus.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/RestaurantController.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/app/Http/Controllers/RestaurantController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/nhom_2/resources/views/admin/order/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +214,7 @@
       <workItem from="1636792771440" duration="2515000" />
       <workItem from="1636861415166" duration="8717000" />
       <workItem from="1636882068125" duration="5477000" />
-      <workItem from="1636966049660" duration="637000" />
+      <workItem from="1636966049660" duration="3678000" />
     </task>
     <task id="LOCAL-00001" summary="push test view">
       <created>1634559544613</created>
