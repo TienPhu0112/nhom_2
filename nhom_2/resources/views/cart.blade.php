@@ -85,9 +85,15 @@
                                 <li><span>Tax</span> <span>{{Cart::tax()}}</span></li>
                                 <li><span><strong>Total</strong></span> <span><strong>${{Cart::total()}}</strong></span></li>
                             </ul>
-                            <a href="{{asset('/checkoutcart')}}" class="btn karl-checkout-btn">Proceed to checkout</a>
-{{--                            <a href="#" class="btn karl-checkout-btn">Proceed to checkout</a>--}}
+                            @if(Cart::count() == 0)
+                                <span style="color: red; font-size: 18px"><strong>Your cart is empty</strong></span>
+                            @endif
+                            @if(Cart::count() == 0)
+                                <a style="padding-top: 18.99px" href="{{asset('/menu')}}" class="btn karl-checkout-btn">Order now</a>
+                            @else
+                                <a style="padding-top: 18.99px" href="{{asset('/checkoutcart')}}" class="btn karl-checkout-btn">Proceed to checkout</a>
 
+                            @endif
                         </div>
                     </div>
                 </div>

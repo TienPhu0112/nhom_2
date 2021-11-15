@@ -143,7 +143,6 @@ class ToGoOrderController extends Controller
                                                         'title' => 'Order Success',
                                                         'lsImg'=>$lsImg]);
     }
-
 //    Test giao diện đặt đồ thành công
 
 //    public function foodorder_success(Request $request) {
