@@ -21,6 +21,7 @@
             <th scope="col">Id</th>
             <th scope="col">Name</th>
             <th scope="col">Image</th>
+            <th scope="col">Description</th>
             <th scope="col">Price</th>
             <th scope="col">Sale Price</th>
             <th scope="col">Status</th>
@@ -35,6 +36,7 @@
                 <th>{{$food->id}}</th>
                 <td>{{$food->name}}</td>
                 <td><img src="{{asset($food->image)}}" style="width:110px"></td>
+                <td>{!! $food->description !!}</td>
                 <td>${{$food->price}}</td>
                 <td>${{$food->sale_price}}</td>
                 <td>{{$food->status === 0 ? "Đang phục vụ" : "Dừng phục vụ"}}</td>

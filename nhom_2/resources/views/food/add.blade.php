@@ -48,7 +48,12 @@
                 <input type="number" class="form-control" name="sale_price">
             </div>
         </div>
-
+        <div class="row mb-3">
+            <label for="inputText" class="col-sm-2 col-form-label">Description</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" id="description" name="description"></textarea>
+            </div>
+        </div>
         <fieldset class="row mb-3">
             <legend class="col-form-label col-sm-2 pt-0">Status</legend>
             <div class="col-sm-10">
@@ -71,5 +76,27 @@
             <button type="submit" class="btn btn-primary">Save</button>
         </div>
 
-    </form><!-- End General Form Elements -->
+    </form>
+
+    <!-- End General Form Elements -->
+
+{{--    Description js--}}
+    <style>
+        .ck-editor__editable {
+            min-height: 200px;
+        }
+    </style>
+    <script src="{{asset('ckeditor5-build-classic/ckeditor.js')}}"></script>
+    <script>
+        ClassicEditor
+            .create( document.querySelector( '#description' ), {
+                // toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+            } )
+            .then( editor => {
+                window.editor = editor;
+            } )
+            .catch( err => {
+                console.error( err.stack );
+            } );
+    </script>
 @endsection

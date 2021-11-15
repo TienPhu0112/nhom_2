@@ -32,6 +32,7 @@ class FoodController extends Controller
             'name' => 'required|min:1|max:255|unique:food',
             'price' => 'required|numeric',
             'sale_price' => 'required|numeric',
+            'description' => 'required',
             'status' => 'required',
             'dishtype_id' => 'required',
         ]);
@@ -39,6 +40,7 @@ class FoodController extends Controller
         $food->name = $request->input('name');
         $food->price = $request->input('price');
         $food->sale_price = $request->input('sale_price');
+        $food->description = $request->input('description');
         $food->status = $request->input('status');
         $food->dishtype_id = $request->input('dishtype_id');
         $imagePath = "";
@@ -85,6 +87,7 @@ class FoodController extends Controller
     {
         $request->validate([
             'name' => 'required|min:1|max:255|unique:food,name,'.$id,
+            'description' => 'required',
             'price' => 'required|numeric',
             'sale_price' => 'required|numeric',
             'status' => 'required',
@@ -92,6 +95,7 @@ class FoodController extends Controller
         ]);
         $food = Food::find($id);
         $food->name = $request->input('name');
+        $food->description = $request->input('description');
         $food->price = $request->input('price');
         $food->sale_price = $request->input('sale_price');
         $food->status = $request->input('status');

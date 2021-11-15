@@ -37,7 +37,7 @@
                                     </div>
 
                                     <span class="info-item-mainmenu txt23">
-                                        Sed fermentum eros vitae eros
+                                        Click on the item's name to add it to the cart
                                     </span>
                                 </div>
                             @endif
@@ -80,7 +80,7 @@
                                     </a>
 
                                     <span class="txt23 m-b-3">
-                                        Aenean pharetra tortor dui in pellentesque
+                                        {!! $food->description !!}
                                     </span>
 
                                     <span class="txt22 m-b-3">
