@@ -37,7 +37,7 @@
                                     </div>
 
                                     <span class="info-item-mainmenu txt23">
-                                        Click on the item's name to add it to the cart
+                                        {!! $food->description !!}
                                     </span>
                                 </div>
                             @endif
