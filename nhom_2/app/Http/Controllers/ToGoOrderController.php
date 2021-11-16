@@ -52,12 +52,13 @@ class ToGoOrderController extends Controller
             'qty' => $request->input('quantity'),
             'price' => $food->price,
             'weight' => 0]);
-        return redirect()->back();
+
+        return redirect()->back()->with('message', "$food->name has been successfully added to your cart!");
     }
 
     public function remove_food(Request $request, $rowId) {
         \Cart::remove($rowId);
-        return redirect()->back();
+        return redirect()->back()->with('message', "Cart has been updated!");
     }
 
     public function cart(Request $request) {
@@ -84,7 +85,7 @@ class ToGoOrderController extends Controller
         foreach ($rowid as $key => $rid) {
             \Cart::update($rid, $qty[$key]);
         }
-        return redirect('/cart');
+        return redirect('/cart')->with('message', "Cart has been updated!");
     }
 
     public function place_order(Request $request) {

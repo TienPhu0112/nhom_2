@@ -420,7 +420,7 @@
                                                 <td class="cart_product_name d-flex align-items-center">
                                                     <h5>{{$row->name}}</h5>
                                                 </td>
-                                                <td class="price"><span>{{$row->price}}</span></td>
+                                                <td class="price"><span>${{$row->price}}</span></td>
                                                 <td class="qty">
                                                     <div class="quantity">
                                                         {{$row->qty}}
@@ -432,9 +432,9 @@
                                         </tbody>
                                     </table>
                                     <ul class="text-services" width="100%" style="text-align:left;">
-                                        <li><span>Subtotal</span> <span>{{Cart::subtotal()}}</span></li>
-                                        <li><span>Tax</span> <span>{{Cart::tax()}}</span></li>
-                                        <li><span><strong>Total</strong></span> <span><strong>{{Cart::total()}}</strong></span></li>
+                                        <li><span>Subtotal</span> <span>${{Cart::subtotal()}}</span></li>
+                                        <li><span>Tax</span> <span>${{Cart::tax()}}</span></li>
+                                        <li><span><strong>Total</strong></span> <span><strong>${{Cart::total()}}</strong></span></li>
                                     </ul>
                                 </div>
                             </td>

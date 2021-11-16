@@ -11,6 +11,9 @@
     <!-- Main menu -->
     <section class="section-mainmenu p-t-110 p-b-70 bg1-pattern">
         <div class="container">
+            @if(Session::has('message'))
+                    <p class="alert alert-success m-b-30" style="font-size: 18px">{{ Session::get('message') }}</p>
+            @endif
             <div class="row">
                 @foreach($lsType as $type)
                   <div class="col-md-10 col-lg-6 p-r-35 p-r-15-lg m-l-r-auto">

@@ -15,6 +15,9 @@
     <div class="cart_area section_padding_100 clearfix">
             <div class="container">
                 <div class="col-12">
+                    @if(Session::has('message'))
+                        <p class="alert alert-success m-b-30" style="font-size: 14px">{{ Session::get('message') }}</p>
+                    @endif
                     <form action="{{route('update_cart')}}" method="POST" >
                         @csrf
                         <div class="col-12">
@@ -22,12 +25,11 @@
                                 <table class="table ">
                                     <thead>
                                     <tr>
-                                        <th>Product</th>
-{{--                                        <th>Image</th>--}}
-                                        <th>Price</th>
-                                        <th>Quantity</th>
-                                        <th>Total</th>
-                                        <th></th>
+                                        <th style="font-size: 15px">Product</th>
+                                        <th style="font-size: 15px">Price</th>
+                                        <th style="font-size: 15px">Quantity</th>
+                                        <th style="font-size: 15px">Total</th>
+                                        <th style="font-size: 15px"></th>
                                     </tr>
                                     </thead>
                                     <tbody>

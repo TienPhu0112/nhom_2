@@ -77,13 +77,19 @@
                             <li><span>Total</span> <span>{{Cart::total()}}</span></li>
                         </ul>
 
-
+                        <div class="cart-page-footer" id="paid" style="display: none">
+                            <span style="text-align: center; color: green; font-size: 18px; font-weight: 500"><i class="fa fa-check" aria-hidden="true"></i> Your order has been paid!</span>
+                        </div>
                         <div id="accordion" role="tablist" class="mb-4">
+                            {{--  Cash on--}}
                             <div class="card">
                                 <div class="card-header" role="tab" id="headingTwo">
                                     <h6 class="mb-0">
-                                        <input type="radio" id="delivery" name="payment" value="delivery" required checked>
-                                        <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Cash on delivery</a>
+                                       <a>
+                                           <input type="radio" id="delivery" name="payment" value="delivery" checked
+                                                  class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                           <a>Cash on delivery</a>
+                                       </a>
                                     </h6>
                                 </div>
                                 <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
@@ -92,35 +98,43 @@
                                     </div>
                                 </div>
                             </div>
+
+                            {{-- Paypal--}}
                             <div class="card">
                                 <div class="card-header" role="tab" id="headingOne">
                                     <h6 class="mb-0">
-                                        <input type="radio" id="paypal" name="payment" value="paypal" disabled>
-                                        <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">Paypal (Available Soon)</a>
+                                        <a>
+                                            <input type="radio" id="paypal" name="payment" value="paypal"
+                                                   class="collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                            Paypal
+                                        </a>
                                     </h6>
                                 </div>
-
                                 <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                                     <div class="card-body">
-                                        <p>The Paypal payment method is in the final stage</p>
+                                        <div id="paypal-button"></div>
                                     </div>
                                 </div>
                             </div>
+
+                            {{-- American Express--}}
                             <div class="card">
-                                <div class="card-header" role="tab" id="headingThree">
+                                <div class="card-header" role="tab" id="headingOne">
                                     <h6 class="mb-0">
-                                        <input type="radio" id="credit_card" name="payment" value="credit_card" disabled>
-                                        <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Credit card (Available Soon)</a>
+                                        <a>
+                                            <input type="radio" id="paypal" name="payment" value="paypal"
+                                                   class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" disabled>
+                                            <a class="collapsed" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree"> American Express (Available soon) </a>
+                                        </a>
                                     </h6>
                                 </div>
-                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                                     <div class="card-body">
-                                        <p>The Credit Card payment method is in the final stage</p>
+                                        <p>American Express is in the process of completion</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
@@ -139,4 +153,50 @@
     <script src="cartfile/js/plugins.js"></script>
     <!-- Active js -->
     <script src="cartfile/js/active.js"></script>
+
+{{--    Paypal--}}
+    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+    <script>
+        paypal.Button.render({
+            // Configure environment
+            env: 'sandbox',
+            client: {
+                sandbox: 'ARctVih_-a-2SBStwWi8UZLrmlgTz_nFvrzHKCi9I99nRgj3Xl2jd-LBiae0hZrX9GEkUoKVMYS97DnE',
+                production: 'demo_production_client_id'
+            },
+            // Customize button (optional)
+            locale: 'en_US',
+            style: {
+                size: 'small',
+                color: 'gold',
+                shape: 'pill',
+            },
+
+            // Enable Pay Now checkout flow (optional)
+            commit: true,
+
+            // Set up a payment
+            payment: function(data, actions) {
+                return actions.payment.create({
+                    transactions: [{
+                        amount: {
+                            total: '{{Cart::total()}}',
+                            currency: 'USD'
+                        }
+                    }]
+                });
+            },
+            // Execute the payment
+            onAuthorize: function(data, actions) {
+                return actions.payment.execute().then(function() {
+                    // Show a confirmation message to the buyer
+                    window.alert('Thank you for your purchase!');
+                    $(document).ready(function(){
+                        $('#accordion').hide();
+                        $('#paid').show();
+                    });
+                });
+            }
+        }, '#paypal-button');
+    </script>
 @endsection
