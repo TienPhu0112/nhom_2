@@ -69,12 +69,12 @@
                             @foreach(Cart::content() as $row)
                                 <li>
                                     <span>{{$row->name}} ({{$row->qty}})</span>
-                                    <span>{{$row->total}}</span>
+                                    <span>${{$row->total}}</span>
                                 </li>
                             @endforeach
-                            <li><span>Subtotal</span> <span>{{Cart::total()}}</span></li>
+                            <li><span>Subtotal</span> <span>${{Cart::total()}}</span></li>
                             <li><span>Shipping</span> <span>Free</span></li>
-                            <li><span>Total</span> <span>{{Cart::total()}}</span></li>
+                            <li><span>Total</span> <span>${{Cart::total()}}</span></li>
                         </ul>
 
                         <div class="cart-page-footer" id="paid" style="display: none">
