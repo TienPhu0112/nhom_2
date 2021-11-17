@@ -52,9 +52,9 @@
                         <i class="fa fa-shopping-cart"></i>
                         <span class="cart">{{Cart::count()}}</span>
                     </a>
-                    <a href="#"><i class="fa fa-tripadvisor m-l-21" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
-                    <a href="#"><i class="fa fa-twitter m-l-21" aria-hidden="true"></i></a>
+                    <a href="https://www.tripadvisor.com.vn/"><i class="fa fa-tripadvisor m-l-21" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa fa-facebook m-l-21" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/?lang=vi"><i class="fa fa-twitter m-l-21" aria-hidden="true"></i></a>
 
                     <button class="btn-show-sidebar m-l-33 trans-0-4"></button>
                 </div>
