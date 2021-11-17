@@ -35,8 +35,7 @@
                                         </div>
                                         <div class="ps-3">
                                             <h6>{{$total_Booking}}</h6>
-                                            <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
+                                            <a href="{{asset('admin/order')}}" class="text-success small pt-1 fw-bold">View</a>
                                         </div>
                                     </div>
                                 </div>
@@ -71,8 +70,7 @@
                                         </div>
                                         <div class="ps-3">
                                             <h6>{{$total_TogoOrder}}</h6>
-                                            <span class="text-success small pt-1 fw-bold">18%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-
+                                            <a href="{{asset('admin/food_order')}}" class="text-success small pt-1 fw-bold">View</a>
                                         </div>
                                     </div>
                                 </div>
@@ -104,12 +102,11 @@
 
                                     <div class="d-flex align-items-center">
                                         <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                                            <i class="fas fa-users"></i>
+                                            <i class="far fa-money-bill-alt"></i>
                                         </div>
                                         <div class="ps-3">
                                             <h6>${{$total_Revenue}}</h6>
-                                            <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
-
+                                            <a href="{{asset('admin/food_order')}}" class="text-success small pt-1 fw-bold">View</a>
                                         </div>
                                     </div>
 

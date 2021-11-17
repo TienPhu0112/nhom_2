@@ -60,13 +60,13 @@
                 <div class="form-check">
                     <input class="form-check-input" value="0" type="radio" name="status" id="gridRadios1" checked="">
                     <label class="form-check-label" for="gridRadios1">
-                        In service
+                        Ready
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" value="1" type="radio" name="status" id="gridRadios2">
                     <label class="form-check-label" for="gridRadios2">
-                        Stop serving
+                        Cancel
                     </label>
                 </div>
             </div>

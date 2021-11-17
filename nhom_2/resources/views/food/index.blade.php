@@ -39,7 +39,7 @@
                 <td>{!! $food->description !!}</td>
                 <td>${{$food->price}}</td>
                 <td>${{$food->sale_price}}</td>
-                <td>{{$food->status === 0 ? "Đang phục vụ" : "Dừng phục vụ"}}</td>
+                <td>{{$food->status === 0 ? "Ready" : "Cancel"}}</td>
                 <td>{{$food->dishTypes->name }}</td>
                 <td>
                     <a href="{{route("food.edit", $food->id)}}" class="btn btn-primary rounded-pill">

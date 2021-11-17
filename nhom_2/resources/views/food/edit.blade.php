@@ -55,13 +55,13 @@
                 <div class="form-check">
                     <input class="form-check-input" value="0" type="radio" name="status" id="gridRadios1" {{ $food->status === 0 ? 'checked=""' : "" }} >
                     <label class="form-check-label" for="gridRadios1">
-                        Đang phục vụ
+                        Ready
                     </label>
                 </div>
                 <div class="form-check">
                     <input class="form-check-input" value="1" type="radio" name="status" id="gridRadios2" {{ $food->status === 1 ? 'checked=""' : "" }}>
                     <label class="form-check-label" for="gridRadios2">
-                        Dừng phục vụ
+                        Cancel
                     </label>
                 </div>
             </div>

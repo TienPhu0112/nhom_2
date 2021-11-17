@@ -26,23 +26,25 @@
 
                         @foreach($lsFood as $food)
                             @if( ($food->dishtype_id) == ($type->id))
-                                <div class="item-mainmenu m-b-36">
-                                    <div class="flex-w flex-b m-b-3">
-                                        <a href="#" class="name-item-mainmenu txt21">
-                                            {{$food->name}}
-                                        </a>
+                                @if($food->status == 0)
+                                    <div class="item-mainmenu m-b-36">
+                                        <div class="flex-w flex-b m-b-3">
+                                            <a href="#" class="name-item-mainmenu txt21">
+                                                {{$food->name}}
+                                            </a>
 
-                                        <div class="line-item-mainmenu bg3-pattern"></div>
+                                            <div class="line-item-mainmenu bg3-pattern"></div>
 
-                                        <div class="price-item-mainmenu txt22">
-                                            ${{$food->price}}
+                                            <div class="price-item-mainmenu txt22">
+                                                ${{$food->price}}
+                                            </div>
                                         </div>
-                                    </div>
 
-                                    <span class="info-item-mainmenu txt23">
-                                        {!! $food->description !!}
-                                    </span>
-                                </div>
+                                        <span class="info-item-mainmenu txt23">
+                                            {!! $food->description !!}
+                                        </span>
+                                    </div>
+                                @endif
                             @endif
                         @endforeach
 
@@ -70,38 +72,40 @@
             <div class="row p-t-108 p-b-70">
                 @foreach($lsFood as $food)
                     @if( ($food->dishtype_id) == ($type->id))
-                        <div class="col-md-8 col-lg-6 m-l-r">
-                    <!-- Block3 -->
-                            <div class="blo3 flex-w flex-col-l-sm m-b-30">
-                                <div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
-                                    <a href="#"><img src="{{$food->image}}" width="159.99px" height="119.99" alt="IMG-MENU"></a>
-                                </div>
+                        @if($food->status == 0)
+                            <div class="col-md-8 col-lg-6 m-l-r">
+                        <!-- Block3 -->
+                                <div class="blo3 flex-w flex-col-l-sm m-b-30">
+                                    <div class="pic-blo3 size20 bo-rad-10 hov-img-zoom m-r-28">
+                                        <a href="#"><img src="{{$food->image}}" width="159.99px" height="119.99" alt="IMG-MENU"></a>
+                                    </div>
 
-                                <div class="text-blo3 size21 flex-col-l-m">
-                                    <a href="#" class="txt22">
-                                        {{$food->name}}
-                                    </a>
+                                    <div class="text-blo3 size21 flex-col-l-m">
+                                        <a href="#" class="txt22">
+                                            {{$food->name}}
+                                        </a>
 
-                                    <span class="txt23 m-b-3">
-                                        {!! $food->description !!}
-                                    </span>
+                                        <span class="txt23 m-b-3">
+                                            {!! $food->description !!}
+                                        </span>
 
-                                    <span class="txt22 m-b-3">
-                                        ${{$food->price}}
-                                    </span>
-                                    <span>
+                                        <span class="txt22 m-b-3">
+                                            ${{$food->price}}
+                                        </span>
+                                        <span>
 
-                                        <form class="cart txt2" method="post"
-                                              action="{{route('add_food', $food->id)}}">
-                                            @csrf
-                                            <button type="submit" name="addtocart" value="5" class="btn3 flex-c-m size13 txt11 trans-0-4"> <i class="fa fa-shopping-cart"></i>&nbsp;Add to cart</button>
-                                            <input type="number" class="qty-text" id="qty" step="1" name="quantity" value="1" hidden>
-                                        </form>
-                                    </span>
-                                    <!-- Add to Cart Form -->
+                                            <form class="cart txt2" method="post"
+                                                  action="{{route('add_food', $food->id)}}">
+                                                @csrf
+                                                <button type="submit" name="addtocart" value="5" class="btn3 flex-c-m size13 txt11 trans-0-4"> <i class="fa fa-shopping-cart"></i>&nbsp;Add to cart</button>
+                                                <input type="number" class="qty-text" id="qty" step="1" name="quantity" value="1" hidden>
+                                            </form>
+                                        </span>
+                                        <!-- Add to Cart Form -->
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endif
                     @endif
                 @endforeach
             </div>
